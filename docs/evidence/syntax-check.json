@@ -1,0 +1,10 @@
+{
+  "evidence_level": 2,
+  "generated_utc": "2026-10-16T16:55:01.116659+00:00",
+  "python_files_compiled": 40,
+  "web_javascript_syntax_exit": 0,
+  "web_source_sha256": "620d52339c6ba5798d8843ebf4a946e31a1612fff1b6118349f74d79257496e8",
+  "physical_hardware_tests": 0,
+  "browser_runtime_executed": false,
+  "passed": true
+}

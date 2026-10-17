@@ -1,0 +1,81 @@
+{
+  "nominal_Wh": 1.665,
+  "usable_EOL_Wh": 1.1988,
+  "mass_g": {
+    "unit_g": 66.45,
+    "min_unit_g": 49.65,
+    "max_unit_g": 97.55
+  },
+  "prototype_cost_allocation_USD": [
+    185,
+    495
+  ]
+}
+{
+  "mixed_defined": {
+    "battery_w": 0.14127,
+    "hours_EOL": 8.486,
+    "hours_new": 10.607,
+    "minutes_per_8h": {
+      "connected_idle": 350.4,
+      "hud": 86.4,
+      "voice": 24.0,
+      "photo": 4.8,
+      "record": 4.8,
+      "transfer": 9.6
+    }
+  },
+  "display_heavy": {
+    "battery_w": 0.33882,
+    "hours_EOL": 3.538,
+    "hours_new": 4.423,
+    "minutes_per_8h": {
+      "connected_idle": 96.0,
+      "hud": 288.0,
+      "voice": 48.0,
+      "photo": 9.6,
+      "record": 14.4,
+      "transfer": 24.0
+    }
+  },
+  "continuous_display": {
+    "battery_w": 0.28609,
+    "hours_EOL": 4.19,
+    "hours_new": 5.238,
+    "minutes_per_8h": {
+      "hud": 480.0
+    }
+  },
+  "continuous_voice": {
+    "battery_w": 0.59291,
+    "hours_EOL": 2.022,
+    "hours_new": 2.527,
+    "minutes_per_8h": {
+      "voice": 480.0
+    }
+  },
+  "continuous_record": {
+    "battery_w": 1.13836,
+    "hours_EOL": 1.053,
+    "hours_new": 1.316,
+    "minutes_per_8h": {
+      "record": 480.0
+    }
+  },
+  "continuous_transfer": {
+    "battery_w": 1.02473,
+    "hours_EOL": 1.17,
+    "hours_new": 1.462,
+    "minutes_per_8h": {
+      "transfer": 480.0
+    }
+  },
+  "connected_standby": {
+    "battery_w": 0.027,
+    "hours_EOL": 44.4,
+    "hours_new": 55.5,
+    "minutes_per_8h": {
+      "connected_idle": 480.0
+    }
+  }
+}

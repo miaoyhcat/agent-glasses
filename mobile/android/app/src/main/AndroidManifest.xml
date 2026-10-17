@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+  <queries><intent><action android:name="android.speech.RecognitionService"/></intent><intent><action android:name="android.intent.action.TTS_SERVICE"/></intent><intent><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent></queries>
+  <application android:theme="@android:style/Theme.Material.NoActionBar" android:label="AgentGlass" android:allowBackup="false" android:usesCleartextTraffic="false" android:supportsRtl="true">
+    <activity android:name=".MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+    <service android:name=".NotificationRelay" android:exported="true" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"><intent-filter><action android:name="android.service.notification.NotificationListenerService"/></intent-filter></service>
+  </application>
+</manifest>

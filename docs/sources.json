@@ -1,0 +1,623 @@
+[
+  {
+    "id": "S01",
+    "title": "Ray-Ban current comparison",
+    "type": "manufacturer",
+    "url": "https://www.ray-ban.com/usa/l/discover-ray-ban-meta-ai-glasses",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S02",
+    "title": "Meta Ray-Ban Display 2026 update",
+    "type": "manufacturer",
+    "url": "https://www.meta.com/blog/meta-ray-ban-display-more-useful-more-people/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S03",
+    "title": "Rokid Glasses product and specifications",
+    "type": "manufacturer",
+    "url": "https://store.rokid.com/products/rokid-glasses",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S04",
+    "title": "Even G2 specifications",
+    "type": "manufacturer",
+    "url": "https://support.evenrealities.com/hc/en-us/articles/13499229138959-Specs",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S05",
+    "title": "Halo hardware manual",
+    "type": "manufacturer technical",
+    "url": "https://docs.brilliant.xyz/halo/hardware/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S06",
+    "title": "T-Glass V3 upstream hardware and examples",
+    "type": "manufacturer repository",
+    "url": "https://github.com/Xinyuan-LilyGO/T-Glass-V3",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S07",
+    "title": "MiRZA official specifications",
+    "type": "manufacturer",
+    "url": "https://ssw.web.docomo.ne.jp/docomoxr/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S08",
+    "title": "ActiveLook official API",
+    "type": "manufacturer API",
+    "url": "https://github.com/ActiveLook/Activelook-API-Documentation/blob/main/ActiveLook_API.md",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S09",
+    "title": "Epson Moverio BT-45CS",
+    "type": "manufacturer",
+    "url": "https://epson.com/For-Work/Wearables/Smart-Glasses/Moverio-BT-45CS-AR-Smart-Glasses/p/V11H970120",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S10",
+    "title": "XREAL One Pro",
+    "type": "manufacturer",
+    "url": "https://www.xreal.com/one-pro",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S11",
+    "title": "ESP32-S3-WROOM-1/1U datasheet v1.8",
+    "type": "datasheet",
+    "url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S12",
+    "title": "GZOT VGA020 panel family",
+    "type": "supplier",
+    "url": "https://www.gzot.com/en/product_details/22",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S13",
+    "title": "Codex App Server official protocol",
+    "type": "official API",
+    "url": "https://learn.chatgpt.com/docs/app-server",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S14",
+    "title": "SPECS June 16 2026 announcement",
+    "type": "manufacturer",
+    "url": "https://newsroom.snap.com/introducing-specs-augmented-reality-glasses",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S15",
+    "title": "Grepow GRP1654 cell family",
+    "type": "supplier",
+    "url": "https://www.grepow.com/button-cell-battery/grp1654.html",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S16",
+    "title": "Waveshare OV2640 camera board",
+    "type": "supplier",
+    "url": "https://www.waveshare.com/product/ov2640-camera-board.htm",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S17",
+    "title": "TDK ICS-43434",
+    "type": "datasheet",
+    "url": "https://www.invensense.tdk.com/en-us/products/microphone/ics-43434",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S18",
+    "title": "MAX98357A",
+    "type": "datasheet",
+    "url": "https://www.analog.com/en/products/max98357a.html",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S19",
+    "title": "BQ24074",
+    "type": "datasheet",
+    "url": "https://www.ti.com/product/BQ24074",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S20",
+    "title": "TPS63070",
+    "type": "datasheet",
+    "url": "https://www.ti.com/product/TPS63070",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S21",
+    "title": "TPS22918 datasheet",
+    "type": "datasheet",
+    "url": "https://www.ti.com/lit/ds/symlink/tps22918.pdf",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S22",
+    "title": "MCP6547",
+    "type": "datasheet",
+    "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/MSLD/ProductDocuments/DataSheets/MCP6546-Open-Drain-Output-Sub-Microamp-Comparators-DS20001714.pdf",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S23",
+    "title": "Waveshare 1.3 inch ST7789 LCD",
+    "type": "supplier",
+    "url": "https://www.waveshare.com/wiki/1.3inch_LCD_Module",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S24",
+    "title": "Halo price and availability wording",
+    "type": "manufacturer",
+    "url": "https://brilliant.xyz/products/halo",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S25",
+    "title": "Frame hardware manual",
+    "type": "manufacturer technical",
+    "url": "https://docs.brilliant.xyz/frame/hardware/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S26",
+    "title": "ENGO2 UK store",
+    "type": "manufacturer",
+    "url": "https://uk.engoeyewear.com/products/engo-2",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S27",
+    "title": "RayNeo X3 Pro",
+    "type": "manufacturer",
+    "url": "https://www.rayneo.com/products/x3-pro-ai-display-glasses",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S28",
+    "title": "Ray-Ban Display reviewer experience",
+    "type": "independent hands-on",
+    "url": "https://www.theverge.com/tech/801684/meta-ray-ban-display-review-smart-glasses-ai-wearables",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S29",
+    "title": "Rokid Glasses long-use review",
+    "type": "independent hands-on",
+    "url": "https://www.tomsguide.com/computing/smart-glasses/rokid-glasses-review",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S30",
+    "title": "Even G2 hands-on review",
+    "type": "independent hands-on",
+    "url": "https://www.wired.com/review/even-realities-g2",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S31",
+    "title": "TPS65132 display bias",
+    "type": "datasheet",
+    "url": "https://www.ti.com/product/TPS65132",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S32",
+    "title": "TLV755P LDO",
+    "type": "datasheet",
+    "url": "https://www.ti.com/product/TLV755P",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S33",
+    "title": "SN74AXC8T245 level translation",
+    "type": "datasheet",
+    "url": "https://www.ti.com/product/SN74AXC8T245",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S34",
+    "title": "Halo Lua API",
+    "type": "official API",
+    "url": "https://docs.brilliant.xyz/halo/halo-sdk-lua/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S35",
+    "title": "Optical dual-combiner patent US20230078819A1",
+    "type": "patent publication",
+    "url": "https://patents.google.com/patent/US20230078819A1/en",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S36",
+    "title": "AI Smart Glasses survey 2609.19793",
+    "type": "research paper",
+    "url": "https://arxiv.org/abs/2609.19793",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S37",
+    "title": "Android Bluetooth permissions",
+    "type": "official API",
+    "url": "https://developer.android.com/develop/connectivity/bluetooth/bt-permissions",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S38",
+    "title": "OpenAI transcription",
+    "type": "official API",
+    "url": "https://developers.openai.com/api/docs/guides/speech-to-text",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S39",
+    "title": "OpenAI vision",
+    "type": "official API",
+    "url": "https://developers.openai.com/api/docs/guides/images-vision",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S40",
+    "title": "OSI open source definition",
+    "type": "definition",
+    "url": "https://opensource.org/osd",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S41",
+    "title": "IEC 62471",
+    "type": "standard scope",
+    "url": "https://webstore.iec.ch/en/publication/7076",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S42",
+    "title": "IEC 62368-1:2023",
+    "type": "standard scope",
+    "url": "https://webstore.iec.ch/en/publication/69308",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public documentation only; no order, sample inspection, certification or independent measurement implied."
+  },
+  {
+    "id": "S43",
+    "title": "Even G2 product page",
+    "type": "manufacturer",
+    "url": "https://www.evenrealities.com/smart-glasses",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Vendor claims and price snapshot only."
+  },
+  {
+    "id": "S44",
+    "title": "Ray-Ban current US store",
+    "type": "manufacturer",
+    "url": "https://www.ray-ban.com/usa",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Vendor claims and price snapshot only."
+  },
+  {
+    "id": "S45",
+    "title": "Vuzix Z100 general availability, 2024-11-20",
+    "type": "manufacturer",
+    "url": "https://ir.vuzix.com/news-events/press-releases/detail/2104/vuzix-announces-general-availability-of-z100-smart-glasses",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Historical launch claims; not a current stock guarantee."
+  },
+  {
+    "id": "S46",
+    "title": "XREAL AURA June 16 2026 announcement",
+    "type": "issuer press release",
+    "url": "https://www.prnewswire.com/news-releases/a-new-era-of-xr-begins-xreal-launches-xreal-aura-powered-by-android-xr-this-fall-302802018.html",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Reservations and developer kits are distinct from completed consumer fulfillment."
+  },
+  {
+    "id": "S47",
+    "title": "Brilliant Halo Python SDK",
+    "type": "official API",
+    "url": "https://docs.brilliant.xyz/halo/halo-sdk-python/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Published package import and method signatures checked; no BLE hardware connected."
+  },
+  {
+    "id": "S48",
+    "title": "brilliant-ble 3.4.0 package metadata",
+    "type": "published package",
+    "url": "https://pypi.org/project/brilliant-ble/3.4.0/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Version installed from public package index; web page renderer failed. Package/API inspection is recorded separately."
+  },
+  {
+    "id": "S49",
+    "title": "IEC 62133-2:2017+AMD1:2021 lithium systems scope",
+    "type": "standard scope",
+    "url": "https://webstore.iec.ch/en/publication/70017",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public scope only. Full paid normative text and certification tests not acquired."
+  },
+  {
+    "id": "S50",
+    "title": "FCC equipment authorization procedures",
+    "type": "regulator",
+    "url": "https://www.fcc.gov/general/equipment-authorization-procedures",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Access limited / HTTP403 in this session. No claim to have read inaccessible full requirements."
+  },
+  {
+    "id": "S51",
+    "title": "UNECE Manual of Tests and Criteria Revision 8",
+    "type": "regulator",
+    "url": "https://unece.org/transport/dangerous-goods/rev8-files",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Access limited / HTTP403 in this session; use official current transport tests with laboratory review."
+  },
+  {
+    "id": "S52",
+    "title": "European Commission Radio Equipment Directive",
+    "type": "regulator",
+    "url": "https://single-market-economy.ec.europa.eu/sectors/electrical-and-electronic-engineering-industries-eei/radio-equipment-directive-red_en",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public page inspected. Published future repeal/transition dates are not treated as already effective."
+  },
+  {
+    "id": "S53",
+    "title": "T-Glass H715 official retail product snapshot",
+    "type": "manufacturer",
+    "url": "https://lilygo.cc/products/t-glass",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "H715 available=true at retrieval; USD54.63 listing, not an order or delivered-sample inspection. Prism-only N276 listed unavailable."
+  },
+  {
+    "id": "S54",
+    "title": "T-Glass V1/V2 manufacturer documentation",
+    "type": "manufacturer technical",
+    "url": "https://wiki.lilygo.cc/products/other/t-glass/",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "V2 prism and 126x126 visible region; do not substitute V3 camera/audio specifications."
+  },
+  {
+    "id": "S55",
+    "title": "T-Glass V2 driver pinned source",
+    "type": "manufacturer repository",
+    "url": "https://github.com/Xinyuan-LilyGO/LilyGO-T-Wristband-and-T-Glass/tree/99ae22477daeaec55714f6b31e0219407dd52439",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Eight unchanged MIT driver/license files retained with hashes; compiled P1 adaptation, no physical display test."
+  },
+  {
+    "id": "S56",
+    "title": "Codex current configuration reference",
+    "type": "official API",
+    "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Analytics/exporter opt-outs, local model catalog and provider configuration checked; installed version schema remains authoritative."
+  },
+  {
+    "id": "S57",
+    "title": "Ollama OpenAI-compatible Responses",
+    "type": "official API",
+    "url": "https://docs.ollama.com/api/openai-compatibility",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Local Qwen3-4b inference executed; no inference latency is claimed for glasses."
+  },
+  {
+    "id": "S58",
+    "title": "Linux Landlock userspace documentation",
+    "type": "kernel documentation",
+    "url": "https://docs.kernel.org/userspace-api/landlock.html",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Network ABI>=4 required for port rules; environment probe refused rather than pretending enforcement. This experimental guard is not a product security boundary."
+  },
+  {
+    "id": "S59",
+    "title": "Android emulator command-line reference",
+    "type": "official API",
+    "url": "https://developer.android.com/studio/run/emulator-commandline",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Official SDK emulator/system images used. API26 foreground app/TLS workflow observed; API35 did not reach boot acceptance."
+  },
+  {
+    "id": "S60",
+    "title": "OpenAI Python official Responses resource source",
+    "type": "official API",
+    "url": "https://raw.githubusercontent.com/openai/openai-python/main/src/openai/resources/responses/responses.py",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Official resource source checked for Responses, max_output_tokens, background, store and service_tier. Large rendered API-reference page failed retrieval; no live paid upstream call was made."
+  },
+  {
+    "id": "S61",
+    "title": "MCP official tools specification 2025-06-18",
+    "type": "official protocol",
+    "url": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+    "retrieved_local_date": "2026-10-16",
+    "retrieved_timezone": "Etc/UTC",
+    "note": "initialize capabilities, tools/list, tools/call and error results used by the public-fixture-only benchmark; not a generic production tool server."
+  },
+  {
+    "id": "S62",
+    "title": "Ray-Ban current comparison: camera/audio models",
+    "type": "manufacturer official",
+    "url": "https://www.ray-ban.com/usa/l/discover-ray-ban-meta-ai-glasses",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Current Gen3 camera/audio positioning and public feature list."
+  },
+  {
+    "id": "S63",
+    "title": "Meta Ray-Ban Display official product details",
+    "type": "manufacturer official",
+    "url": "https://www.ray-ban.com/usa/l/discover-meta-ray-ban-display",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "600×600 monocular display; frame 68g/70g by size; camera/audio and neural band. Manufacturer specifications."
+  },
+  {
+    "id": "S64",
+    "title": "Rokid Glasses official product specifications",
+    "type": "manufacturer official",
+    "url": "https://store.rokid.com/products/rokid-glasses",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "49g, MicroLED, FOV30°, 12MP and open-ear audio; manufacturer data."
+  },
+  {
+    "id": "S65",
+    "title": "Even G2 official specifications",
+    "type": "manufacturer official",
+    "url": "https://support.evenrealities.com/hc/en-us/articles/13499229138959-Specs",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Binocular green MicroLED, 640×350, 27.5°, four microphones; manufacturer data."
+  },
+  {
+    "id": "S66",
+    "title": "Brilliant Halo current product description",
+    "type": "manufacturer official",
+    "url": "https://brilliant.xyz/products/halo",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Developer positioning, color display, optical sensor, microphones, bone conduction; vendor says just over40g."
+  },
+  {
+    "id": "S67",
+    "title": "Brilliant Halo official Python SDK",
+    "type": "manufacturer official",
+    "url": "https://docs.brilliant.xyz/halo/halo-sdk-python/",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "Public BLE/Lua and messaging APIs; no competitor inability inferred."
+  },
+  {
+    "id": "S68",
+    "title": "XREAL One Pro official product",
+    "type": "manufacturer official",
+    "url": "https://www.xreal.com/one-pro",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "57° MicroOLED display and USB-C DP source requirements; manufacturer data."
+  },
+  {
+    "id": "S69",
+    "title": "RayNeo X3 Pro official specifications",
+    "type": "manufacturer official",
+    "url": "https://www.rayneo.com/products/x3-pro-ai-display-glasses",
+    "retrieved_local_date": "2026-10-17",
+    "retrieved_timezone": "Asia/Shanghai",
+    "note": "640×480, 30°, 12MP and Creator Mode; manufacturer data."
+  }
+]

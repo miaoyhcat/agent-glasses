@@ -1,0 +1,52 @@
+{
+  "generated_utc": "2026-10-16T16:55:00.948716+00:00",
+  "evidence_level": 2,
+  "physical_hardware_tests": 0,
+  "model_inference_executed": false,
+  "preflight": {
+    "checks": [
+      {
+        "check": "runtime_isolation",
+        "passed": true,
+        "detail": "Real HTTP jobs require Docker; simulation remains separate"
+      },
+      {
+        "check": "owner_enabled_model_api",
+        "passed": false,
+        "detail": "Model API billing is disabled until the desktop owner enables it"
+      },
+      {
+        "check": "desktop_model_key",
+        "passed": false,
+        "detail": "Only environment variable presence is checked; the key is never printed or mounted"
+      },
+      {
+        "check": "explicit_model",
+        "passed": false,
+        "detail": "Choose an actual account-supported Codex model; no automatic paid probe"
+      },
+      {
+        "check": "authorized_projects",
+        "passed": true,
+        "detail": "Configured project directories must exist"
+      },
+      {
+        "check": "docker_cli",
+        "passed": false,
+        "detail": "Docker CLI is missing"
+      },
+      {
+        "check": "worker_image_name",
+        "passed": true,
+        "detail": "Only a local administrator configures this image"
+      }
+    ],
+    "launch_prerequisites_present": false,
+    "model_inference_executed": false,
+    "container_security_test_executed": false,
+    "note": "Passing prerequisite checks is not proof of authentication, sandbox enforcement or a successful task."
+  },
+  "full_test_requested": false,
+  "passed": false,
+  "note": "Preflight only; no successful live acceptance is claimed"
+}

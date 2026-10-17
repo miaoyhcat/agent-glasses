@@ -1,0 +1,14 @@
+{
+  "currency":"USD",
+  "kind":"engineering allocation ranges, not vendor quotations or a purchasable whole-device price",
+  "quantity":3,
+  "items":[
+    {"name":"optical panel + bonded engine + driver","low":80,"high":230,"quote":"MISSING; minimum order and NRE unknown"},
+    {"name":"compute camera radio storage audio and sensors","low":30,"high":65,"quote":"allocation"},
+    {"name":"protected battery pack and power path","low":20,"high":45,"quote":"allocation; custom pack MOQ unknown"},
+    {"name":"PCB FPC assembly and connectors","low":25,"high":65,"quote":"allocation; no released full PCB"},
+    {"name":"printed frame optics carrier lenses fasteners","low":30,"high":90,"quote":"allocation; prescription and materials variable"}
+  ],
+  "excludes":["tax","shipping","optical NRE and tooling","engineering labour","test equipment","certification","yield loss beyond prototype allowance","phone and computer","AI service charges"],
+  "warning":"Do not place an order from this allocation table. Obtain exact supplier quotes and close manufacturing gates first."
+}

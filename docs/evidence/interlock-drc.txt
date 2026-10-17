@@ -1,0 +1,64 @@
+** Drc report for /workspace/scratch/1628ebaca2ec/revision-v0.2/agent-glasses/hardware/pcb/interlock-test-coupon/interlock-test.kicad_pcb **
+** Created on 2026-10-16 17:27:23 **
+
+** Found 18 DRC violations **
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(40.0000 mm, 36.0000 mm): Footprint R5
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(20.0000 mm, 26.0000 mm): Footprint R3
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(40.0000 mm, 30.0000 mm): Footprint R4
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(30.0000 mm, 36.0000 mm): Footprint R7
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(8.0000 mm, 8.0000 mm): Footprint J1
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(8.0000 mm, 33.0000 mm): Footprint J2
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(31.0000 mm, 30.0000 mm): Footprint C4
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(20.0000 mm, 36.0000 mm): Footprint R6
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(50.0000 mm, 20.0000 mm): Footprint U2
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(60.0000 mm, 20.0000 mm): Footprint C2
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(8.0000 mm, 20.0000 mm): Footprint SW1
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(43.0000 mm, 10.0000 mm): Footprint C1
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(51.0000 mm, 28.0000 mm): Footprint C3
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(20.0000 mm, 20.0000 mm): Footprint R2
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(31.0000 mm, 23.0000 mm): Footprint U1
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(62.0000 mm, 32.0000 mm): Footprint J3
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(22.0000 mm, 10.0000 mm): Footprint R1
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(32.0000 mm, 10.0000 mm): Footprint D1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

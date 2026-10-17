@@ -1,0 +1,26 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.11+dfsg-1build4*%
+%TF.CreationDate,2026-10-15T15:04:45-04:00*%
+%TF.ProjectId,interlock-test,696e7465-726c-46f6-936b-2d746573742e,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.11+dfsg-1build4) date 2026-10-15 15:04:45*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X2000000Y-43000000D02*
+X2000000Y-2000000D01*
+X68000000Y-2000000D02*
+X68000000Y-43000000D01*
+X2000000Y-2000000D02*
+X68000000Y-2000000D01*
+X68000000Y-43000000D02*
+X2000000Y-43000000D01*
+M02*

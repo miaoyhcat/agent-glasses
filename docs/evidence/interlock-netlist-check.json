@@ -1,0 +1,13 @@
+{
+  "evidence_level": 2,
+  "scope": "3.3V interlock test coupon only",
+  "pads_reconciled": 47,
+  "nets": 10,
+  "schematic_csv_pcb_match": true,
+  "drc_errors": 0,
+  "drc_warnings": 18,
+  "unconnected_pads": 0,
+  "electrical_behavior_tested": false,
+  "manufacturing_release": false,
+  "remaining": "External-library metadata warnings and independent package/pinout review remain. IO back-power and optical obstruction are not addressed."
+}

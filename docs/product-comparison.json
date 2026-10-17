@@ -1,0 +1,90 @@
+[
+  {
+    "product": "AgentGlass",
+    "positioning": "可审查、可自托管的智能体眼镜平台",
+    "display": "H1单目HUD设计；P1近眼显示适配",
+    "capture_audio": "D0相机/录音/短音频与手机协同",
+    "developer": "固件、Android、桌面、协议和CAD共同交付",
+    "practical_focus": "自有项目上的inspect/fix/test、真实任务事件与本机审批",
+    "basis": "project implementation; hardware metrics are design inputs",
+    "sources": "PROJECT",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "Ray-Ban Meta Gen 3",
+    "positioning": "日常拍摄与语音AI",
+    "display": "Camera + Audio型号",
+    "capture_audio": "12MP相机、开放式音频",
+    "developer": "厂商应用及服务生态",
+    "practical_focus": "第一视角记录、通话与日常助手",
+    "basis": "manufacturer specifications",
+    "sources": "S62",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "Meta Ray-Ban Display",
+    "positioning": "带镜片显示的消费AI眼镜",
+    "display": "单目全彩600×600",
+    "capture_audio": "12MP、麦克风与开放式扬声器",
+    "developer": "Meta应用生态与Neural Band",
+    "practical_focus": "消息、字幕、导航与腕带交互",
+    "basis": "manufacturer specifications",
+    "sources": "S63",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "Rokid Glasses with Display",
+    "positioning": "轻量翻译与信息显示",
+    "display": "MicroLED、30°FOV",
+    "capture_audio": "12MP、4麦与开放式音频",
+    "developer": "Rokid应用与服务",
+    "practical_focus": "字幕、翻译、提词与拍摄",
+    "basis": "manufacturer specifications",
+    "sources": "S64",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "Even Realities G2",
+    "positioning": "字幕与信息辅助",
+    "display": "双目绿光640×350、27.5°FOV",
+    "capture_audio": "官方规格列4麦",
+    "developer": "Even应用与设备体系",
+    "practical_focus": "轻量信息提示、沟通辅助",
+    "basis": "manufacturer specifications",
+    "sources": "S65",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "Brilliant Halo",
+    "positioning": "可编程AI眼镜",
+    "display": "彩色近眼显示",
+    "capture_audio": "光学传感器、双麦与骨传导",
+    "developer": "公开Python/Flutter/Web Bluetooth及Lua接口",
+    "practical_focus": "可编程应用与个人AI体验",
+    "basis": "manufacturer specifications and official SDK",
+    "sources": "S66|S67",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "XREAL One Pro",
+    "positioning": "空间大屏与外部主机显示",
+    "display": "MicroOLED、57°FOV",
+    "capture_audio": "Bose调校音频；XREAL Eye为外部配件",
+    "developer": "USB-C DP主机与开发门户",
+    "practical_focus": "电脑/游戏/移动设备大屏",
+    "basis": "manufacturer specifications",
+    "sources": "S68",
+    "retrieved_date": "2026-10-17"
+  },
+  {
+    "product": "RayNeo X3 Pro",
+    "positioning": "全彩AI与空间AR",
+    "display": "双目全彩640×480、30°FOV",
+    "capture_audio": "12MP、3麦阵列",
+    "developer": "Creator Mode、Unity/Android ARDK",
+    "practical_focus": "导航、翻译、空间应用",
+    "basis": "manufacturer specifications",
+    "sources": "S69",
+    "retrieved_date": "2026-10-17"
+  }
+]

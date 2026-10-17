@@ -1,0 +1,9 @@
+product,positioning,display,capture_audio,developer,practical_focus,basis,sources,retrieved_date
+AgentGlass,可审查、可自托管的智能体眼镜平台,H1单目HUD设计；P1近眼显示适配,D0相机/录音/短音频与手机协同,固件、Android、桌面、协议和CAD共同交付,自有项目上的inspect/fix/test、真实任务事件与本机审批,project implementation; hardware metrics are design inputs,PROJECT,2026-10-17
+Ray-Ban Meta Gen 3,日常拍摄与语音AI,Camera + Audio型号,12MP相机、开放式音频,厂商应用及服务生态,第一视角记录、通话与日常助手,manufacturer specifications,S62,2026-10-17
+Meta Ray-Ban Display,带镜片显示的消费AI眼镜,单目全彩600×600,12MP、麦克风与开放式扬声器,Meta应用生态与Neural Band,消息、字幕、导航与腕带交互,manufacturer specifications,S63,2026-10-17
+Rokid Glasses with Display,轻量翻译与信息显示,MicroLED、30°FOV,12MP、4麦与开放式音频,Rokid应用与服务,字幕、翻译、提词与拍摄,manufacturer specifications,S64,2026-10-17
+Even Realities G2,字幕与信息辅助,双目绿光640×350、27.5°FOV,官方规格列4麦,Even应用与设备体系,轻量信息提示、沟通辅助,manufacturer specifications,S65,2026-10-17
+Brilliant Halo,可编程AI眼镜,彩色近眼显示,光学传感器、双麦与骨传导,公开Python/Flutter/Web Bluetooth及Lua接口,可编程应用与个人AI体验,manufacturer specifications and official SDK,S66|S67,2026-10-17
+XREAL One Pro,空间大屏与外部主机显示,MicroOLED、57°FOV,Bose调校音频；XREAL Eye为外部配件,USB-C DP主机与开发门户,电脑/游戏/移动设备大屏,manufacturer specifications,S68,2026-10-17
+RayNeo X3 Pro,全彩AI与空间AR,双目全彩640×480、30°FOV,12MP、3麦阵列,Creator Mode、Unity/Android ARDK,导航、翻译、空间应用,manufacturer specifications,S69,2026-10-17

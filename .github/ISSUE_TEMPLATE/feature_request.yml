@@ -1,0 +1,16 @@
+name: Feature request / 功能建议
+description: 说明用户场景与验收方式
+title: "[Feature] "
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 用户场景
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 希望实现的行为与验收方式
+    validations:
+      required: true

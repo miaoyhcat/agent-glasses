@@ -1,0 +1,146 @@
+{
+  "evidence_level": 2,
+  "physical_hardware_tests": 0,
+  "cli_version": "0.104.0",
+  "unified_exec": false,
+  "model": "local qwen3:4b-instruct via Ollama 0.40.5",
+  "container_executed": false,
+  "model_requests": 5,
+  "task_status": "completed",
+  "events": [
+    {
+      "seq": 1,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "status",
+      "data": {
+        "stage": "awaiting_desktop_approval",
+        "status": "pending"
+      },
+      "created": 1792168861.1120837
+    },
+    {
+      "seq": 2,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "status",
+      "data": {
+        "status": "preparing"
+      },
+      "created": 1792168861.1126735
+    },
+    {
+      "seq": 3,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "bridge",
+      "data": {
+        "event": "initialized",
+        "platform": "unknown"
+      },
+      "created": 1792168861.293594
+    },
+    {
+      "seq": 4,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "status",
+      "data": {
+        "stage": "codex_turn_requested",
+        "status": "running"
+      },
+      "created": 1792168864.3312783
+    },
+    {
+      "seq": 5,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "item",
+      "data": {
+        "id": "msg_502689",
+        "lifecycle": "started",
+        "type": "agentMessage"
+      },
+      "created": 1792168966.4730525
+    },
+    {
+      "seq": 6,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "item",
+      "data": {
+        "id": "msg_502689",
+        "lifecycle": "completed",
+        "type": "agentMessage"
+      },
+      "created": 1792168980.458195
+    },
+    {
+      "seq": 7,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "summary",
+      "data": {
+        "source": "agentMessage",
+        "text": "The discount arithmetic bug has been successfully fixed. The original code incorrectly added the discount fraction instead of subtracting it. The fix changes the operation from `*(1 + discount_fraction)` to `*(1 - discount_fraction)`, ensuring a 10% discount on $100 results in $90. All tests now pass."
+      },
+      "created": 1792168980.4582522
+    },
+    {
+      "seq": 8,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "status",
+      "data": {
+        "source": "turn/completed",
+        "status": "completed"
+      },
+      "created": 1792168980.4645934
+    },
+    {
+      "seq": 9,
+      "task_id": "dfc97c44-5cb5-458f-bc5b-ac14fe3925d9",
+      "kind": "bridge",
+      "data": {
+        "container_cleanup_confirmed": null,
+        "event": "execution_diagnostic",
+        "exit_code": 0,
+        "signals": [
+          "socket_error"
+        ],
+        "stage": "awaiting_turn_completion",
+        "stderr_bytes": 3889
+      },
+      "created": 1792168980.6313126
+    }
+  ],
+  "model_inference_executed": true,
+  "minimal_patch_security_guard": true,
+  "capability_limited_public_fixture_only": true,
+  "mcp_tool_audit": [
+    {
+      "tool": "read_fixture",
+      "source_sha256": "c5924f0f3b6fd821b79615287182ee9162b30f69ae439c4ec0a674a3138b3295",
+      "exit_code": null,
+      "written": null
+    },
+    {
+      "tool": "test_fixture",
+      "source_sha256": "c5924f0f3b6fd821b79615287182ee9162b30f69ae439c4ec0a674a3138b3295",
+      "exit_code": 1,
+      "written": null
+    },
+    {
+      "tool": "write_fixture",
+      "source_sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb",
+      "exit_code": null,
+      "written": true
+    },
+    {
+      "tool": "test_fixture",
+      "source_sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb",
+      "exit_code": 0,
+      "written": null
+    }
+  ],
+  "passed": true,
+  "initial_exact_ast_check_passed": false,
+  "patch_guard": "Complete original fixture AST with only Add\u2192Sub; comments/docstrings may differ; tests are byte-identical",
+  "independent_test_exit": 0,
+  "acceptance_recheck_utc": "2026-10-16T16:44:35.068230+00:00",
+  "model_patch_artifact": "examples/verified-local-result/discount.py",
+  "unchanged_test_sha256": "8782ac6f3b132ab1821b75521873ca4191bd2326a915473b0349dab6c98836db",
+  "model_patch_sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb"
+}

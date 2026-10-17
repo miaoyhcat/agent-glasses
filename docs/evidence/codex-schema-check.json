@@ -1,0 +1,62 @@
+{
+  "evidence_level": 2,
+  "cli_version": "0.162.1",
+  "model_inference_executed": false,
+  "method": "Actual adapter-shaped requests validated against CLI-generated schemas; not a live task test",
+  "checks": [
+    {
+      "schema": "ThreadStartParams",
+      "schema_sha256": "e9c6d3cc18d049bfbc0249add3808fb8e5a27e1a0b5a423767aafbc3859a9428",
+      "parameter_keys": [
+        "cwd",
+        "approvalPolicy",
+        "sandbox"
+      ],
+      "passed": true
+    },
+    {
+      "schema": "ThreadResumeParams",
+      "schema_sha256": "948779cace55dda4384689a1627cd6675aa4782744bb5820cca16bfc0118586c",
+      "parameter_keys": [
+        "cwd",
+        "approvalPolicy",
+        "sandbox",
+        "threadId"
+      ],
+      "passed": true
+    },
+    {
+      "schema": "TurnStartParams",
+      "schema_sha256": "583aff13e7a2da43fbb0150e0edc3c73171f374f0aa745dddba256166988a005",
+      "parameter_keys": [
+        "threadId",
+        "cwd",
+        "approvalPolicy",
+        "input",
+        "sandboxPolicy"
+      ],
+      "passed": true
+    },
+    {
+      "schema": "TurnStartParams",
+      "schema_sha256": "583aff13e7a2da43fbb0150e0edc3c73171f374f0aa745dddba256166988a005",
+      "parameter_keys": [
+        "threadId",
+        "cwd",
+        "approvalPolicy",
+        "input",
+        "sandboxPolicy"
+      ],
+      "passed": true
+    },
+    {
+      "schema": "TurnInterruptParams",
+      "schema_sha256": "6dff382dae73d1dbc58406ed045605f647e7a49660e2540fbd2c6c24d60c5f2b",
+      "parameter_keys": [
+        "threadId",
+        "turnId"
+      ],
+      "passed": true
+    }
+  ]
+}

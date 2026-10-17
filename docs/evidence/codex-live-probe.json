@@ -1,0 +1,17 @@
+{
+  "cli_version": "0.162.1",
+  "results": {
+    "initialize": {
+      "received": true,
+      "error": null,
+      "thread_created": false
+    },
+    "failure": "TimeoutError"
+  },
+  "notification_methods": [
+    "configWarning",
+    "configWarning",
+    "remoteControl/status/changed"
+  ],
+  "model_inference_executed": false
+}

@@ -1,0 +1,15 @@
+{
+  "version": "3.4.0",
+  "evidence_level": 2,
+  "import_success": true,
+  "hardware_connected": false,
+  "methods": {
+    "__init__": "(self)",
+    "connect": "(self, name=None, timeout=10, print_response_handler=<function BrilliantBle.<lambda>>, data_response_handler=<function BrilliantBle.<lambda>>, disconnect_handler=<function BrilliantBle.<lambda>>, connect_timeout=5)",
+    "send_lua": "(self, string: str, show_me=False, await_print=False, timeout=5)",
+    "send_data": "(self, data: bytearray, show_me=False, await_data=False, timeout=5, await_bt_response=True)",
+    "send_audio": "(self, data: bytearray, await_bt_response=False)",
+    "disconnect": "(self)",
+    "max_lua_payload": "(self)"
+  }
+}

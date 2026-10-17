@@ -1,0 +1,24 @@
+name: Bug report / 问题反馈
+description: 提交可复现的软件、固件或设计问题
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 版本与配置
+      description: Commit、系统、D0/P1/H1配置及应用版本
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤与预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 观察结果与证据
+      description: 提供去除令牌、密钥、个人媒体和私人代码后的日志或文件路径
+    validations:
+      required: true

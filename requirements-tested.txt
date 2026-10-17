@@ -1,0 +1,4 @@
+# Direct host runtime versions actually used for validation, Python 3.12.14/Linux.
+# This is not a cross-platform, hash-locked transitive dependency lockfile.
+aiohttp==3.14.4
+cryptography==50.0.2

@@ -1,0 +1,9 @@
+{
+  "release_tag": "v0.2.0-source.1",
+  "software_version": "0.2.0",
+  "license": "LicenseRef-AgentGlass-Personal-Noncommercial-1.0",
+  "commercial_contact": "3277681859@qq.com",
+  "design_index": "docs/design-index.md",
+  "product_comparison": "docs/product-comparison.md",
+  "validation": "docs/evidence/publication-validation.json"
+}

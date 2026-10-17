@@ -1,0 +1,151 @@
+{
+  "generated_utc": "2026-10-16T16:52:59.736689+00:00",
+  "evidence_level": 2,
+  "physical_hardware_tests": 0,
+  "cli_version": "codex-cli 0.104.0",
+  "model": "qwen3:4b-instruct",
+  "model_requests": 5,
+  "model_inference_executed": true,
+  "task_status": "completed",
+  "container_executed": false,
+  "capability_limited_public_fixture_only": true,
+  "minimal_patch_security_guard": true,
+  "independent_test_exit": 0,
+  "mcp_tool_audit": [
+    {
+      "tool": "read_fixture",
+      "source_sha256": "c5924f0f3b6fd821b79615287182ee9162b30f69ae439c4ec0a674a3138b3295",
+      "exit_code": null,
+      "written": null
+    },
+    {
+      "tool": "test_fixture",
+      "source_sha256": "c5924f0f3b6fd821b79615287182ee9162b30f69ae439c4ec0a674a3138b3295",
+      "exit_code": 1,
+      "written": null
+    },
+    {
+      "tool": "write_fixture",
+      "source_sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb",
+      "exit_code": null,
+      "written": true
+    },
+    {
+      "tool": "test_fixture",
+      "source_sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb",
+      "exit_code": 0,
+      "written": null
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "status",
+      "data": {
+        "stage": "awaiting_desktop_approval",
+        "status": "pending"
+      },
+      "created": 1792169465.1572156
+    },
+    {
+      "seq": 2,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "status",
+      "data": {
+        "status": "preparing"
+      },
+      "created": 1792169465.1575394
+    },
+    {
+      "seq": 3,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "bridge",
+      "data": {
+        "event": "initialized",
+        "platform": "unknown"
+      },
+      "created": 1792169465.3189552
+    },
+    {
+      "seq": 4,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "status",
+      "data": {
+        "stage": "codex_turn_requested",
+        "status": "running"
+      },
+      "created": 1792169468.2358372
+    },
+    {
+      "seq": 5,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "item",
+      "data": {
+        "id": "msg_478248",
+        "lifecycle": "started",
+        "type": "agentMessage"
+      },
+      "created": 1792169568.2088032
+    },
+    {
+      "seq": 6,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "item",
+      "data": {
+        "id": "msg_478248",
+        "lifecycle": "completed",
+        "type": "agentMessage"
+      },
+      "created": 1792169579.1629028
+    },
+    {
+      "seq": 7,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "summary",
+      "data": {
+        "source": "agentMessage",
+        "text": "The issue in the discount.py file has been successfully fixed. The arithmetic error in the discounted_price function was corrected by changing the operation from multiplication by (1 + discount_fraction) to multiplication by (1 - discount_fraction). This ensures that a 10% discount on 100 correctly produces 90 instead of 110. All tests are now passing."
+      },
+      "created": 1792169579.1630433
+    },
+    {
+      "seq": 8,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "status",
+      "data": {
+        "source": "turn/completed",
+        "status": "completed"
+      },
+      "created": 1792169579.1655526
+    },
+    {
+      "seq": 9,
+      "task_id": "47f73b80-cb8b-491b-adbb-0c28c5b02a5b",
+      "kind": "bridge",
+      "data": {
+        "container_cleanup_confirmed": null,
+        "event": "execution_diagnostic",
+        "exit_code": 0,
+        "signals": [
+          "authentication_error",
+          "socket_error"
+        ],
+        "stage": "awaiting_turn_completion",
+        "stderr_bytes": 3889
+      },
+      "created": 1792169579.5639663
+    }
+  ],
+  "model_patch_sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb",
+  "passed": true,
+  "source_inputs": {
+    "scripts/benchmark_codex_local.py": "c48794ed142e93cc28e670feb278a73d2a747d6ba34b731811da8d4cf7fb98c7",
+    "scripts/fixture_mcp.py": "1d3da67d07c3f085c0b5b11da31cee725575bc1fe0e3673f7f26aabf43b8dca2",
+    "agent-integration/codex/worker_entry.py": "9462a885488ec2139c459fdbc2671f307f9a3de09ef5d181501ae35d6220269c",
+    "desktop/agentglass/codex.py": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
+    "desktop/agentglass/model_proxy.py": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
+    "desktop/agentglass/store.py": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9"
+  },
+  "model_patch_artifact": "examples/verified-local-result/discount.py"
+}

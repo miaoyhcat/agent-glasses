@@ -1,0 +1,5 @@
+# Optional reproducible design/QA tools; not needed to run the bridge.
+cadquery==2.7.0
+matplotlib==3.10.8
+jsonschema==4.26.0
+cairosvg==2.9.1

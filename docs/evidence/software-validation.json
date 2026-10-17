@@ -1,0 +1,81 @@
+{
+  "generated_utc": "2026-10-16T16:51:03.986695+00:00",
+  "evidence_level": 2,
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "dependencies": {
+    "aiohttp": "3.14.4",
+    "cryptography": "50.0.2"
+  },
+  "checks": [
+    {
+      "name": "unit-tests",
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "log": "docs/evidence/unit-tests.txt",
+      "test_count": 62
+    },
+    {
+      "name": "https-demo",
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "python3",
+        "simulator/demo.py"
+      ],
+      "log": "docs/evidence/https-demo.txt"
+    },
+    {
+      "name": "engineering-calculations",
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "python3",
+        "scripts/engineering.py"
+      ],
+      "log": "docs/evidence/engineering-calculations.txt"
+    },
+    {
+      "name": "java-audio",
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "python3",
+        "scripts/check_java_audio.py"
+      ],
+      "log": "docs/evidence/java-audio.txt"
+    },
+    {
+      "name": "java-reliability",
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "python3",
+        "scripts/check_java_reliability.py"
+      ],
+      "log": "docs/evidence/java-reliability.txt"
+    },
+    {
+      "name": "native-firmware-core",
+      "exit_code": 0,
+      "passed": true,
+      "command": [
+        "python3",
+        "scripts/check_native_core.py"
+      ],
+      "log": "docs/evidence/native-firmware-core.txt"
+    }
+  ],
+  "physical_hardware_tests": 0,
+  "model_inference_executed": false,
+  "all_passed": true
+}

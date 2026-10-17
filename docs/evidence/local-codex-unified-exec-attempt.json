@@ -1,0 +1,111 @@
+{
+  "evidence_level": 2,
+  "physical_hardware_tests": 0,
+  "cli_version": "0.104.0",
+  "model": "local Qwen3:4b via Ollama 0.40.5",
+  "container_executed": false,
+  "model_requests": 2,
+  "task_status": "completed",
+  "events": [
+    {
+      "seq": 1,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "status",
+      "data": {
+        "stage": "awaiting_desktop_approval",
+        "status": "pending"
+      },
+      "created": 1792167903.1641622
+    },
+    {
+      "seq": 2,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "status",
+      "data": {
+        "status": "preparing"
+      },
+      "created": 1792167903.1642754
+    },
+    {
+      "seq": 3,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "bridge",
+      "data": {
+        "event": "initialized",
+        "platform": "unknown"
+      },
+      "created": 1792167903.3779905
+    },
+    {
+      "seq": 4,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "status",
+      "data": {
+        "stage": "codex_turn_requested",
+        "status": "running"
+      },
+      "created": 1792167906.3532
+    },
+    {
+      "seq": 5,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "item",
+      "data": {
+        "id": "msg_815305",
+        "lifecycle": "started",
+        "type": "agentMessage"
+      },
+      "created": 1792167992.732715
+    },
+    {
+      "seq": 6,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "item",
+      "data": {
+        "id": "msg_815305",
+        "lifecycle": "completed",
+        "type": "agentMessage"
+      },
+      "created": 1792168002.5783675
+    },
+    {
+      "seq": 7,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "summary",
+      "data": {
+        "source": "agentMessage",
+        "text": "I cannot access or read the `discount.py` file due to sandbox restrictions. Please provide the content of `discount.py` or confirm if there's another way to proceed with the issue."
+      },
+      "created": 1792168002.5784311
+    },
+    {
+      "seq": 8,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "status",
+      "data": {
+        "source": "turn/completed",
+        "status": "completed"
+      },
+      "created": 1792168002.579571
+    },
+    {
+      "seq": 9,
+      "task_id": "35ae79f9-e187-4782-8632-8538f56aee7f",
+      "kind": "bridge",
+      "data": {
+        "container_cleanup_confirmed": null,
+        "event": "execution_diagnostic",
+        "exit_code": 0,
+        "signals": [
+          "socket_error"
+        ],
+        "stage": "awaiting_turn_completion",
+        "stderr_bytes": 3274
+      },
+      "created": 1792168003.110463
+    }
+  ],
+  "model_inference_executed": true,
+  "minimal_patch_security_guard": false,
+  "passed": false
+}

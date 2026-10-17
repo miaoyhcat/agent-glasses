@@ -1,0 +1,19 @@
+{
+  "revision":"H1 optical RFQ envelope, NOT an optical prescription",
+  "eye":"left", "exit_pupil_center_x_mm":-32.5,
+  "panel_candidate":"GZOT VGA020HW02C (100mW supplier typical, not complete engine power)",
+  "panel_rails_v":[5.5,1.8,-4.5],
+  "rail_note":"A 3.3V-only power tree is invalid. Bias generation, sequencing and logic-level conversion are mandatory; controller details remain RFQ-gated.",
+  "panel_width_px":640,"panel_height_px":480,"pitch_um":6.3,
+  "collimator_focal_mm":14.3,
+  "virtual_distance_mm":2000,
+  "eye_relief_target_mm":18,
+  "eyebox_target_mm":[8,6],
+  "transmission_target_min":0.70,
+  "combiner_reflectance_assumption":0.30,
+  "path_transmission_assumption":0.65,
+  "panel_peak_luminance_cd_m2":5000,
+  "focal_placement_errors_mm":[-0.10,-0.05,0,0.05,0.10],
+  "unknowns":["actual lens prescription","wavefront error","MTF","exit-pupil geometry","ghosts","distortion","stray light","final engine electrical interface and initialization","luminance and power at eye","photobiological safety"],
+  "note":"Panel peak luminance is supplier data. Multiplying radiance by simple path factors is an upper-bound-style budgeting exercise, not a calibrated at-eye optical result."
+}

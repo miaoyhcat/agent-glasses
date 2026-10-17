@@ -1,0 +1,99 @@
+{
+  "evidence_level": 2,
+  "scope": "unpowered fixture only; RFQ optical envelope excluded",
+  "brep_valid": true,
+  "pairwise_checks": [
+    {
+      "pair": [
+        "front",
+        "left_temple"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "front",
+        "left_cover"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "front",
+        "right_temple"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "front",
+        "right_cover"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "left_temple",
+        "left_cover"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "left_temple",
+        "right_temple"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "left_temple",
+        "right_cover"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "left_cover",
+        "right_temple"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "left_cover",
+        "right_cover"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "pair": [
+        "right_temple",
+        "right_cover"
+      ],
+      "overlap_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "old_lid_placement_overlap_mm3": 123.92849592094655,
+  "cover_side_gap_mm": 0.2,
+  "screw_nominal_radial_clearance_mm": 0.1,
+  "not_verified": [
+    "supplier components",
+    "screw engagement strength",
+    "printing tolerances",
+    "hinge kinematics",
+    "lens retention",
+    "optical alignment"
+  ],
+  "passed": true
+}

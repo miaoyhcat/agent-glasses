@@ -1,0 +1,90 @@
+{
+  "evidence_level": 2,
+  "agent_backend": "explicit simulator; not Codex/model inference",
+  "transport": "real loopback HTTPS with generated local certificate",
+  "assertions": {
+    "unauthorized_request_blocked": true,
+    "pair_success": true,
+    "task_pending_local_approval": true,
+    "idempotency": true,
+    "mobile_cannot_approve": true,
+    "local_operator_approval": true,
+    "simulated_task_completed": true,
+    "event_cursor_resume": true,
+    "media_sha256_commit": true,
+    "audit_chain_valid": true,
+    "original_project_unchanged": true,
+    "pass": true
+  },
+  "events": [
+    {
+      "seq": 1,
+      "kind": "status",
+      "data": {
+        "stage": "awaiting_desktop_approval",
+        "status": "pending"
+      }
+    },
+    {
+      "seq": 2,
+      "kind": "status",
+      "data": {
+        "status": "preparing"
+      }
+    },
+    {
+      "seq": 3,
+      "kind": "snapshot",
+      "data": {
+        "bytes": 14,
+        "files": 1
+      }
+    },
+    {
+      "seq": 4,
+      "kind": "status",
+      "data": {
+        "stage": "SIMULATOR_NO_CODEX",
+        "status": "running"
+      }
+    },
+    {
+      "seq": 5,
+      "kind": "item",
+      "data": {
+        "lifecycle": "started",
+        "simulated": true,
+        "type": "commandExecution"
+      }
+    },
+    {
+      "seq": 6,
+      "kind": "item",
+      "data": {
+        "execution_status": "completed",
+        "exit_code": 0,
+        "lifecycle": "completed",
+        "simulated": true,
+        "type": "commandExecution"
+      }
+    },
+    {
+      "seq": 7,
+      "kind": "summary",
+      "data": {
+        "simulated": true,
+        "text": "模拟任务完成；未调用模型或执行项目代码。"
+      }
+    },
+    {
+      "seq": 8,
+      "kind": "status",
+      "data": {
+        "source": "simulator",
+        "status": "completed"
+      }
+    }
+  ],
+  "duration_seconds": 0.0548,
+  "hardware_test": false
+}

@@ -1,0 +1,27 @@
+{
+  "evidence_level": 2,
+  "generated_utc": "2026-10-16T15:17:51.068053+00:00",
+  "platformio_telemetry_enabled": false,
+  "physical_hardware_tests": 0,
+  "targets": {
+    "agentglass_d0": {
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/evidence/firmware-build.txt",
+      "ram_bytes": 34132,
+      "program_bytes": 695421,
+      "binary_sha256": "e9e9ad6287f683ee82f718bc26ae1b0947a08765b7037990d0d573b777922ee9",
+      "binary_bytes": 695856
+    },
+    "agentglass_tglass_v2": {
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/evidence/tglass-v2-build.txt",
+      "ram_bytes": 63212,
+      "program_bytes": 706261,
+      "binary_sha256": "300b48c2c3cb8ad1c2adee501675dbf2f57d73f86d2fdcc9e5a8d541dc5a895c",
+      "binary_bytes": 706624
+    }
+  },
+  "all_passed": true
+}

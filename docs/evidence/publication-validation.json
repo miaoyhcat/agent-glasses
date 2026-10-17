@@ -1,0 +1,21 @@
+{
+  "evidence_level": 2,
+  "generated_utc": "2026-10-17T13:46:02.952191+00:00",
+  "release_tag": "v0.2.0-source.1",
+  "software_version": "0.2.0",
+  "publication_scope": "Documentation, source organization, comparison and local Git distribution",
+  "runtime_build_input_hashes_match": true,
+  "tested_apk_hash_matches": true,
+  "tested_wheel_hash_matches": true,
+  "vendor_source_hashes_match": true,
+  "comparison_source_ids_resolve": true,
+  "comparison_rows": 8,
+  "market_database_products": 16,
+  "source_references": 69,
+  "recorded_host_tests": 62,
+  "historical_package_readback": "docs/evidence/package-readback.json records the v0.2 engineering archive; publication documentation changes are separately scoped here",
+  "physical_hardware_tests": 0,
+  "remote_github_created": false,
+  "license": "LicenseRef-AgentGlass-Personal-Noncommercial-1.0",
+  "commercial_contact": "3277681859@qq.com"
+}

@@ -1,0 +1,26 @@
+{
+  "revision": "H1-pre-EVT-0.1",
+  "evidence": "engineering assumptions; not measurements; D0 busy-loop firmware does not meet this budget",
+  "battery": {"part":"Grepow GRP1654M1", "cells_parallel":3, "mah_each":150, "nominal_v":3.7, "usable_fraction":0.90, "end_of_life_capacity":0.80, "pack_note":"Supplier-built protected, matched 1S3P pack required. Do not hand-parallel loose cells."},
+  "converter_efficiency":0.88,
+  "battery_quiescent_w":0.002,
+  "states": {
+    "connected_idle":{"rail_w":0.022,"description":"BLE connected, display/camera/amp off, light sleep; not current D0 firmware"},
+    "hud":{"rail_w":0.250,"description":"MCU + BLE + assumed 150mW optical module; engine power unconfirmed"},
+    "voice":{"rail_w":0.520,"description":"capture or open-ear playback, phone ASR/network excluded"},
+    "photo":{"rail_w":0.750,"description":"camera on, JPEG capture, persistent local write"},
+    "record":{"rail_w":1.000,"description":"QVGA JPEG frame capture + SD; not H.264"},
+    "transfer":{"rail_w":0.900,"description":"burst Wi-Fi, storage read and MCU; not implemented in D0"}
+  },
+  "profiles": {
+    "mixed_defined":{"connected_idle":0.73,"hud":0.18,"voice":0.05,"photo":0.01,"record":0.01,"transfer":0.02},
+    "display_heavy":{"connected_idle":0.20,"hud":0.60,"voice":0.10,"photo":0.02,"record":0.03,"transfer":0.05},
+    "continuous_display":{"hud":1.0},
+    "continuous_voice":{"voice":1.0},
+    "continuous_record":{"record":1.0},
+    "continuous_transfer":{"transfer":1.0},
+    "connected_standby":{"connected_idle":1.0}
+  },
+  "sensitivity":{"idle_power_multipliers":[1,2,4],"optics_hud_extra_w":[0,0.15,0.35],"capacity_factors":[0.6,0.8,1.0]},
+  "thermal":{"effective_k_per_w":[18,35,65],"ambient_c":[25,35],"contact_design_limit_c":40,"note":"Lumped steady-state sensitivity, not FEA or IEC limit. Cell/skin hotspot can be worse."}
+}

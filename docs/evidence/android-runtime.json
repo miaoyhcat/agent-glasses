@@ -1,0 +1,23 @@
+{
+  "evidence_level": 2,
+  "android_api": 26,
+  "physical_hardware_tests": 0,
+  "model_inference_executed": false,
+  "apk_sha256": "69aacf25db23bc8b4f0ce71a2a60fcc434bf93cdda5ade1f39072dbd039e6c81",
+  "checks": {
+    "android_booted": true,
+    "apk_installed": true,
+    "activity_launched": true,
+    "android_tls_pair_and_projects": true,
+    "android_task_received_pending": true,
+    "android_displays_real_simulator_completion": true,
+    "no_app_fatal_exception": true
+  },
+  "limitations": [
+    "No BLE peripheral",
+    "No real ASR/TTS engine acceptance",
+    "No optics/camera/battery/Windows tests"
+  ],
+  "generated_utc": "2026-10-16T16:21:25.617230+00:00",
+  "passed": true
+}

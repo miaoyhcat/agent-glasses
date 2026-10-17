@@ -1,0 +1,13 @@
+assembly,qty,unit_g,min_unit_g,max_unit_g,evidence,notes
+front_frame_and_nose_support,1,10,8,13,estimate,PA12 or TR90 geometry requires process validation
+temple_shells_and_covers,2,7.2,5.9,9.9,CAD_plus_allowance,6.844g from revised geometry plus margin; 0.8mm wall is not yet qualified
+optical_engine_and_combiner,1,7,5,12,RFQ_PENDING,must include bonded optics carrier baffle and driver
+prescription_lenses_pair,1,7,4,14,estimate,prescription dependent; cannot omit from 50g comparison
+GRP1654M1_cells,3,2.95,2.75,3.15,supplier,S15; pack protection and tabs counted separately
+pack_tabs_protection_NTC,1,1.5,1,2.3,estimate,supplier matched protected 1S3P assembly
+main_module_PCB_passives_and_RF,1,5.5,4,7.5,estimate,includes WROOM module board shielding antenna zone
+camera_and_connector,1,1.2,0.8,2,estimate,miniature DVP module; D0 Waveshare board is much larger
+microphones_speaker_and_acoustics,1,2.5,1.8,4,estimate,two mics planned; D0 one mic
+FPC_wire_hinges_screws_gaskets,1,4,2.5,6,estimate,all moving interconnects and strain relief
+privacy_switch_LED_charging_contacts,1,1.5,1,2.5,estimate,not a software-only privacy LED
+manufacturing_allowance,1,3,1.5,5,estimate,adhesives coating tolerances missing detail reserve

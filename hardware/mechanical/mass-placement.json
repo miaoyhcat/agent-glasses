@@ -1,0 +1,23 @@
+{
+ "coordinate_note":"x: wearer left negative; z: rearward from nose/front plane. Lumped assembly positions, not a full detailed CAD mass model.",
+ "placements":[
+  {"group":"front_frame_and_nose_support","fraction":1,"x":0,"z":0},
+  {"group":"temple_shells_and_covers","fraction":0.5,"x":-68,"z":43},
+  {"group":"temple_shells_and_covers","fraction":0.5,"x":68,"z":43},
+  {"group":"optical_engine_and_combiner","fraction":1,"x":-32.5,"z":5},
+  {"group":"prescription_lenses_pair","fraction":1,"x":0,"z":0},
+  {"group":"GRP1654M1_cells","fraction":0.3333333333333333,"x":-68,"z":24},
+  {"group":"GRP1654M1_cells","fraction":0.3333333333333333,"x":-68,"z":47},
+  {"group":"GRP1654M1_cells","fraction":0.3333333333333333,"x":68,"z":47},
+  {"group":"pack_tabs_protection_NTC","fraction":1,"x":-68,"z":18},
+  {"group":"main_module_PCB_passives_and_RF","fraction":1,"x":68,"z":25},
+  {"group":"camera_and_connector","fraction":1,"x":68,"z":4},
+  {"group":"microphones_speaker_and_acoustics","fraction":1,"x":0,"z":70},
+  {"group":"FPC_wire_hinges_screws_gaskets","fraction":1,"x":0,"z":12},
+  {"group":"privacy_switch_LED_charging_contacts","fraction":1,"x":-50,"z":8},
+  {"group":"manufacturing_allowance","fraction":1,"x":0,"z":25}
+ ],
+ "ear_support_z_mm":115,
+ "nose_contact_area_total_mm2":100,
+ "note":"Static vertical reaction calculation only. Not comfort evidence; motion, friction, skin shape, hinge spring force and nosepad fit are omitted."
+}

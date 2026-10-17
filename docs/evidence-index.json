@@ -1,0 +1,312 @@
+{
+  "levels": {
+    "1": "已实测通过",
+    "2": "已通过软件测试或仿真",
+    "3": "已通过工程计算或文献论证",
+    "4": "待实物验证"
+  },
+  "physical_hardware_tests": 0,
+  "real_model_tasks_completed": 2,
+  "claims": [
+    {
+      "id": "SOFT-HOST",
+      "claim": "电脑端认证/任务/媒体状态机制",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "tests/test_core.py",
+      "record": "docs/evidence/software-validation.json",
+      "boundary": "62 host tests; no production security audit; no actual Docker execution"
+    },
+    {
+      "id": "SIM-HTTPS",
+      "claim": "无硬件端到端HTTPS链路",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "simulator/demo.py",
+      "record": "docs/evidence/https-demo.json",
+      "boundary": "Real TLS; explicitly simulated agent; no camera or model"
+    },
+    {
+      "id": "CODEX-SCHEMA",
+      "claim": "官方Codex请求结构",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/check_codex_schema.py",
+      "record": "docs/evidence/codex-schema-check.json",
+      "boundary": "CLI0.162.1 schemas; not actual inference"
+    },
+    {
+      "id": "CODEX-INIT",
+      "claim": "真实CLI初始化",
+      "evidence_level": 2,
+      "status": "partial",
+      "implementation_or_input": "desktop/agentglass/codex.py",
+      "record": "docs/evidence/codex-live-probe.json",
+      "boundary": "initialize received; thread/start timeout; zero inference"
+    },
+    {
+      "id": "CODEX-E2E",
+      "claim": "真实检查修复测试连续会话",
+      "evidence_level": 4,
+      "status": "unverified",
+      "implementation_or_input": "agent-integration/codex/README.md",
+      "record": "docs/acceptance-matrix.csv",
+      "boundary": "Target computer, Docker and account required"
+    },
+    {
+      "id": "CODEX-SEC",
+      "claim": "无宿主凭据、无容器网络的stdio模型代理隔离方案",
+      "evidence_level": 4,
+      "status": "unverified",
+      "implementation_or_input": "desktop/agentglass/isolation.py",
+      "record": "SECURITY.md",
+      "boundary": "Construction, redaction, quotas and stdio transport tested; real Docker run unverified; no host API key in worker"
+    },
+    {
+      "id": "BUILD-ANDROID",
+      "claim": "Android调试APK构建",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/build_android.py",
+      "record": "docs/evidence/build-manifest.json",
+      "boundary": "v0.2.0 official SDK build, signature verified; exact APK also passed API26 emulator runtime, not physical phone"
+    },
+    {
+      "id": "AUDIO-JVM",
+      "claim": "实际Android PCM转换器",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "mobile/android/app/src/main/java/dev/agentglass/PcmWave.java",
+      "record": "docs/evidence/java-audio-tests.json",
+      "boundary": "Seven host JVM assertions; not acoustic quality"
+    },
+    {
+      "id": "BUILD-FW",
+      "claim": "D0 N16R8与P1 TGlass V2两个目标交叉编译",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "firmware/platformio.ini",
+      "record": "docs/evidence/firmware-validation.json",
+      "boundary": "Both drivers compiled, not flashed; P1 is display-only split developer kit, not H1 integrated optics"
+    },
+    {
+      "id": "ELEC-CAD",
+      "claim": "联锁测试板CAD和网表一致",
+      "evidence_level": 2,
+      "status": "passed_with_warnings",
+      "implementation_or_input": "scripts/check_interlock.py",
+      "record": "docs/evidence/interlock-netlist-check.json",
+      "boundary": "47 pads /10nets /0errors /0unconnected /18warnings; no electrical test"
+    },
+    {
+      "id": "ELEC-SAFE",
+      "claim": "相机隐私与故障联锁",
+      "evidence_level": 4,
+      "status": "unverified",
+      "implementation_or_input": "hardware/power/power-tree.md",
+      "record": "docs/acceptance-matrix.csv",
+      "boundary": "Electrical LED faults only proposed; IO and obscuration unresolved"
+    },
+    {
+      "id": "MECH-CAD",
+      "claim": "STEP结构有效及盖板装配干涉回归",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/build_cad.py",
+      "record": "docs/evidence/cad-assembly-check.json",
+      "boundary": "10 overlap checks pass; old geometry rejected; not final hinge/Rx frame or actual supplier optical engine"
+    },
+    {
+      "id": "MASS",
+      "claim": "66.45g完整预算",
+      "evidence_level": 3,
+      "status": "calculated",
+      "implementation_or_input": "hardware/bom/mass-budget.csv",
+      "record": "docs/evidence/engineering-results.json",
+      "boundary": "No weighing; broad independent min/max; initial50g target missed"
+    },
+    {
+      "id": "ENERGY",
+      "claim": "定义混合8.486h与重显示3.538h",
+      "evidence_level": 3,
+      "status": "calculated",
+      "implementation_or_input": "hardware/power/budget.json",
+      "record": "docs/evidence/engineering-results.json",
+      "boundary": "Unmeasured assumptions; D0 not optimized; +150mW HUD makes mixed6.972h"
+    },
+    {
+      "id": "THERM",
+      "claim": "热敏感性而非温度证明",
+      "evidence_level": 3,
+      "status": "calculated",
+      "implementation_or_input": "hardware/power/budget.json",
+      "record": "docs/evidence/engineering-results.json",
+      "boundary": "Lumped sensitivity, no FEA; continuous recording not qualified"
+    },
+    {
+      "id": "OPTICS",
+      "claim": "640480约20度近轴目标",
+      "evidence_level": 3,
+      "status": "calculated",
+      "implementation_or_input": "hardware/optics/specification.json",
+      "record": "docs/evidence/engineering-results.json",
+      "boundary": "Panel S12; no optical prescription/raytrace/eyebox verification"
+    },
+    {
+      "id": "COST",
+      "claim": "185至495美元预算分配",
+      "evidence_level": 3,
+      "status": "assumption",
+      "implementation_or_input": "hardware/bom/cost-budget.json",
+      "record": "docs/evidence/engineering-results.json",
+      "boundary": "Not quotation; excludesNRE/tools/certification/phone/API"
+    },
+    {
+      "id": "MARKET",
+      "claim": "16款代表产品与全球技术比较",
+      "evidence_level": 3,
+      "status": "literature",
+      "implementation_or_input": "docs/market-database.json",
+      "record": "docs/sources.json",
+      "boundary": "69 indexed references; original 16-product research plus source-linked publication comparison; manufacturer figures distinguished from project budgets"
+    },
+    {
+      "id": "H1-MFG",
+      "claim": "完整整机可制造性",
+      "evidence_level": 4,
+      "status": "blocked",
+      "implementation_or_input": "docs/manufacturing-guide.md",
+      "record": "docs/risks-and-limitations.md",
+      "boundary": "OEM optical engine/full main PCB/FPC/pack qualification missing"
+    },
+    {
+      "id": "H1-PHYSICAL",
+      "claim": "重量续航光学佩戴合规",
+      "evidence_level": 4,
+      "status": "unverified",
+      "implementation_or_input": "docs/acceptance-matrix.csv",
+      "record": "docs/verification-report.md",
+      "boundary": "Zero physical hardware tests"
+    },
+    {
+      "id": "LICENSE",
+      "claim": "个人非商业源代码可查看授权",
+      "evidence_level": 3,
+      "status": "text_delivered",
+      "implementation_or_input": "LICENSE",
+      "record": "NOTICE.md",
+      "boundary": "Legal owner pending; third-party rights excluded; not legal approval"
+    },
+    {
+      "id": "ANDROID-RUNTIME",
+      "claim": "实际APK在官方API26模拟器运行",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/check_android_runtime.py",
+      "record": "docs/evidence/android-runtime.json",
+      "boundary": "7 checks including real TLS and local approval; agent SIMULATOR; no BLE/camera/ASR/physical-phone validation"
+    },
+    {
+      "id": "ANDROID-QUEUE",
+      "claim": "实际Android共享类队列与原子持久化",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "tests/ReliabilityCheck.java",
+      "record": "docs/evidence/java-reliability-tests.json",
+      "boundary": "13 assertions including 10000 submissions; process simulation is not physical flash power-loss validation"
+    },
+    {
+      "id": "FW-NATIVE",
+      "claim": "实际固件媒体ID与HUD光栅核心",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/check_native_core.py",
+      "record": "docs/evidence/native-core-tests.json",
+      "boundary": "256 ID vectors and raster boundary tests; no DMA or hardware timing proof"
+    },
+    {
+      "id": "BROKER-TRANSPORT",
+      "claim": "真实stdio分块ACK和宿主模型密钥留存",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "tests/test_model_broker.py",
+      "record": "docs/evidence/software-validation.json",
+      "boundary": "Real local TCP mock upstream and worker; not a paid provider or Docker run; tokens/call quotas do not establish a dollar spending cap"
+    },
+    {
+      "id": "P1-SUPPLY",
+      "claim": "完整近眼开发板采购路径及实际驱动",
+      "evidence_level": 3,
+      "status": "literature_and_compiled",
+      "implementation_or_input": "hardware/optics/p1-tglass-v2.md",
+      "record": "docs/sources.json",
+      "boundary": "H715 official page snapshot, vendor stock/price may change; not purchased; no claim of H1 size/weight/endurance"
+    },
+    {
+      "id": "CODEX-LOCAL",
+      "claim": "官方CLI+真实本地模型修复公开样例并独立复测通过",
+      "evidence_level": 2,
+      "status": "passed_public_fixture_only",
+      "implementation_or_input": "desktop/agentglass/model_proxy.py",
+      "record": "docs/evidence/local-codex-broker.json",
+      "boundary": "Diagnostic CLI0.104.0/local qwen3:4b-instruct via constrained MCP; 5 genuine model calls; 2 independent tests; not CLI0.162.1 Docker/OpenAI production acceptance"
+    },
+    {
+      "id": "WORKSPACE-LINKS",
+      "claim": "连续任务不跟随模型创建的链接设置宿主权限",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "desktop/agentglass/security.py",
+      "record": "tests/test_worker_tree.py",
+      "boundary": "POSIX regression and cleanup gates pass; quiescent owner-controlled tree required; Windows runtime and hard disk quota unverified"
+    },
+    {
+      "id": "ACCEPTANCE-STAGING",
+      "claim": "独立样例验收排除影子测试模块、旧字节码和测试篡改",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/accept_codex_worker.py",
+      "record": "tests/test_acceptance_staging.py",
+      "boundary": "Fixed public arithmetic fixture only; actual independent Docker container has not executed"
+    },
+    {
+      "id": "CODEX-LOCAL-REPRO",
+      "claim": "实际交付脚本再次完成真实CLI/本地模型公开样例修复",
+      "evidence_level": 2,
+      "status": "passed_public_fixture_only",
+      "implementation_or_input": "scripts/benchmark_codex_local.py",
+      "record": "docs/evidence/local-codex-reproduction.json",
+      "boundary": "5 genuine local-model requests; 2 independent tests; CLI0.104.0 only; not Docker or paid OpenAI provider acceptance"
+    },
+    {
+      "id": "PACKAGE-READBACK",
+      "claim": "交付候选ZIP解压后重新通过全部六组检查及62项主机测试",
+      "evidence_level": 2,
+      "status": "passed",
+      "implementation_or_input": "scripts/verify.py",
+      "record": "docs/evidence/package-readback.json",
+      "boundary": "Historical v0.2 engineering ZIP, with archive hash recorded. Publication documentation is separately scoped in publication-validation.json; compiled inputs retain their tested hashes."
+    },
+    {
+      "id": "PUBLIC-COMPARISON",
+      "claim": "公开源码发布版的7款代表性产品比较与项目特色索引",
+      "evidence_level": 3,
+      "status": "source_linked",
+      "implementation_or_input": "docs/product-comparison.json",
+      "record": "docs/product-comparison.md",
+      "boundary": "Manufacturer positioning/specifications and project implementation; not normalized hardware performance testing"
+    },
+    {
+      "id": "SOURCE-PUBLICATION",
+      "claim": "源码公开发布的授权、比较与设计资料一致性检查",
+      "evidence_level": 2,
+      "status": "checked_at_packaging",
+      "implementation_or_input": "scripts/package_source_release.py",
+      "record": "docs/evidence/publication-validation.json",
+      "boundary": "Local repository and offline Git distribution; remote creation is a separate operation; original engineering evidence retains its scope"
+    }
+  ],
+  "real_openai_model_tasks_completed": 0,
+  "real_model_inference_attempted": true,
+  "real_model_counter_definition": "Independently accepted executions of the public fixture, not raw completed turns; no production OpenAI/Docker task accepted"
+}

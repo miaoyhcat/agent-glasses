@@ -1,0 +1,45 @@
+AgentGlass 个人非商业使用许可证 1.0
+AgentGlass Personal Noncommercial License 1.0
+
+版权所有人 / Copyright owner: [待项目所有者填写法定名称 / TO BE COMPLETED BY THE PROJECT OWNER]
+年份 / Year: 2026
+商业授权联系邮箱 / Commercial licensing: 3277681859@qq.com
+
+本项目仅允许个人非商业学习、研究、修改及自用。未经著作权人事先书面许可，严禁将本项目原创成果用于商业用途，包括商业销售、生产销售、商业集成、商业授权或其他以商业利益为目的的使用。违者必究。
+
+一、适用范围
+本许可证仅适用于本仓库中由许可方享有相应授权权利、且未另行标注许可证的原创软件源代码、原创硬件电路和PCB设计、原创结构/CAD文件、原创文档、图示及其他原创成果（合称“许可材料”）。本许可证不将不受著作权保护的事实、方法或公有领域材料转变为专有财产，也不推定生成式工具产出的内容必然享有独占著作权。
+
+二、有限授权
+在遵守本许可证的前提下，许可方在其有权授权的范围内，允许自然人免费查看、复制、研究、修改许可材料，并为个人非商业自用制作实体设备。允许以非商业方式分享原始或修改后的许可材料，但应附带本许可证、保留原有署名和权利声明、显著标注修改内容及修改日期，不得移除商业限制或声称获得许可方背书。分享者只能授予其实际拥有的权利。
+
+三、商业使用须事先书面许可
+本许可证不授予商业使用权。商业使用包括但不限于：销售许可材料或据其生产的设备；为销售而生产；面向客户的商业定制、系统集成或服务；商业产品或付费服务中的使用、嵌入、分发或授权；为企业内部业务经营而实施许可材料；以及其他主要为取得直接或间接商业利益的使用。上述用途无论是否单独向许可材料收取费用，均需联系 3277681859@qq.com 取得著作权人事先书面许可。个人非商业使用权不得解释为商业制造许可。
+
+四、第三方权利与专利
+第三方库、工具链、数据手册、商标、专利、参考设计和外部资料保留原权利人的权利，遵守各自许可证或适用条款。本许可证不得替代、撤销、缩减或扩张这些第三方条款；详见 NOTICE.md。除许可方另行明确书面授予外，本许可证不提供专利、商标或第三方技术的使用许可，不构成不侵权或可自由实施（FTO）保证。若第三方许可证依法要求额外的源代码、重链接或再分发条件，分发者应另行满足；不得把许可方的非商业限制加诸第三方作品本身。
+
+五、无保证与责任范围
+许可材料按现状提供。在法律允许的范围内，许可方不对适销性、特定用途适用性、不侵权、可制造性、可靠性、光学/电气/电池安全、认证或性能作出保证。软件编译、自动化测试、工程计算与实物认证是不同事项。使用者对具体设计复核、制造、装配、测试和使用承担相应责任。任何责任限制不排除适用法律不得排除的责任。
+
+六、终止与保留权利
+违反本许可证时，本许可证授予的权限终止，使用者应停止未经许可的使用及分发。权利人可依法主张救济；任何恢复许可须由权利人书面确认。未明确授予的权利予以保留。依法享有、不得以协议排除的权利不受影响。
+
+七、文本性质
+这是具有非商业限制的“源代码可查看”许可，不是符合 OSI 开放源代码定义的开源许可证。本仓库不以 MIT、Apache-2.0、GPL 等常规开源许可证授权其原创成果。正式对外商业授权或发布前，应由项目所有者补全法定名称并进行专业法律审核。未填写的字段不应被第三方擅自冒用或虚构。本许可证不自行指定尚未确认的法域、法院或权利人身份。
+
+English terms
+
+1. Scope. This license applies only to original material in this repository for which the licensor actually has authority to grant rights, unless a separate license is identified. It covers original software, hardware/PCB designs, CAD/structural files, documentation and other original deliverables. It does not create exclusive rights in facts, methods, public-domain material or material that is not legally protected.
+
+2. Personal noncommercial grant. Subject to these terms, a natural person may view, copy, study, modify and use the licensed material for personal noncommercial learning, research and self-use, including making devices for that person's own noncommercial use. Noncommercial sharing of original or modified material is permitted if this license, attribution and notices are retained and changes and dates are clearly identified. No endorsement or greater rights may be asserted.
+
+3. Commercial restriction. Prior written permission from the copyright owner is required for any commercial use, including commercial sale, production for sale, commercial integration, licensing, customer services, incorporation into commercial products or paid services, business operations, or other use primarily intended for direct or indirect commercial benefit. This applies whether or not the material is charged for separately. Unauthorized commercial use is strictly prohibited and the rights holder reserves the right to pursue legal remedies. Contact: 3277681859@qq.com.
+
+4. Third parties. Third-party software, tools, documentation, designs, trademarks and patents retain their original rights and terms. This license neither replaces those terms nor claims exclusive ownership of third-party works. No patent, trademark, third-party license or freedom-to-operate assurance is granted. Distributors must separately comply with any applicable source, relinking and redistribution obligations.
+
+5. No warranty. To the extent allowed by law, the licensed material is provided AS IS without warranties of fitness, merchantability, non-infringement, safety, manufacturability, certification or performance. Software tests and engineering calculations are not physical product certification. Mandatory statutory rights and liabilities are not excluded.
+
+6. Termination. Rights granted here terminate upon violation. Unauthorized use and distribution must stop. Reinstatement requires the rights holder's written agreement. All rights not expressly granted are reserved, subject to non-waivable rights under applicable law.
+
+7. Status. This is a source-available, personal-noncommercial license, not an OSI-compliant open-source license. The owner must supply their legal name and obtain professional legal review before formal commercial licensing or release. This text does not invent an owner identity, governing jurisdiction or court. The Chinese and English text express the same restrictions; any material ambiguity should be clarified in writing with the rights holder.

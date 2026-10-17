@@ -1,0 +1,9 @@
+{
+ "scoring_note":"Scores 1..5 are transparent engineering judgments, not measured product ratings. A failed hard gate prevents manufacturing release regardless of score.",
+ "weights":{"weight":0.15,"energy":0.15,"functions":0.20,"procurement":0.20,"openness":0.15,"manufacturing":0.10,"comfort":0.05},
+ "candidates":[
+  {"id":"A-H1","name":"ESP32-S3 + OEM single-eye optic + phone/cloud","scores":{"weight":3,"energy":3,"functions":4,"procurement":2,"openness":5,"manufacturing":2,"comfort":3},"nominal_mass_g":66.45,"mass_basis":"own budget, not measurement","hard_gates":["complete optical engine procurement","full hardware release","low-power firmware and physical validation"],"development_choice":true},
+  {"id":"B-standalone","name":"Android AR SoC + binocular waveguide","scores":{"weight":2,"energy":1,"functions":5,"procurement":1,"openness":2,"manufacturing":1,"comfort":2},"nominal_mass_g":null,"mass_basis":"do not substitute another vendor product mass for a new design","hard_gates":["SoC BSP and NDA access","waveguide optical supplier","higher thermal budget"],"development_choice":false},
+  {"id":"C-platform","name":"Intact Halo SDK platform","scores":{"weight":5,"energy":3,"functions":2,"procurement":3,"openness":4,"manufacturing":4,"comfort":4},"nominal_mass_g":null,"mass_basis":"vendor just-over-40g claim; not a verified AgentGlass build","hard_gates":["documented durable offline video cache","actual delivery and full hardware files","all required functions validated"],"development_choice":false}
+ ]
+}

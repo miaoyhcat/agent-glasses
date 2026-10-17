@@ -1,0 +1,19 @@
+{
+  "evidence_level": 2,
+  "generated_utc": "2026-10-17T13:46:02.951594+00:00",
+  "required_files_present": true,
+  "local_markdown_links_valid": true,
+  "build_input_output_hashes_match": true,
+  "no_private_key_patterns_found": true,
+  "source_count": 69,
+  "market_product_count": 16,
+  "acceptance_cases": 38,
+  "host_test_count": 62,
+  "physical_hardware_tests": 0,
+  "exact_android_runtime_artifact": true,
+  "third_party_vendor_hashes_match": true,
+  "local_model_public_fixture_passed": true,
+  "note": "Pattern scan is not a general secret or security audit. ZIP content is checked by SHA-256 on readback.",
+  "publication_comparison_rows": 8,
+  "prominent_licensing_verified": true
+}

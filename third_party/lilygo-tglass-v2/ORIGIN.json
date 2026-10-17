@@ -1,0 +1,16 @@
+{
+  "upstream": "https://github.com/Xinyuan-LilyGO/LilyGO-T-Wristband-and-T-Glass",
+  "commit": "99ae22477daeaec55714f6b31e0219407dd52439",
+  "license": "MIT, unchanged third-party files, NOT relicensed under AgentGlass license",
+  "files_sha256": {
+    "LICENSE": "913879919918761b5b79f9aa804a772f1033e1fa28d425d6fa368448046ccc42",
+    "src/LilyGo_Wristband.h": "e30165d7ff48a03b96edf3d5305bb67768bc96a9d56eeb62aa1ab64455f4acd8",
+    "src/LilyGo_Wristband.cpp": "664aab8dc565e875a684f7f575d497fe670a265507fcdb578e88ddec640472d4",
+    "src/LilyGo_Display.h": "22f9ca946cf2b1102b08c1bc196295a623520cc6762f86bc970ff3726bc15a03",
+    "src/LilyGo_Button.h": "2856819343cb9dab6fe6a23e130107c6aab3eb93529f3dc1ef6431c2a6d291b9",
+    "src/LilyGo_Button.cpp": "3430bbe4f9f9fddc1ea1f0e3761e6c878882c5adc0734dde03cac7b4be5fb466",
+    "src/initSequence.h": "d0fb99aa56b11cb6148a22a4c97c5571d912d51f157eeec898f2fb0b297f5578",
+    "src/initSequence.cpp": "2c4117c3033a5f2d98ffe9cc16c3164a5a0b90a770a1dfa81a31fa2de6144968"
+  },
+  "subset": "Only display/button implementation and initialization; LVGL helper/examples excluded; driver still initializes IMU and RTC"
+}

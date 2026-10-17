@@ -1,0 +1,11 @@
+{
+  "evidence_level": 2,
+  "brep_valid": true,
+  "fixture_volume_mm3": {
+    "front": 4115.187,
+    "temple": 6333.538,
+    "cover": 443.128
+  },
+  "PA12_1_01g_cm3_shell_estimate_g": 6.844,
+  "note": "Geometry generation only. Shell volume is not the product mass budget. Frame/lens retention, hinge mechanism, ergonomic fit and final engine mounting are not released."
+}

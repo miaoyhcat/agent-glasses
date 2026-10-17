@@ -1,0 +1,19 @@
+ref,qty,value,package,part,requirement,source_id
+C1,1,1uF,0805,Qualified capacitor 1uF,X7R >=10V; account DC bias; CT capacitor per load-switch datasheet,generic specification / S21
+C2,1,1uF,0805,Qualified capacitor 1uF,X7R >=10V; account DC bias; CT capacitor per load-switch datasheet,generic specification / S21
+C3,1,1nF,0805,Qualified capacitor 1nF,X7R >=10V; account DC bias; CT capacitor per load-switch datasheet,generic specification / S21
+C4,1,100nF,0805,Qualified capacitor 100nF,X7R >=10V; account DC bias; CT capacitor per load-switch datasheet,generic specification / S21
+D1,1,VISIBLE_GREEN_LED,0805-like original land pattern,Qualified visible green LED; exact SKU NOT selected,Vf must remain in1.3-2.4V at3-4mA over planned temperature; check orientation K=pad1/A=pad2; modern >2.7V green LEDs are incompatible,engineering requirement; RFQ
+J1,1,3V3_IN,2.54mm header,Header 2 pins,SW1 is connector for external SPST; never fit an unreviewed permanent short,generic specification
+J2,1,MCU_CTRL,2.54mm header,Header 3 pins,SW1 is connector for external SPST; never fit an unreviewed permanent short,generic specification
+J3,1,CAMERA_3V3_OUT,2.54mm header,Header 2 pins,SW1 is connector for external SPST; never fit an unreviewed permanent short,generic specification
+R1,1,330,0805,Qualified resistor 330,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+R2,1,232k 1%,0805,Qualified resistor 232k 1%,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+R3,1,100k 1%,0805,Qualified resistor 100k 1%,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+R4,1,22.1k 1%,0805,Qualified resistor 22.1k 1%,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+R5,1,100k 1%,0805,Qualified resistor 100k 1%,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+R6,1,10k,0805,Qualified resistor 10k,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+R7,1,100k,0805,Qualified resistor 100k,1% unless explicitly tighter; >=0.1W; verify thermal/ESD rating,generic specification
+SW1,1,EXTERNAL_MASTER_SWITCH,2.54mm header,Header 2 pins,SW1 is connector for external SPST; never fit an unreviewed permanent short,generic specification
+U1,1,MCP6547-I/P,DIP8,MCP6547-I/P,Verify notch/pin1 against datasheet,S22
+U2,1,TPS22918DBVR,SOT23-6 DBV,TPS22918DBVR,Verify DBV land pattern before fabrication,S21

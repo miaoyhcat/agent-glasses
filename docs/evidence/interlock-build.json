@@ -1,0 +1,9 @@
+{
+  "type": "3.3V interlock test coupon only",
+  "components": 18,
+  "nets": 10,
+  "track_segments": 1313,
+  "vias": 6,
+  "manufacturing_release": false,
+  "note": "A generated routed coupon is not a validated camera safety system. DRC, netlist reconciliation and electrical fault injection are separate gates."
+}

@@ -1,0 +1,922 @@
+{
+  "files": {
+    ".gitattributes": {
+      "sha256": "848eae8019f0419fea7f5f5b489737d4798585669211f93ffec34471a92f7900",
+      "bytes": 99
+    },
+    ".github/ISSUE_TEMPLATE/bug_report.yml": {
+      "sha256": "e018cf90c5a2a8de0c1e41efb87601cd8042794c3ed7726ee4ce54a0c6e68caf",
+      "bytes": 662
+    },
+    ".github/ISSUE_TEMPLATE/feature_request.yml": {
+      "sha256": "f85301817ece04aa8fdaa5c6ea65bf1a571af9dae7c2a9832d6824619738fa56",
+      "bytes": 368
+    },
+    ".github/workflows/ci.yml": {
+      "sha256": "2a8838288b93cd2650bcf5cdb950856944a3d0ca068546d06beae2d9f53e06dc",
+      "bytes": 967
+    },
+    ".gitignore": {
+      "sha256": "a9d984f97704bd6edae5a9f0722d31d919b62917241bb999c4a94182a77d5ceb",
+      "bytes": 122
+    },
+    "CHANGELOG.md": {
+      "sha256": "1708b15acbd8fa0e21d7daa41ee835f078648e9b56c9fa22205233fdda975817",
+      "bytes": 681
+    },
+    "COMMERCIAL-LICENSE.md": {
+      "sha256": "bdc527b109a561d6f985fa74b965e7fec2b7e5cd6788f818950375f790c88784",
+      "bytes": 1897
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "46760578732cbfb8d98423c08d8e9f53a0b30a53729031dd3e06e32248726fa4",
+      "bytes": 1046
+    },
+    "LICENSE": {
+      "sha256": "b744e2116196d3ae1df9958eb88860bfb66f5ce92cf92db51f8a05f75e52ac0b",
+      "bytes": 7030
+    },
+    "NOTICE.md": {
+      "sha256": "4593980354ff499bf71e39fd266eb31d7a02204156fd4109b825fd12604f9664",
+      "bytes": 2916
+    },
+    "README.md": {
+      "sha256": "5224a3bbdb8fada70690a7a759c5fca6dca5b9c4d61758fd00277bbaa32f9a48",
+      "bytes": 6646
+    },
+    "README_EN.md": {
+      "sha256": "f45a1c0a1862e4e1adc937f8bd53419ab7e6c9e15c4f1ea6680d3024aeaaac04",
+      "bytes": 3947
+    },
+    "SECURITY.md": {
+      "sha256": "33efc7b6c5b5f82d5e98f2ab6cfaad83fdddf4499c632ba36477578195aecf42",
+      "bytes": 5216
+    },
+    "SOURCE-RELEASE.json": {
+      "sha256": "8890e3da842d4bd3ada17a94f5b7d5d44c32267a07bf9e7437ad71433b81a670",
+      "bytes": 337
+    },
+    "agent-integration/codex/Dockerfile": {
+      "sha256": "831516aac4221416fecef4c5603fa95ef99ea853f707972937b3a264bc813050",
+      "bytes": 785
+    },
+    "agent-integration/codex/README.md": {
+      "sha256": "19d25f2e8b0f11a4840ac9336bf989a5db5a6d92d4a3891a7602df06a7d67461",
+      "bytes": 4566
+    },
+    "agent-integration/codex/local-benchmark.md": {
+      "sha256": "e154dcdcf8a20b7dd937a9ad8fd26128de1c710e9e27362b1239ebfcba82ede5",
+      "bytes": 3596
+    },
+    "agent-integration/codex/worker_entry.py": {
+      "sha256": "9462a885488ec2139c459fdbc2671f307f9a3de09ef5d181501ae35d6220269c",
+      "bytes": 5152
+    },
+    "agent-integration/halo/README.md": {
+      "sha256": "e7eb06b441b4527dda80e867005b807bd24a8dc1f5333c5813c52217dd4537b7",
+      "bytes": 1254
+    },
+    "agent-integration/halo/hud_relay.py": {
+      "sha256": "50a4f3a4e58092cd00a028e96174b898603f891d92ba9adf3c3dfa74f4eb88f4",
+      "bytes": 2774
+    },
+    "agent-integration/protocols/protocol.md": {
+      "sha256": "1e4c21b507af1b61f999f62ee730e5707bcac6f068cf3e8bf603ef8f5d8cc8bb",
+      "bytes": 7783
+    },
+    "assets/agentglass-banner.svg": {
+      "sha256": "ee93e38ef511b4c46adab61db26f4574a4397291d2238654437e740532cdb26d",
+      "bytes": 2123
+    },
+    "assets/android-runtime.png": {
+      "sha256": "6342cc7cebed70bc0b56ba18c48cc262a89ecfc8195c58fc4f4e12981486b577",
+      "bytes": 58345
+    },
+    "assets/packaging-fixture.png": {
+      "sha256": "b6528c4ca19a6a4d6a6e9ef9d127e2ea7f99ac4b51be313405cb4158772b1c3b",
+      "bytes": 142232
+    },
+    "desktop/README.md": {
+      "sha256": "7ed47d8ce2148f59999544155d0124221f46560e145d5a1947406bfe666a976e",
+      "bytes": 1429
+    },
+    "desktop/agentglass/__init__.py": {
+      "sha256": "f53e6a5665810caf20f20751c295fada0ae91c3eceec898f8d56a8624484a484",
+      "bytes": 95
+    },
+    "desktop/agentglass/cli.py": {
+      "sha256": "5b9ccf9ebcb8ae37c33251f4156e876b6c813e3401796590222284d19d1dcf8a",
+      "bytes": 6611
+    },
+    "desktop/agentglass/cloud.py": {
+      "sha256": "23fcbf2173dfbfc450a0155b823b8a04f990a4162e182c1e70046cb88345db43",
+      "bytes": 2920
+    },
+    "desktop/agentglass/codex.py": {
+      "sha256": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
+      "bytes": 15803
+    },
+    "desktop/agentglass/doctor.py": {
+      "sha256": "588d05fea504e33b06d214260389c9672e924065bb42f54641294edcc9226ad9",
+      "bytes": 2395
+    },
+    "desktop/agentglass/isolation.py": {
+      "sha256": "bc83959676b68594b5939eee2b446f06c2e964c5f76267436115e55955b92dcc",
+      "bytes": 1824
+    },
+    "desktop/agentglass/media.py": {
+      "sha256": "6de29f7e2fd8edbaf053de0a7ca65112f66500f6be653da199449d45627b5884",
+      "bytes": 5639
+    },
+    "desktop/agentglass/model_proxy.py": {
+      "sha256": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
+      "bytes": 5756
+    },
+    "desktop/agentglass/protocol.py": {
+      "sha256": "e22fe5f56907d11ae353dbf2b137e711c10d005c2a295162e20ab27615cdaafb",
+      "bytes": 2869
+    },
+    "desktop/agentglass/security.py": {
+      "sha256": "7ce33cc56894381a39e7c52060c46473966b64fe24a399b404c1b73007609387",
+      "bytes": 7147
+    },
+    "desktop/agentglass/server.py": {
+      "sha256": "42feca1581f34a03e5a3c670d8e7dbe8536a859680db71c7447490b1fe06a821",
+      "bytes": 19989
+    },
+    "desktop/agentglass/store.py": {
+      "sha256": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9",
+      "bytes": 9167
+    },
+    "desktop/agentglass/web/index.html": {
+      "sha256": "620d52339c6ba5798d8843ebf4a946e31a1612fff1b6118349f74d79257496e8",
+      "bytes": 6887
+    },
+    "docs/acceptance-matrix.csv": {
+      "sha256": "eb99ca1e7326379187bfdfa3547df503af79a1cd15f639e750fccae5e65ade15",
+      "bytes": 9029
+    },
+    "docs/architecture-candidates.json": {
+      "sha256": "568f62a9f793ffb672760314202862a87a375d6141fd1eb37b3173afe4de3c33",
+      "bytes": 1532
+    },
+    "docs/architecture.md": {
+      "sha256": "4f8e22ef2b11ef58df62c2824a386e28583eb37032532bf4ce9063c0b20d605b",
+      "bytes": 4378
+    },
+    "docs/compliance-plan.md": {
+      "sha256": "4900688f77461ccd9e308a6421ace4242770220de2664d0152d158612619eba5",
+      "bytes": 1954
+    },
+    "docs/design-index.md": {
+      "sha256": "b9125f1e2ca25c5afc9b6b1f6d7e0e5cb45f5d8d02cd1e94d7442b066fdb3df0",
+      "bytes": 3277
+    },
+    "docs/engineering-decisions.md": {
+      "sha256": "1fdb29003de83d38fd1d310f6743dc76cde86d16f83cf4ff5c335594e856fcf8",
+      "bytes": 4125
+    },
+    "docs/evidence/android-build.txt": {
+      "sha256": "07819c882a2f950a089b89cbe09521ebeb8faaa9bd58bae5b5d628c67b54918c",
+      "bytes": 547
+    },
+    "docs/evidence/android-runtime-signing-attempt.json": {
+      "sha256": "3019c5963a67893987bcca39a8c14ca5df480d68911ed268b93cb5a6d274fe4a",
+      "bytes": 743
+    },
+    "docs/evidence/android-runtime.json": {
+      "sha256": "7c8f7d029566ffa44ab4aa68207b0a574083d8ca05adcd34aa011374c3aed1ca",
+      "bytes": 690
+    },
+    "docs/evidence/architecture-ranking.json": {
+      "sha256": "8daf8788120bf593520cf06fd9a5c964b4a58ffa47696daf5c5143c83185c9a9",
+      "bytes": 1901
+    },
+    "docs/evidence/build-manifest.json": {
+      "sha256": "3cb9f977378241bd5890485b1ae2b86a8c7d1dc24842a33d6562ee9d8b522a02",
+      "bytes": 7299
+    },
+    "docs/evidence/cad-assembly-check.json": {
+      "sha256": "25bfaa076abf177711370beb703e232d0ebc16be32b3d99ebbd529ea25fe79b6",
+      "bytes": 1746
+    },
+    "docs/evidence/cad-build.json": {
+      "sha256": "a48a9fcb76bd9013dec6230d2c7f7c1a4ebf102d3285c09deb311ec744496a07",
+      "bytes": 372
+    },
+    "docs/evidence/cad-build.txt": {
+      "sha256": "8302901cfb596636ff037423fc874acf33727d64fad3282c3a5104a1dba6d3b6",
+      "bytes": 246
+    },
+    "docs/evidence/codex-live-probe.json": {
+      "sha256": "4174caadd9f70f9a356525d2a2c76214bfa7dc4a15acd9902a7f219bbd224938",
+      "bytes": 330
+    },
+    "docs/evidence/codex-schema-check.json": {
+      "sha256": "fd8eb5b925532c635bf6d1ab7cf085582cd23335b77c18f57d752866d77c0ec7",
+      "bytes": 1580
+    },
+    "docs/evidence/codex-target-preflight.json": {
+      "sha256": "8a98eb3ebb78c78ee28249fc45cfc010efd5e099d1ed82b0746fa018e186fbec",
+      "bytes": 1647
+    },
+    "docs/evidence/codex-target-preflight.txt": {
+      "sha256": "8a98eb3ebb78c78ee28249fc45cfc010efd5e099d1ed82b0746fa018e186fbec",
+      "bytes": 1647
+    },
+    "docs/evidence/delivery-audit.json": {
+      "sha256": "ef919137faa8b8c37fb5015f38ec61503614817f76af5b9a9e596e59e4c9ee45",
+      "bytes": 694
+    },
+    "docs/evidence/engineering-calculations.txt": {
+      "sha256": "bbcff63e8fcb39f81b8989dd47451f2ec59ee7d12d9065ecd6e387e85791ce53",
+      "bytes": 1517
+    },
+    "docs/evidence/engineering-results.json": {
+      "sha256": "1f9521d0a055399a1d62d9674917f161414fdb3f3fcf0cbe95197b535c32fd24",
+      "bytes": 8479
+    },
+    "docs/evidence/execution-preflight.json": {
+      "sha256": "a9dc62662cb7816aef87ed8284fe90a8dbdd4977bc8fedb42cd9eb5bc932acb8",
+      "bytes": 946
+    },
+    "docs/evidence/firmware-build.txt": {
+      "sha256": "dca54e3e9ea7d2d15b0769c4b47b929131dd92d0210cd05badeb5e4a0ad958b6",
+      "bytes": 22863
+    },
+    "docs/evidence/firmware-validation.json": {
+      "sha256": "b993d836d9bbf40141c1d45701d822fbf231dcc1ce5928bffa447666bd7b8aef",
+      "bytes": 803
+    },
+    "docs/evidence/halo-sdk-check.json": {
+      "sha256": "d1d167ba820e3c563ef158504f9101d6fe992e6f8d5ce0aa59ca9c285d4ef3b0",
+      "bytes": 710
+    },
+    "docs/evidence/https-demo.json": {
+      "sha256": "29bf6c445f6c85e3d56c5e06e0bacb1a157655367c3c1d9c14b17202d7960b08",
+      "bytes": 1908
+    },
+    "docs/evidence/https-demo.txt": {
+      "sha256": "29bf6c445f6c85e3d56c5e06e0bacb1a157655367c3c1d9c14b17202d7960b08",
+      "bytes": 1908
+    },
+    "docs/evidence/interlock-build.json": {
+      "sha256": "78228d3c324b446baabcc71f37351050188bc91bfcdae6b8f9dc8a2b91c2812f",
+      "bytes": 314
+    },
+    "docs/evidence/interlock-drc.txt": {
+      "sha256": "70bc2b06d680e6d727eeac1b5484bf357703a801ae6332e50596d4956b06440f",
+      "bytes": 3261
+    },
+    "docs/evidence/interlock-netlist-check.json": {
+      "sha256": "71d5857b2aceabec5890373e31d04d59ce2e99015d3c6b9be06ea9148ae6a2e5",
+      "bytes": 441
+    },
+    "docs/evidence/interlock-recheck.txt": {
+      "sha256": "71d5857b2aceabec5890373e31d04d59ce2e99015d3c6b9be06ea9148ae6a2e5",
+      "bytes": 441
+    },
+    "docs/evidence/java-audio-tests.json": {
+      "sha256": "45cea8608739234273fbac10efe684e8a2f76eb103a16e8f172c6c6ca04d7464",
+      "bytes": 362
+    },
+    "docs/evidence/java-audio.txt": {
+      "sha256": "825a203fb34613ab3dc69e6ba42cf7f6a4e7b101aeda41cd44f9db0017f8778b",
+      "bytes": 148
+    },
+    "docs/evidence/java-reliability-tests.json": {
+      "sha256": "4fd118d221a8296abd895e3d50a4615f25747a2ababefd5e7c8202b5244afa4f",
+      "bytes": 774
+    },
+    "docs/evidence/java-reliability.txt": {
+      "sha256": "719077dd3f5787f7b5eb5ddd4e56ee155c6d754c6499c0ff7691799d2a07d595",
+      "bytes": 512
+    },
+    "docs/evidence/local-benchmark-initial-attempt.json": {
+      "sha256": "ca8610bbeafee107af42d52a47ef09e4f1c985019b05033e7b2296162ee707b3",
+      "bytes": 3179
+    },
+    "docs/evidence/local-codex-broker.json": {
+      "sha256": "bb751b7d856bc8edb16df2fa98e02195d8dcf31a0e204276905deeea7bcdef5a",
+      "bytes": 4300
+    },
+    "docs/evidence/local-codex-independent-tests.txt": {
+      "sha256": "6ed827926f96531098695e1443d429f298211c68abb802f2506950c4aef7a46a",
+      "bytes": 276
+    },
+    "docs/evidence/local-codex-mcp-pre-acceptance.json": {
+      "sha256": "77fa648b34542bb56432e917b9fdf6ff6f714b1bc4e6bbd0e842440c4daf5727",
+      "bytes": 3775
+    },
+    "docs/evidence/local-codex-mcp-strict-attempt.json": {
+      "sha256": "37bcd0cf91be7863919db49302da40614b6de47bf0660426aed7ce74d89a9c71",
+      "bytes": 4514
+    },
+    "docs/evidence/local-codex-reproduction-tests.txt": {
+      "sha256": "9aff33dd89f946dc0126377c1ee7355eedcf124c8f8d77af5c25f51cfc27d15b",
+      "bytes": 276
+    },
+    "docs/evidence/local-codex-reproduction.json": {
+      "sha256": "d080cae7be9287491cca6d80502ab66ce45f3d329ed9c2fcfebf09327b5a421f",
+      "bytes": 4732
+    },
+    "docs/evidence/local-codex-thinking-attempt.json": {
+      "sha256": "8b7bbef8f9a3726665425cdca7cf38335310e1c91b02778614abab728868d379",
+      "bytes": 4256
+    },
+    "docs/evidence/local-codex-unified-exec-attempt.json": {
+      "sha256": "3e759947b3a7563c005bde8a13f88fbf119183a5cda2039c24900378da6448b5",
+      "bytes": 2820
+    },
+    "docs/evidence/local-model-manifest.json": {
+      "sha256": "8a43d2a7ec095808e90e795747f5922cd9bd19596cc365770b63a798076dfbb6",
+      "bytes": 1226
+    },
+    "docs/evidence/native-core-tests.json": {
+      "sha256": "65d4544ea183578f5255f93b0663ad55614e39343f2087c107ee9e0c4844b3c1",
+      "bytes": 351
+    },
+    "docs/evidence/native-firmware-core.txt": {
+      "sha256": "65d4544ea183578f5255f93b0663ad55614e39343f2087c107ee9e0c4844b3c1",
+      "bytes": 351
+    },
+    "docs/evidence/package-readback-unit-tests.txt": {
+      "sha256": "0c0ad87a46430b22cc512e31e076e24a60df6abb6ad83ac357f86adf83cf16b4",
+      "bytes": 7566
+    },
+    "docs/evidence/package-readback.json": {
+      "sha256": "be9102f0ebbdb7d279f34ec490155fbfe4299e92995334ae7f8f48f814b6278a",
+      "bytes": 15617
+    },
+    "docs/evidence/publication-validation.json": {
+      "sha256": "33c5ceefc8076aac8ddfe57b43fc3346f1442cd700f13515712e3d3f7144a2ce",
+      "bytes": 904
+    },
+    "docs/evidence/software-validation.json": {
+      "sha256": "fbac9d412808098672b3e1c72e3c2a2939c2707fa82f844ab2f584eae9142f13",
+      "bytes": 1765
+    },
+    "docs/evidence/syntax-check.json": {
+      "sha256": "e07e14919339e51b1afcf6ed60c2d4783a213cb4af5d13132e78752d1e19efa9",
+      "bytes": 325
+    },
+    "docs/evidence/syntax-check.txt": {
+      "sha256": "7246bf080becc48bd36501d967fc23d69224371d9cdd08138cffad76aa7bb057",
+      "bytes": 54
+    },
+    "docs/evidence/tglass-v2-build.txt": {
+      "sha256": "fccbb764979551be40afbc5ba0cfd2bc1307c24d566000bda3a7fc2d1a9f3f3a",
+      "bytes": 1886
+    },
+    "docs/evidence/unit-tests.txt": {
+      "sha256": "45a7996a8a0b6036f1c8453784bb1db42262343c65b9baf9b3b5b5406fe9d4be",
+      "bytes": 7566
+    },
+    "docs/evidence/wheel-build.txt": {
+      "sha256": "fcb3f22f09b5dc0b709cc3c35fba4520a8783315b2e6cddfd618e313117d4ef3",
+      "bytes": 630
+    },
+    "docs/evidence/wheel-runtime.json": {
+      "sha256": "4f8f19bc2d66f2c3af5087267b21fc17e11fbf0a5aab9759ad5a0c22d9e5e10f",
+      "bytes": 456
+    },
+    "docs/evidence-index.json": {
+      "sha256": "481a632f060af7cfd39cc756f4ac359bff16e2a0884656b365689118f2bf2df2",
+      "bytes": 13198
+    },
+    "docs/feasibility-study.md": {
+      "sha256": "98a9334ec78f00c19fabc4172c82f829d523649d7d2ec3b573742152305af249",
+      "bytes": 5446
+    },
+    "docs/final-report.md": {
+      "sha256": "f98fe08952a3e3fe10e38bd8bab3d8a135b713a83c8153fdce5ba909831dd5aa",
+      "bytes": 3650
+    },
+    "docs/manufacturing-guide.md": {
+      "sha256": "43b9dcef1862eb612b29dab5986ef47d0d501457939ff04587f94a30acb073d5",
+      "bytes": 4750
+    },
+    "docs/market-database.csv": {
+      "sha256": "345b4b48a800204aa3ffdd1d265bc3ccb74efac1236a1bff106eaff81ba9995f",
+      "bytes": 11533
+    },
+    "docs/market-database.json": {
+      "sha256": "0556e1d2cb601832ffdf5995c66348ba43926001cf03519f5443718552e287b7",
+      "bytes": 17434
+    },
+    "docs/market-research.md": {
+      "sha256": "30d8a3892cd2e801815db21e4cf64fc8612874412160c111cd18e5568a3d8881",
+      "bytes": 5959
+    },
+    "docs/product-comparison.csv": {
+      "sha256": "d859e52d42d9a6ff7c44f1a1328674d421a87049e438e3f3dfda9876862eb6bf",
+      "bytes": 1924
+    },
+    "docs/product-comparison.json": {
+      "sha256": "070e981969985b92b7c218bc1a371a690c9110d8378f0ef6901351334b1a4e32",
+      "bytes": 3381
+    },
+    "docs/product-comparison.md": {
+      "sha256": "62c5b0ec52731add87f543413a436786b63fdedf4b3ec7f9bfa91c0045818a58",
+      "bytes": 3704
+    },
+    "docs/product-requirements.md": {
+      "sha256": "986f1ee8386d0bc9648f8a0b67423a86fdb67835652a756445631135f77e6b60",
+      "bytes": 3325
+    },
+    "docs/revision-v0.2.md": {
+      "sha256": "a7ad7150d7711a958d688d3facdc362df53daa34ad76945acd719a252461ec26",
+      "bytes": 3915
+    },
+    "docs/risks-and-limitations.md": {
+      "sha256": "d15617b91e85bd352d73a948531a8ded39877533c5086f025ee79a901c4ddfd2",
+      "bytes": 2768
+    },
+    "docs/sources.json": {
+      "sha256": "65463d7f776703d3f9d92ffb978de2444bb5507c812da78e6aaee76bdc0fedb0",
+      "bytes": 25968
+    },
+    "docs/sources.md": {
+      "sha256": "5e9b3802119aab8ef8dbde5938e50fdb772be249e814a5873be26028c01baf20",
+      "bytes": 18183
+    },
+    "docs/user-guide.md": {
+      "sha256": "8e7fda8056f74d35c816b7d81c251f158c896959e7182ec108e6e3168e7c6123",
+      "bytes": 1901
+    },
+    "docs/verification-report.md": {
+      "sha256": "dc56dc47d853f59ce8781c5ba53234a0d0e80a3cb53094cc063c671db6b7b5d3",
+      "bytes": 6456
+    },
+    "examples/demo-project/README.md": {
+      "sha256": "fa43bdc4600f0c7ed7180a90bcc54de7551a0d4e45308dfc5ba95124428e2c16",
+      "bytes": 623
+    },
+    "examples/demo-project/discount.py": {
+      "sha256": "c5924f0f3b6fd821b79615287182ee9162b30f69ae439c4ec0a674a3138b3295",
+      "bytes": 314
+    },
+    "examples/demo-project/test_discount.py": {
+      "sha256": "8782ac6f3b132ab1821b75521873ca4191bd2326a915473b0349dab6c98836db",
+      "bytes": 348
+    },
+    "examples/verified-local-result/discount.py": {
+      "sha256": "764ea59e915449a7e9e2e9a5f96d48d7b2fb8a81d0fc6ac66bc84d8e65a00cdb",
+      "bytes": 230
+    },
+    "examples/verified-local-result/test_discount.py": {
+      "sha256": "8782ac6f3b132ab1821b75521873ca4191bd2326a915473b0349dab6c98836db",
+      "bytes": 348
+    },
+    "firmware/README.md": {
+      "sha256": "11207a8957817d68104a1568773c92a8d9df51190b9619b4d89fd4f7f029acdb",
+      "bytes": 4768
+    },
+    "firmware/boards/agentglass_d0.json": {
+      "sha256": "c8647b1ed689aa6fce4bab67ee3e2cc4c7aa8a9b98ef819af87102351b522ca4",
+      "bytes": 733
+    },
+    "firmware/boards/lilygo_tglass_v2.json": {
+      "sha256": "5d71a902076dd3fa716e9db27c0032e70a1d1d72e9eb13b17e91def247c1d59d",
+      "bytes": 1044
+    },
+    "firmware/include/hud_raster.h": {
+      "sha256": "568f38a5d6d0d43dfdccbab08b8d97790905affbb220da9a419e88f8c02e6f68",
+      "bytes": 463
+    },
+    "firmware/include/media_id.h": {
+      "sha256": "273796b9fef8e5c25f6d810c30b23ee67cd8f67978cc4307a76a3623863959c2",
+      "bytes": 647
+    },
+    "firmware/include/pins.h": {
+      "sha256": "dee3abf90cff702626676bba978d2ba13b33240a6f132fbbee3e2c10a8d0081e",
+      "bytes": 624
+    },
+    "firmware/partitions.csv": {
+      "sha256": "58d91dd5aae596f4621be452b9275672070aa34c89e90fab2bccb9e9e603915e",
+      "bytes": 202
+    },
+    "firmware/platformio.ini": {
+      "sha256": "fee4ced0fc60dbde87f4e2cb14e3a621b8ae103d68a5c3a2802d39d4df4196e2",
+      "bytes": 1134
+    },
+    "firmware/src/main.cpp": {
+      "sha256": "b4aa793a6f30cff4624913fdd5ebc2f67fda5a2efb4b863ba5bff7063f05ac56",
+      "bytes": 22630
+    },
+    "firmware/src/tglass_main.cpp": {
+      "sha256": "a3bc9204d95e1e5ace14d1664c379b3b91f3c012494fa47babdb2e2105646398",
+      "bytes": 9512
+    },
+    "hardware/assembly/README.md": {
+      "sha256": "6c9f7aa54c7c0f1273bf21216495c0f1989083da433a6b5a2a8ec0646176092a",
+      "bytes": 1417
+    },
+    "hardware/assembly/d0-wiring.csv": {
+      "sha256": "cbbfbc9419043a56f80d3d0fc1e552dc125e44dcf47e0aa506e134409669751a",
+      "bytes": 1946
+    },
+    "hardware/assembly/p1-components.csv": {
+      "sha256": "6408e0117777402f2100574a495c7d4daf3064acc95d540018aae3ef1ea3de94",
+      "bytes": 627
+    },
+    "hardware/bom/components.csv": {
+      "sha256": "1cd1501516854ab07622f9cb73e1dacd768266c039624e0ac18bce0efbafc59d",
+      "bytes": 4781
+    },
+    "hardware/bom/cost-budget.json": {
+      "sha256": "cc59b14b161e55c815e0835200360fa89fbe1e2e67457b6f8910c84640cea801",
+      "bytes": 1077
+    },
+    "hardware/bom/interlock-coupon.csv": {
+      "sha256": "02e5c4d9018167516a749b56c59ae3077560b1609be1fa7db9dcf87e4fa75a07",
+      "bytes": 2514
+    },
+    "hardware/bom/mass-budget.csv": {
+      "sha256": "060b5c415c00e3cc1e69b3c4369093e12a708fcaf20fdd9d89ad21985f367287",
+      "bytes": 1230
+    },
+    "hardware/mechanical/README.md": {
+      "sha256": "85f548563d3fb2da037337569c9789d9cbd9416a76b63501d2305842c77796c2",
+      "bytes": 923
+    },
+    "hardware/mechanical/frame.scad": {
+      "sha256": "8b7ff9b304f93e59a8b6fb42ccc2950d6cce295acd7bfdde4f8eab26d47b615a",
+      "bytes": 1949
+    },
+    "hardware/mechanical/generated/agentglass-h1-fixture.step": {
+      "sha256": "51e149e8fb52b813e272e0f7bfec8849b89bb27ed4c53f420527ee68b7662469",
+      "bytes": 210862
+    },
+    "hardware/mechanical/generated/cover.step": {
+      "sha256": "6ee082c6da40483cbe68a1301de309ca6ad6ed028abb34ab4dd032db1508f552",
+      "bytes": 28743
+    },
+    "hardware/mechanical/generated/cover.stl": {
+      "sha256": "255d21b8e495a4693911eff863b569810614d973d39301c34fcfe39fdf014e11",
+      "bytes": 76684
+    },
+    "hardware/mechanical/generated/front.step": {
+      "sha256": "f66747142c0d204b69974a3d1d5a37706ff164347c8e37d63aece25a25171d90",
+      "bytes": 86554
+    },
+    "hardware/mechanical/generated/front.stl": {
+      "sha256": "bf57137708e4789f836e4afc6121c224897e5fd78c7c28508e2b221f863c9be4",
+      "bytes": 175884
+    },
+    "hardware/mechanical/generated/temple.step": {
+      "sha256": "8652ca9f6ada2f301247d73a693466c90f3223948ef87239d7030ee2c9b4674d",
+      "bytes": 70758
+    },
+    "hardware/mechanical/generated/temple.stl": {
+      "sha256": "84aa8379bf58acbeb9fd7ae3dcada25a9c1524dbf109449e38970f8703d1a6d1",
+      "bytes": 79084
+    },
+    "hardware/mechanical/mass-placement.json": {
+      "sha256": "2ca03bc29f77dc25b0570c95a604c3d1b860980a80c43b1f5e8e681ef1618470",
+      "bytes": 1449
+    },
+    "hardware/mechanical/parameters.json": {
+      "sha256": "7140774f95ee7d094f7f4f04e441d41b8a2df137de8ae398d757f06532f4144e",
+      "bytes": 774
+    },
+    "hardware/optics/README.md": {
+      "sha256": "f791680d8550b6d0393c54a206026d48b7fcba1ff764d26f49a27cf59a807ca5",
+      "bytes": 1760
+    },
+    "hardware/optics/p1-tglass-v2.md": {
+      "sha256": "28dd36b9af55c92711f835b3abbce5bcd21411a3c12e3c1df2e7232b39eb77f1",
+      "bytes": 2567
+    },
+    "hardware/optics/specification.json": {
+      "sha256": "22229013a575e7bb0dd9e2236dcc7fca6f34d05dbe277567af50bb12b6ef1b4f",
+      "bytes": 1205
+    },
+    "hardware/pcb/README.md": {
+      "sha256": "0ae788ff4e03a3f1fd8eabe909befa8b76637a4f34a07a3e3756b6d8d5eabb87",
+      "bytes": 1014
+    },
+    "hardware/pcb/interlock-test-coupon/connections.csv": {
+      "sha256": "408206aea50eda7a946523e7cc05427d706d8bb6f81fd7418e1b0f9b8ad383fc",
+      "bytes": 1565
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/README.md": {
+      "sha256": "74126d4ee5b3ec281a415b5b3027bfd340e4701a0fd4df9e86de38556ee679b6",
+      "bytes": 1123
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-B_Cu.gbl": {
+      "sha256": "712413e329f65e6e8eaa43f8e808adce3e76f4c23d05b5c73f311c3e18d67568",
+      "bytes": 37705
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-B_Mask.gbs": {
+      "sha256": "0ba912ee2e4f3ba7c815da4c3eeb1deecc32f48d50321956f001b01b1841fd6c",
+      "bytes": 1029
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-Edge_Cuts.gm1": {
+      "sha256": "68cc22641400834daa11f4a3fd3274e0d91e7602d2cc64b1264ffbf1c4b82200",
+      "bytes": 699
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-F_Cu.gtl": {
+      "sha256": "78c2f3dcd63e3ab01f41c191baeb703483826ecf6a23c71241aaed0ea79ab1e4",
+      "bytes": 124694
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-F_Mask.gts": {
+      "sha256": "36ea31dbbb8585c51a3c6bba4895b2f75084553838c054756d0e6632d6824bac",
+      "bytes": 2061
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-F_Paste.gtp": {
+      "sha256": "19c8f1aa86f59c93527ad433c8f6e53fd23e317470d3a89aa1f9969d7744bcfd",
+      "bytes": 1497
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-F_Silkscreen.gto": {
+      "sha256": "17889d6222f42776645c0abc202fac32caf91c01b1d5ecb35cb49507f1a43fba",
+      "bytes": 30806
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-drl_map.svg": {
+      "sha256": "aa79b8226b96fb34acd5bf4b7081dfe4eee49a47b023185bf68e74896247cf1d",
+      "bytes": 54077
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test-job.gbrjob": {
+      "sha256": "b635a71b081715b0e4497f41ab34e24974a14165142910d4d8aa354807007932",
+      "bytes": 2374
+    },
+    "hardware/pcb/interlock-test-coupon/fabrication-review/interlock-test.drl": {
+      "sha256": "afb33179af5f9e5fd06d4069c1788cc2d71fe9f13e203b8dd65234fd1409721f",
+      "bytes": 758
+    },
+    "hardware/pcb/interlock-test-coupon/interlock-test.kicad_pcb": {
+      "sha256": "1a7470b0819abf0ce0e43e7796b7c93710d2ba73f03135eeedfb460064da58e0",
+      "bytes": 310970
+    },
+    "hardware/pcb/interlock-test-coupon/interlock-test.kicad_pro": {
+      "sha256": "26b7311c9e12f8af435c87644d3773d1a4f6450eb3c46b377ba087e1f339d9fa",
+      "bytes": 6851
+    },
+    "hardware/power/budget.json": {
+      "sha256": "2e83041efddd3a173bf9cbcdfb652a2c6407ff8108ea2184974f713e466a329f",
+      "bytes": 1868
+    },
+    "hardware/power/power-tree.md": {
+      "sha256": "c0effe177b0e4ff86f65d92318657e83f7b9a89249c4c2915e7a2fd3a4d243f5",
+      "bytes": 2648
+    },
+    "hardware/schematics/interlock.kicad_sch": {
+      "sha256": "8a00d9e1fa0897cd51b39cc7f651845c3b0a1e026ba9511a282022d938fa6209",
+      "bytes": 35631
+    },
+    "hardware/schematics/interlock.net": {
+      "sha256": "cfaba7c3b4c905d80feea30f1886fc609cebd89ab7469c12571ef0def32c7cc9",
+      "bytes": 16376
+    },
+    "hardware/schematics/interlock.xml": {
+      "sha256": "cc2ed712410f24a337d57b2ba7e9c5b99064cdb2417271ec95663154d6a0afda",
+      "bytes": 16998
+    },
+    "hardware/schematics/preview/interlock.svg": {
+      "sha256": "b65db20f5977ef2dabe12fa937000ddd755e21fa75f547b59cb52e78b612c499",
+      "bytes": 357391
+    },
+    "mobile/README.md": {
+      "sha256": "5e516a2180a5d4c45098fbad311c5020817445ee8604ff74c3a76fbd7662618e",
+      "bytes": 3388
+    },
+    "mobile/android/app/build.gradle": {
+      "sha256": "07088dd6e5369dffe034c54b2feb209728af2d358c7dbf9c054651254356e244",
+      "bytes": 328
+    },
+    "mobile/android/app/src/main/AndroidManifest.xml": {
+      "sha256": "6542c990692403848f5943b90430cb33c78d42d2a3fed32afcf9404b752dd772",
+      "bytes": 1695
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/BleLink.java": {
+      "sha256": "071aab32a43c2e0ee469f50b60962f494aca3aa6825a0846c3268b7b8bf3f141",
+      "bytes": 9344
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/DurableFiles.java": {
+      "sha256": "db5f9a50cf767dc5bbdf8a7c29d48e4054492788f93cf5c4decba608fbe83aae",
+      "bytes": 1518
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/MainActivity.java": {
+      "sha256": "6f91f503a1fddbacca4658abce48d93201e079a61e8a7a1a5052d6062c3b1956",
+      "bytes": 28419
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/NotificationRelay.java": {
+      "sha256": "4a330cee75fc2e3879aa924ee424b24c9e054647ad52fca3ab768cc52f9a7c53",
+      "bytes": 1084
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/PcmWave.java": {
+      "sha256": "fa2997fb036c8fb8d31f9c9d07df388f71dca043e524f6abbbf8b962468af7f2",
+      "bytes": 1854
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/TaskDispatch.java": {
+      "sha256": "d3b0ca608de7755c6e4a40dd70f043439473d78766bd4c1568782ad5bc4557c6",
+      "bytes": 1878
+    },
+    "mobile/android/app/src/main/java/dev/agentglass/TlsApi.java": {
+      "sha256": "09f25cab77bde007fa19b697d38a9b1a665d5172825c0bfdaa9269d25c567bc1",
+      "bytes": 6548
+    },
+    "mobile/android/build.gradle": {
+      "sha256": "8ebf0602839be8fd4c06f07a93e45da6b4a04444fa1b38df8b9def9c1b5c8032",
+      "bytes": 69
+    },
+    "mobile/android/settings.gradle": {
+      "sha256": "39413071035f41771763129f7956fec59d2b09fb3dccd4ac7edbbc5a6b0230e7",
+      "bytes": 271
+    },
+    "pyproject.toml": {
+      "sha256": "6dd36af1fee293db3d87205c2fff3839bcf73534045cacbb9a68a0a553683f9c",
+      "bytes": 707
+    },
+    "releases/README.md": {
+      "sha256": "42e766ca1e9d37332dfd0fea6face37d1d7be392e0a8af217e99e784aa8f6eea",
+      "bytes": 1503
+    },
+    "releases/agentglass-0.2.0-py3-none-any.whl": {
+      "sha256": "52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91",
+      "bytes": 39099
+    },
+    "releases/agentglass-debug.apk": {
+      "sha256": "69aacf25db23bc8b4f0ce71a2a60fcc434bf93cdda5ade1f39072dbd039e6c81",
+      "bytes": 41357
+    },
+    "requirements-design.txt": {
+      "sha256": "c57cd774483b2a7c90d82b06196e1289dab2f3ef4b2bca92abb768092c395838",
+      "bytes": 141
+    },
+    "requirements-tested.txt": {
+      "sha256": "d8e4ce30f8191e68d38c03f2ce7cfb774319718f396802895d6e02ec69f2404a",
+      "bytes": 196
+    },
+    "scripts/accept_codex_worker.py": {
+      "sha256": "dc512cd940a694a72377c3178d65fa3fa3e802d3af2588b9af37742a2d73d155",
+      "bytes": 9418
+    },
+    "scripts/benchmark_codex_local.py": {
+      "sha256": "c48794ed142e93cc28e670feb278a73d2a747d6ba34b731811da8d4cf7fb98c7",
+      "bytes": 8963
+    },
+    "scripts/build_android.py": {
+      "sha256": "d2d6a761d44ab81d1654f166692c5b009ece73a7cb715e7624e37ac6b5fe8cc7",
+      "bytes": 3011
+    },
+    "scripts/build_cad.py": {
+      "sha256": "fabbad3cbd60e3b4d5f8405b63722980d723e2c8a403499808c7f9fc80bd04be",
+      "bytes": 4155
+    },
+    "scripts/build_firmware.py": {
+      "sha256": "db332fbdd98760b49b774dda1abcd84a679c1b27226a839b40372ae070fd7e0a",
+      "bytes": 2209
+    },
+    "scripts/build_interlock.py": {
+      "sha256": "844465c2448c48eabc1320de4fd46e236e994d6b29ac0d701ccc7b5d87f2bb06",
+      "bytes": 12429
+    },
+    "scripts/check_android_runtime.py": {
+      "sha256": "e1cee75c31c94f7c888b18eea55454f21157f948c0cce6ff47020952ae37d58b",
+      "bytes": 9574
+    },
+    "scripts/check_cad_assembly.py": {
+      "sha256": "c6479b997a9f85c16dc41f5e48796cd44a023a49f2ab11cd9c19e6e2ba3ce706",
+      "bytes": 2238
+    },
+    "scripts/check_codex_schema.py": {
+      "sha256": "4df0d1bfbb43c02f80437be1e840252747c75d8c1630c0adffa759588c6256da",
+      "bytes": 1952
+    },
+    "scripts/check_interlock.py": {
+      "sha256": "dc5ac4069c3fdf6374af133d1e0087acd249617962d3d9ade0a48264f509e8ae",
+      "bytes": 2736
+    },
+    "scripts/check_java_audio.py": {
+      "sha256": "ec15db6e22eb9d1b800e338f8304ab0be705956f809afbb650ac864cf7692271",
+      "bytes": 876
+    },
+    "scripts/check_java_reliability.py": {
+      "sha256": "0c0986f1431d6b4a6f8663ae3ea8f35af3f5c700a46f0b50c470605f406c3e79",
+      "bytes": 1034
+    },
+    "scripts/check_native_core.py": {
+      "sha256": "2888b22b8e1c85053766c211effc21e0e1681ce6e792ed5374a58b9afb10190a",
+      "bytes": 1133
+    },
+    "scripts/engineering.py": {
+      "sha256": "bccfa56b93214c58a73ba20f86b4ba56162cbc1ae5ae92bbcc23abbb5847d4c6",
+      "bytes": 6150
+    },
+    "scripts/extract_agmj.py": {
+      "sha256": "ba184cfd57084e18c83331ae46abdd53e8b09098df2bf0b6e07dfc7af6727ca0",
+      "bytes": 1357
+    },
+    "scripts/fixture_mcp.py": {
+      "sha256": "1d3da67d07c3f085c0b5b11da31cee725575bc1fe0e3673f7f26aabf43b8dca2",
+      "bytes": 8334
+    },
+    "scripts/package_delivery.py": {
+      "sha256": "efafea9939490d8a84a22ca08c1edec2b4562511859fd09f2c2a00ec34062b0a",
+      "bytes": 8902
+    },
+    "scripts/package_source_release.py": {
+      "sha256": "da9c416fd19e445a0fea441a562560297429642d8c14f6204b029a4259d584d0",
+      "bytes": 10616
+    },
+    "scripts/publish-github.md": {
+      "sha256": "9cea28b4ce2ae214f68a8f1d2428c45e5193414c199f62669b2fb1be58b97820",
+      "bytes": 1603
+    },
+    "scripts/record_build_manifest.py": {
+      "sha256": "b358ed04e1bb486fe5fde0a41e36b1d5b4d2a1f952a8351a5838836b97680c02",
+      "bytes": 4075
+    },
+    "scripts/render_fixture.py": {
+      "sha256": "dcc2045df4261d4158b88ae3fecd3480cdc88b6b50fc85759574ceebfa106f53",
+      "bytes": 2225
+    },
+    "scripts/verify.py": {
+      "sha256": "b5b7acb4cdcf7a4b6e3f67b3c70b5e88a252302658c101f219cd193ea5a0695c",
+      "bytes": 2408
+    },
+    "simulator/demo.py": {
+      "sha256": "11e23b5dc0eab8c2c663d4bd6db1aa60267934ece3cc97f0388afe9283e0e5e1",
+      "bytes": 4943
+    },
+    "tests/PcmWaveCheck.java": {
+      "sha256": "15a4f622afbdfaa78107a88ca62a51e0b65013d391d0e1bf9cdb5248909be37b",
+      "bytes": 1999
+    },
+    "tests/ReliabilityCheck.java": {
+      "sha256": "14259e3ea65ff90c86f0b1b319b0d1cffaefe2933d1ee2d6ba4a63752f554c68",
+      "bytes": 5162
+    },
+    "tests/fake_codex.py": {
+      "sha256": "05d00f8e2845509b43c4c47b5c0466d84b8f5400aba728182acf5421dc918284",
+      "bytes": 3021
+    },
+    "tests/native_core_check.cpp": {
+      "sha256": "5267e61992c08a4ea0242f0fcc16f9d84cd330e10f7317ec2b89ea454ac88b48",
+      "bytes": 1000
+    },
+    "tests/test_acceptance_staging.py": {
+      "sha256": "ecf6ea485682dcafc5b06c45924989ca9ee306e2401c0723eb010dd96584468e",
+      "bytes": 2204
+    },
+    "tests/test_core.py": {
+      "sha256": "8cd51dc5390360ad20899f2362a3623e83a8cb76594027f56dc7afc400dd8cd2",
+      "bytes": 25296
+    },
+    "tests/test_fixture_mcp.py": {
+      "sha256": "945ab340d36792da6dc5cd033ff490101c335045b43753642a3c91c3ff115c8f",
+      "bytes": 2514
+    },
+    "tests/test_model_broker.py": {
+      "sha256": "356026cfd0052a0df5f8cd931136c5ce63b4dd3b32f21b0d8f27519a6ed87465",
+      "bytes": 5997
+    },
+    "tests/test_worker_tree.py": {
+      "sha256": "46d645e1fa68a1c2acbf9a7c0d4bd64da4d8291c0fef6fbb2cd96da27378eaba",
+      "bytes": 1821
+    },
+    "third_party/lilygo-tglass-v2/LICENSE": {
+      "sha256": "913879919918761b5b79f9aa804a772f1033e1fa28d425d6fa368448046ccc42",
+      "bytes": 1063
+    },
+    "third_party/lilygo-tglass-v2/ORIGIN.json": {
+      "sha256": "4b04e886ed151d2bd308a404bd4da16507b145d80c3a5c234606563cc7eec402",
+      "bytes": 1152
+    },
+    "third_party/lilygo-tglass-v2/library.json": {
+      "sha256": "5751b0c36671bc17b148aad8345e5879ef07f6a862d051c619cfd263484f003b",
+      "bytes": 189
+    },
+    "third_party/lilygo-tglass-v2/src/LilyGo_Button.cpp": {
+      "sha256": "3430bbe4f9f9fddc1ea1f0e3761e6c878882c5adc0734dde03cac7b4be5fb466",
+      "bytes": 3185
+    },
+    "third_party/lilygo-tglass-v2/src/LilyGo_Button.h": {
+      "sha256": "2856819343cb9dab6fe6a23e130107c6aab3eb93529f3dc1ef6431c2a6d291b9",
+      "bytes": 1603
+    },
+    "third_party/lilygo-tglass-v2/src/LilyGo_Display.h": {
+      "sha256": "22f9ca946cf2b1102b08c1bc196295a623520cc6762f86bc970ff3726bc15a03",
+      "bytes": 1084
+    },
+    "third_party/lilygo-tglass-v2/src/LilyGo_Wristband.cpp": {
+      "sha256": "664aab8dc565e875a684f7f575d497fe670a265507fcdb578e88ddec640472d4",
+      "bytes": 20944
+    },
+    "third_party/lilygo-tglass-v2/src/LilyGo_Wristband.h": {
+      "sha256": "e30165d7ff48a03b96edf3d5305bb67768bc96a9d56eeb62aa1ab64455f4acd8",
+      "bytes": 3619
+    },
+    "third_party/lilygo-tglass-v2/src/initSequence.cpp": {
+      "sha256": "2c4117c3033a5f2d98ffe9cc16c3164a5a0b90a770a1dfa81a31fa2de6144968",
+      "bytes": 5911
+    },
+    "third_party/lilygo-tglass-v2/src/initSequence.h": {
+      "sha256": "d0fb99aa56b11cb6148a22a4c97c5571d912d51f157eeec898f2fb0b297f5578",
+      "bytes": 618
+    }
+  },
+  "physical_hardware_tests": 0,
+  "remote_github_created": false
+}

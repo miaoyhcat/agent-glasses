@@ -1,0 +1,2 @@
+# Preserve the exact bytes used by build and validation records, including vendor sources.
+* -text

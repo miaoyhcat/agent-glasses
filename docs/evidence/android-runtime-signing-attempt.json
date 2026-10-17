@@ -1,0 +1,18 @@
+{
+  "evidence_level": 2,
+  "android_api": 26,
+  "physical_hardware_tests": 0,
+  "model_inference_executed": false,
+  "apk_sha256": "69aacf25db23bc8b4f0ce71a2a60fcc434bf93cdda5ade1f39072dbd039e6c81",
+  "checks": {
+    "android_booted": true
+  },
+  "limitations": [
+    "No BLE peripheral",
+    "No real ASR/TTS engine acceptance",
+    "No optics/camera/battery/Windows tests"
+  ],
+  "generated_utc": "2026-10-16T16:17:08.695986+00:00",
+  "passed": false,
+  "error": "RuntimeError: adb: failed to install /workspace/scratch/1628ebaca2ec/revision-v0.2/agent-glasses/build/android/agentglass-debug.apk: Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package dev.agentglass signatures do not match the previously installed version; ignoring!]\n\n"
+}

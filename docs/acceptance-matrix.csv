@@ -1,0 +1,39 @@
+id,scope,evidence_level,current_status,procedure,acceptance,equipment,evidence_or_plan
+DISP-01,镜片显示,4,待实物验证,300/1000/10000lux背景，固定字表，各眼盒位置20次,文本正确识读率≥95%；裁切、鬼影、闪烁记录,完整光机；亮度计/成像仪；头模,hardware/optics/README.md
+DISP-02,光学几何,3,已通过工程计算或文献论证,运行engineering.py近轴模型,约20°对角FOV计算可复算；不代表真实FOV/MTF,Python,docs/evidence/engineering-results.json
+DISP-03,HUD事件延迟,4,待实物验证,事件时间戳到光电/录像可见变化100次,任务事件到HUD p95≤3秒；丢失事件为0,相机/时间同步；手机/真实眼镜,docs/architecture.md
+VOICE-01,中文识别,4,待实物验证,100句普通话安静环境、不同说话人,CER≤10%；以固定人工标注语料计算,声学室或标定房间；录音/真实ASR,mobile/README.md
+VOICE-02,英文及噪声,4,待实物验证,100句英语；65dBA街道噪声复测,安静WER≤15%；噪声WER≤30%；失败样本保留,校准噪声源/声级计,mobile/README.md
+VOICE-03,语音响应,4,待实物验证,语音结束至第一段可听回复100次,H1目标p95≤3秒；D0缓存BLE路线不预期直接达标,真实模型、网络和音频回环,firmware/README.md
+VOICE-04,短语音转换,2,已通过软件测试或仿真,运行check_java_audio.py,实际Android PcmWave类的7项JVM断言通过,JDK17+,docs/evidence/java-audio-tests.json
+CAM-01,拍照链路,4,待实物验证,灰阶/色卡/文字，连续100张并传手机,100/100可解码与SHA-256一致；曝光和可读性记录,D0/光照箱/色卡,firmware/README.md
+CAM-02,短录像,4,待实物验证,录15秒AGMJ并提取帧和时间戳,容器完整；真实帧间隔记录；目标≥4fps，无超温,摄像头/SD/受控温度台,scripts/extract_agmj.py
+CAM-03,掉电缓存,4,待实物验证,写入/重命名/ack窗口分别断电各100次,已确认文件不丢；未确认保留或明确报错；无静默损坏,可编程电源/继电器/存储镜像,docs/manufacturing-guide.md
+CODEX-01,官方初始化,2,已通过软件测试或仿真,CLI0.162.1实际initialize探测,收到真实初始化响应；不得扩展为推理通过,已安装官方CLI,docs/evidence/codex-live-probe.json
+CODEX-02,真实任务连续会话,4,待实物验证,目标电脑执行scripts/accept_codex_worker.py --run；inspect→fix→test,同thread/副本；真实测试退出码；原项目不变；结果可核对,Docker；专用API key；明确模型与额度,scripts/accept_codex_worker.py
+CODEX-03,协议与推理过滤,2,已通过软件测试或仿真,协议fixture注入审批、reasoning、原始日志,审批默认拒绝；私有流不进入公开事件,Python子进程fixture,tests/test_core.py
+CODEX-04,容器与凭据,4,待实物验证,目标Docker真实容器、短期token、stdio模型代理及容器退出验收,无宿主凭据/家目录/原项目/网络；限额生效；任务后容器清除,目标OS与Docker；专用API key；安全审核,SECURITY.md
+NET-01,认证与重放,2,已通过软件测试或仿真,无令牌、错误令牌、配对码重放、撤销、HMAC重放,全部拒绝；合法请求保留,Python测试,tests/test_core.py
+NET-02,任务幂等及取消,2,已通过软件测试或仿真,相同/冲突请求；取消；重启恢复,不重复执行；取消未完成不误报；重启unknown,Python测试,tests/test_core.py
+NET-03,真实HTTPS闭环,2,已通过软件测试或仿真,运行simulator/demo.py,所有断言通过；显式标记SIMULATOR,本机TLS；无需模型,docs/evidence/https-demo.json
+NET-04,手机BLE稳定性,4,待实物验证,100次重连，弱信号，系统权限撤销，长媒体传输,无错绑/未授权明文；重传后文件一致；前后台行为准确,至少两款Android实机,mobile/README.md
+POWER-01,能量预算,3,已通过工程计算或文献论证,运行engineering.py,明确定义混合8.486h模型可复算；目标未实测确认,Python；假设输入,docs/evidence/engineering-results.json
+POWER-02,真实混合续航,4,待实物验证,复现8小时内各状态分钟数和亮度，25°C/35°C,符合完整负载定义；记录实际续航、电流、温度；不以待机替代,功率分析仪/电池循环仪/环境箱,hardware/power/budget.json
+POWER-03,峰值和保护,4,待实物验证,低压/EOL/冷态，负载阶跃、短路及NTC异常,无复位/危险过流；限流/欠压/充电保护动作符合定版阈值,电子负载/示波器/电芯厂商,hardware/power/power-tree.md
+MASS-01,完整质量,3,已通过工程计算或文献论证,BOM+CAD模型完整相加,当前约66.45g，明确50g未达；禁止遗漏Rx/保护/FPC,Python/CAD,hardware/bom/mass-budget.csv
+MASS-02,实物质量与佩戴,4,待实物验证,完整称重；断电试戴；通过安全门槛后分时佩戴,质量记录完整；鼻压/耳压/滑移/不适被记录和整改,0.01g秤/头模/目标用户,hardware/mechanical/mass-placement.json
+THERM-01,温度,4,待实物验证,25/35°C，待机/显示/短录像/充电至稳定或截止,内部目标接触面≤40°C；过温能可靠停止；电芯在其范围内,热像仪+接触热电偶+NTC校准,docs/feasibility-study.md
+SAFE-01,指示灯测试板CAD,2,已通过软件测试或仿真,KiCad复读、DRC与网表比较,0 error/0 unconnected；18库元数据warning明确保留,KiCad7/pcbnew,docs/evidence/interlock-drc.txt
+SAFE-02,指示灯与断电IO,4,待实物验证,LED开/短/遮挡、REQ故障、相机IO高低电平、物理开关,无法在无可见提示时有效采集；无反向供电；遮挡风险关闭,可编程电源/示波器/光探测器,hardware/power/power-tree.md
+SAFE-03,光电池射频合规,4,待实物验证,由实验室确定适用标准和市场要求后测试,取得适用光/电池/射频/EMC/运输报告；不冒用模组证书,具备相应资质实验室,docs/compliance-plan.md
+BUILD-01,D0与P1固件构建,2,已通过软件测试或仿真,build_firmware.py固定依赖并关闭遥测交叉编译两个目标,两个构建真实退出码0；记录镜像哈希/RAM/Flash；无烧录声明,对应交叉工具链,docs/evidence/firmware-validation.json
+BUILD-02,Android构建,2,已通过软件测试或仿真,官方SDK直接构建+apksigner verify,APK v0.2.0签名与哈希通过；API26模拟器安装/运行另列,Android35 SDK/JDK17,docs/evidence/build-manifest.json
+MECH-01,机械模型,2,已通过软件测试或仿真,build_cad.py后check_cad_assembly.py复读导出STEP,全部BREP有效；左右盖板/壳体等10对相交体积为0；旧错位负例被检出,CadQuery,docs/evidence/cad-assembly-check.json
+MOBILE-01,真实Android模拟器链路,2,已通过软件测试或仿真,API26 AOSP模拟器安装实际交付APK；真实TLS配对与提交任务；本机批准；UI收结果,7项断言通过；APK哈希一致；智能体明确SIMULATOR,官方Android emulator/SDK；TCG；JDK17,docs/evidence/android-runtime.json
+MOBILE-02,有界队列和持久写入,2,已通过软件测试或仿真,实际共享Java类执行1万次投递与崩溃恢复逻辑测试,13项断言通过；轮询不堆积；HUD只保留最新；有效旧文件恢复,JDK17,docs/evidence/java-reliability-tests.json
+MOBILE-03,真实手机后台与掉电,4,待实物验证,两款Android实机；前后台/进程杀死/文件同步窗口/换电脑,无错绑和重复任务；已ack媒体不丢；明确恢复状态,Android实机；可控断电与BLE设备,mobile/README.md
+FW-CORE,媒体ID和光栅映射,2,已通过软件测试或仿真,编译实际C++头文件；256随机ID与Python比较；边缘像素/字节序验证,文件名含NUL不超32字节；左右边缘不丢；无越界,C++编译器/Python,docs/evidence/native-core-tests.json
+BROKER-01,模型代理限额与密钥隔离代码,2,已通过软件测试或仿真,真实loopbackHTTP上游+stdio工作进程；密钥/限额/并发/ACK/清理命令测试,外部模型URL、托管工具、跨会话引用、超限拒绝；主密钥不进入工作进程,Python；测试上游；非Docker安全证明,tests/test_model_broker.py
+DISP-04,P1近眼硬件显示,4,待实物验证,采购完整TGlass V2；烧录；按P1指南显示边框/中文/状态,完整可读边缘；无异常发光；实测可用视域/亮度/延迟；光安全评估,完整P1板/光机；USB；Android；光学测量设备,hardware/optics/p1-tglass-v2.md
+CODEX-05,真实本地受限样例,2,已通过软件测试或仿真,CLI0.104.0+真实本地Qwen；MCP读取/修改/固定测试,原始失败测试→模型修改→通过；安全AST及原测试字节独立验证,Ollama0.40.5；qwen3:4b-instruct；公开可丢弃环境,docs/evidence/local-codex-broker.json
+SAFE-04,连续副本与独立验收防伪,2,已通过软件测试或仿真,符号链接/硬链接/FIFO；未清理worker；影子unittest/旧pyc/篡改测试负例,拒绝全部恶意负例；宿主权限不变；干净验收只含固定测试和安全模块,Python/POSIX；Windows与真实Docker另验,tests/test_worker_tree.py

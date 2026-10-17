@@ -1,0 +1,20 @@
+{
+  "evidence_level": 2,
+  "scope": "host JVM, actual APK source classes; NOT an Android filesystem power-cut or BLE device test",
+  "assertions": [
+    "PASS poll_started",
+    "PASS ten_thousand_slow_poll_ticks_no_backlog",
+    "PASS cancel_accepted_during_blocked_poll",
+    "PASS only_one_poll_in_flight",
+    "PASS bounded_queue_rejects_excess_work",
+    "PASS ten_thousand_hud_updates_coalesced",
+    "PASS latest_hud_is_rendered",
+    "PASS initial_manifest_synced",
+    "PASS interrupted_temp_write_keeps_committed_manifest",
+    "PASS valid_pending_recovers_broken_manifest",
+    "PASS post_rename_failure_keeps_whole_new_value",
+    "PASS concurrent_readers_never_see_torn_metadata",
+    "PASS unrecoverable_metadata_retained_and_rejected"
+  ],
+  "passed": true
+}

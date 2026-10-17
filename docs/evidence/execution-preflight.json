@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "check": "runtime_isolation",
+      "passed": true,
+      "detail": "Real HTTP jobs require Docker; simulation remains separate"
+    },
+    {
+      "check": "dedicated_auth_file",
+      "passed": false,
+      "detail": "Only existence is checked; credential content is not read or validated"
+    },
+    {
+      "check": "authorized_projects",
+      "passed": true,
+      "detail": "Configured project directories must exist"
+    },
+    {
+      "check": "docker_cli",
+      "passed": false,
+      "detail": "Docker CLI is missing"
+    },
+    {
+      "check": "worker_image_name",
+      "passed": true,
+      "detail": "Only a local administrator configures this image"
+    }
+  ],
+  "launch_prerequisites_present": false,
+  "model_inference_executed": false,
+  "container_security_test_executed": false,
+  "note": "Passing prerequisite checks is not proof of authentication, sandbox enforcement or a successful task."
+}

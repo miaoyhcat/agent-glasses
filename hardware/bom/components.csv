@@ -1,0 +1,23 @@
+ref,assembly,preferred_part,alternative,interface_or_supply,procurement_status,source_id,selection_and_limit
+U1,H1 compute,ESP32-S3-WROOM-1-N16R8,ESP32-S3-WROOM-1U-N16R8,3.0-3.6V; DVP SPI I2S BLE WiFi,public manufacturer part; obtain distributor quote,S11,public tools and memory; U version needs separately validated antenna
+DISP1,H1 panel candidate,GZOT VGA020HW02C,complete licensed OEM near-eye engine,640x480 QSPI; +5.5V +1.8V -4.5V,RFQ and full programming manual REQUIRED,S12,bare panel is NOT a complete see-through display; no MIPI host on S3
+BIAS1,H1 display bias,TPS65132 family,integrated panel-vendor bias controller,I2C dual positive-negative display supply,verify exact output range sequencing and revision before layout,S12|S31,must supply +5.5V and -4.5V; not included in D0 bench board
+LDO1,H1 display logic,TLV75518PDBVR,qualified low-noise 1.8V LDO,3.3V to1.8V,public part; panel-current requirements pending,S12|S32,mandatory 1.8V logic supply
+LVL1,H1 QSPI interface,SN74AXC8T245 family,panel vendor qualified level translator,3.3V to1.8V QSPI direction must be resolved,exact direction grouping and GPIO allocation pending,S12|S33,do not wire 3.3V S3 outputs directly to 1.8V-only display IO
+OPT1,H1 optics,custom licensed prism/collimator with VGA020,ActiveLook OEM kit subject to quote,optical bonded module; 20deg diagonal target,NO RELEASED PART NUMBER; blocked RFQ,S08|S12,procurement failure blocks H1; ActiveLook is lower resolution and different firmware
+CAM1,D0 development,Waveshare OV2640 Camera Board,verified OV2640 DVP module with local regulation,3.3V module DVP8 SCCB,public product; confirm stock and pinout,S16,bare sensor requires multiple rails; do not connect unregulated sensor to 3.3V
+CAM2,H1 miniaturization,OV2640 miniature DVP module,PixArt PAG7982J1 plus compatible ISP,DVP8; module-specific rails,miniature mechanical drawing and quote REQUIRED,S16|S05,large Waveshare board excluded from H1 mass budget
+MIC1,D0 microphone,TDK ICS-43434 breakout,verified INMP441 I2S breakout,I2S 24bit at 3.3V,manufacturer part; breakout stock check,S17,only one mic implemented; dual-mic DSP remains H1 work
+AMP1,D0/H1 audio,MAX98357AETE+,MAX98360 variant after interface review,I2S 2.5-5.5V,public manufacturer part,S18,open-ear speaker impedance/enclosure and SPL require measurement
+SPK1,H1 audio,8ohm micro dynamic transducer with acoustic drawing,validated bone conduction assembly,amplifier BTL differential outputs,exact vendor SKU and response pending RFQ,S18,no fabricated acoustic rating or bone-conduction privacy promise
+BAT1,H1 battery,3 x Grepow GRP1654M1 matched 1S3P pack,2 x GRP1654M1 lower energy pack,3.7V nominal 4.2V CC-CV; 450mAh,cell public; pack requires supplier design,S15,do not combine independent unprotected loose cells
+CHG1,H1 charger,BQ24074RGTR,BQ25185 with redesign,5V input; one-cell 4.2V; NTC,public manufacturer part,S19,power path; hardware 100mA default; conservative charge temperature 0-45C
+REG1,H1 3.3V,TPS63070RNMR,TPS631000 after peak-current analysis,2-16V buck-boost; feedback set3.3V,public manufacturer part,S20,replaced TPS63031 due to low-battery peak-current margin
+COUPON_U2,privacy test board,TPS22918DBVR,qualified powered-off-isolation switch,3.3V controlled load switch,public manufacturer part,S21,does not isolate camera IO by itself
+COUPON_U1,privacy test board,MCP6547-I/P,MCP6547-I/SN requires SOIC layout redesign,dual open-drain comparator DIP8,public manufacturer part,S22,window monitor catches LED electrical open/short; not opaque cover
+STOR1,D0 local cache,16MB integrated flash plus high-endurance microSD,industrial microSD with endurance data,SPI filesystem; module flash cache,retail SD; exact qualified SKU pending,S11,durable ack; SD write/format power failure remains physical test
+RTC1,H1 optional RTC,PCF85063A,phone time synchronization plus retention,I2C; 3.3V,public part referenced upstream,S06,no discrete RTC implemented in D0; time requires host sync
+IMU1,H1 optional motion,BMA400,BMA580,I2C with interrupt,public manufacturer part,S05,omitted from D0 and not a safety or navigation sensor
+NTC1,battery safety,10k NTC specified by pack maker,pack supplier approved alternative,charger temperature network,pack supplier drawing required,S19,never bypass NTC; threshold tolerance review needed
+FPC1,hinge interconnect,custom impedance-controlled flex,short flexible wire harness for D0,3.3V power + grounds + low-speed signals,custom manufacture; no released flex artwork,S11,camera high-speed route stays in front frame; hinge lifetime unverified
+LCD1,D0 bench display,Waveshare 1.3inch LCD Module,documented 240x240 ST7789 module,SPI RGB565 3.3V logic,public manufacturer product,S23,bench display only; not H1 optics and not an AR claim

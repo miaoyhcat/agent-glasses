@@ -1,0 +1,14 @@
+{
+  "evidence_level": 2,
+  "scope": "host JVM tests of the actual Android PcmWave implementation; not Android device tests",
+  "assertions": [
+    "PASS mono_length",
+    "PASS mono_values",
+    "PASS stereo_resample_length",
+    "PASS stereo_mix",
+    "PASS eight_second_bound",
+    "PASS float_rejected",
+    "PASS truncation_rejected"
+  ],
+  "passed": true
+}

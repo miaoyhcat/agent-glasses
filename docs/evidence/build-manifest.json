@@ -1,0 +1,107 @@
+{
+  "generated_utc": "2026-10-16T16:51:51.014264+00:00",
+  "project_version": "0.2.0",
+  "evidence_level": 2,
+  "physical_tests": 0,
+  "host_python": "3.12.14",
+  "platformio": "6.2.0",
+  "android_sdk_platform": 35,
+  "android_build_tools": "35.0.0",
+  "jdk": "OpenJDK17.0.20",
+  "firmware_targets_not_distributed": {
+    "agentglass_d0": {
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/evidence/firmware-build.txt",
+      "ram_bytes": 34132,
+      "program_bytes": 695421,
+      "binary_sha256": "e9e9ad6287f683ee82f718bc26ae1b0947a08765b7037990d0d573b777922ee9",
+      "binary_bytes": 695856
+    },
+    "agentglass_tglass_v2": {
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/evidence/tglass-v2-build.txt",
+      "ram_bytes": 63212,
+      "program_bytes": 706261,
+      "binary_sha256": "300b48c2c3cb8ad1c2adee501675dbf2f57d73f86d2fdcc9e5a8d541dc5a895c",
+      "binary_bytes": 706624
+    }
+  },
+  "source_inputs": {
+    "firmware": {
+      "firmware/boards/agentglass_d0.json": "c8647b1ed689aa6fce4bab67ee3e2cc4c7aa8a9b98ef819af87102351b522ca4",
+      "firmware/boards/lilygo_tglass_v2.json": "5d71a902076dd3fa716e9db27c0032e70a1d1d72e9eb13b17e91def247c1d59d",
+      "firmware/include/hud_raster.h": "568f38a5d6d0d43dfdccbab08b8d97790905affbb220da9a419e88f8c02e6f68",
+      "firmware/include/media_id.h": "273796b9fef8e5c25f6d810c30b23ee67cd8f67978cc4307a76a3623863959c2",
+      "firmware/include/pins.h": "dee3abf90cff702626676bba978d2ba13b33240a6f132fbbee3e2c10a8d0081e",
+      "firmware/partitions.csv": "58d91dd5aae596f4621be452b9275672070aa34c89e90fab2bccb9e9e603915e",
+      "firmware/platformio.ini": "fee4ced0fc60dbde87f4e2cb14e3a621b8ae103d68a5c3a2802d39d4df4196e2",
+      "firmware/src/main.cpp": "b4aa793a6f30cff4624913fdd5ebc2f67fda5a2efb4b863ba5bff7063f05ac56",
+      "firmware/src/tglass_main.cpp": "a3bc9204d95e1e5ace14d1664c379b3b91f3c012494fa47babdb2e2105646398",
+      "third_party/lilygo-tglass-v2/ORIGIN.json": "4b04e886ed151d2bd308a404bd4da16507b145d80c3a5c234606563cc7eec402",
+      "third_party/lilygo-tglass-v2/library.json": "5751b0c36671bc17b148aad8345e5879ef07f6a862d051c619cfd263484f003b",
+      "third_party/lilygo-tglass-v2/src/LilyGo_Button.cpp": "3430bbe4f9f9fddc1ea1f0e3761e6c878882c5adc0734dde03cac7b4be5fb466",
+      "third_party/lilygo-tglass-v2/src/LilyGo_Button.h": "2856819343cb9dab6fe6a23e130107c6aab3eb93529f3dc1ef6431c2a6d291b9",
+      "third_party/lilygo-tglass-v2/src/LilyGo_Display.h": "22f9ca946cf2b1102b08c1bc196295a623520cc6762f86bc970ff3726bc15a03",
+      "third_party/lilygo-tglass-v2/src/LilyGo_Wristband.cpp": "664aab8dc565e875a684f7f575d497fe670a265507fcdb578e88ddec640472d4",
+      "third_party/lilygo-tglass-v2/src/LilyGo_Wristband.h": "e30165d7ff48a03b96edf3d5305bb67768bc96a9d56eeb62aa1ab64455f4acd8",
+      "third_party/lilygo-tglass-v2/src/initSequence.cpp": "2c4117c3033a5f2d98ffe9cc16c3164a5a0b90a770a1dfa81a31fa2de6144968",
+      "third_party/lilygo-tglass-v2/src/initSequence.h": "d0fb99aa56b11cb6148a22a4c97c5571d912d51f157eeec898f2fb0b297f5578"
+    },
+    "android": {
+      "mobile/android/app/build.gradle": "07088dd6e5369dffe034c54b2feb209728af2d358c7dbf9c054651254356e244",
+      "mobile/android/app/src/main/AndroidManifest.xml": "6542c990692403848f5943b90430cb33c78d42d2a3fed32afcf9404b752dd772",
+      "mobile/android/app/src/main/java/dev/agentglass/BleLink.java": "071aab32a43c2e0ee469f50b60962f494aca3aa6825a0846c3268b7b8bf3f141",
+      "mobile/android/app/src/main/java/dev/agentglass/DurableFiles.java": "db5f9a50cf767dc5bbdf8a7c29d48e4054492788f93cf5c4decba608fbe83aae",
+      "mobile/android/app/src/main/java/dev/agentglass/MainActivity.java": "6f91f503a1fddbacca4658abce48d93201e079a61e8a7a1a5052d6062c3b1956",
+      "mobile/android/app/src/main/java/dev/agentglass/NotificationRelay.java": "4a330cee75fc2e3879aa924ee424b24c9e054647ad52fca3ab768cc52f9a7c53",
+      "mobile/android/app/src/main/java/dev/agentglass/PcmWave.java": "fa2997fb036c8fb8d31f9c9d07df388f71dca043e524f6abbbf8b962468af7f2",
+      "mobile/android/app/src/main/java/dev/agentglass/TaskDispatch.java": "d3b0ca608de7755c6e4a40dd70f043439473d78766bd4c1568782ad5bc4557c6",
+      "mobile/android/app/src/main/java/dev/agentglass/TlsApi.java": "09f25cab77bde007fa19b697d38a9b1a665d5172825c0bfdaa9269d25c567bc1",
+      "mobile/android/build.gradle": "8ebf0602839be8fd4c06f07a93e45da6b4a04444fa1b38df8b9def9c1b5c8032",
+      "mobile/android/settings.gradle": "39413071035f41771763129f7956fec59d2b09fb3dccd4ac7edbbc5a6b0230e7",
+      "scripts/build_android.py": "d2d6a761d44ab81d1654f166692c5b009ece73a7cb715e7624e37ac6b5fe8cc7"
+    },
+    "python": {
+      "desktop/agentglass/__init__.py": "f53e6a5665810caf20f20751c295fada0ae91c3eceec898f8d56a8624484a484",
+      "desktop/agentglass/cli.py": "5b9ccf9ebcb8ae37c33251f4156e876b6c813e3401796590222284d19d1dcf8a",
+      "desktop/agentglass/cloud.py": "23fcbf2173dfbfc450a0155b823b8a04f990a4162e182c1e70046cb88345db43",
+      "desktop/agentglass/codex.py": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
+      "desktop/agentglass/doctor.py": "588d05fea504e33b06d214260389c9672e924065bb42f54641294edcc9226ad9",
+      "desktop/agentglass/isolation.py": "bc83959676b68594b5939eee2b446f06c2e964c5f76267436115e55955b92dcc",
+      "desktop/agentglass/media.py": "6de29f7e2fd8edbaf053de0a7ca65112f66500f6be653da199449d45627b5884",
+      "desktop/agentglass/model_proxy.py": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
+      "desktop/agentglass/protocol.py": "e22fe5f56907d11ae353dbf2b137e711c10d005c2a295162e20ab27615cdaafb",
+      "desktop/agentglass/security.py": "7ce33cc56894381a39e7c52060c46473966b64fe24a399b404c1b73007609387",
+      "desktop/agentglass/server.py": "42feca1581f34a03e5a3c670d8e7dbe8536a859680db71c7447490b1fe06a821",
+      "desktop/agentglass/store.py": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9",
+      "desktop/agentglass/web/index.html": "620d52339c6ba5798d8843ebf4a946e31a1612fff1b6118349f74d79257496e8",
+      "pyproject.toml": "6dd36af1fee293db3d87205c2fff3839bcf73534045cacbb9a68a0a553683f9c"
+    }
+  },
+  "delivered_binary_outputs": {
+    "releases/agentglass-0.2.0-py3-none-any.whl": {
+      "sha256": "52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91",
+      "bytes": 39099
+    },
+    "releases/agentglass-debug.apk": {
+      "sha256": "69aacf25db23bc8b4f0ce71a2a60fcc434bf93cdda5ade1f39072dbd039e6c81",
+      "bytes": 41357
+    }
+  },
+  "android_signature_v2_v3_verified": true,
+  "android_api26_runtime_exact_apk_matches": true,
+  "python_wheel_contains_web_ui": true,
+  "python_wheel_matches_current_source": true,
+  "unbuilt_container_definition": {
+    "agent-integration/codex/Dockerfile": "831516aac4221416fecef4c5603fa95ef99ea853f707972937b3a264bc813050",
+    "agent-integration/codex/worker_entry.py": "9462a885488ec2139c459fdbc2671f307f9a3de09ef5d181501ae35d6220269c"
+  },
+  "limitations": [
+    "Input hashes recorded after the actual builds; not a byte-identical cross-platform build guarantee",
+    "Android runtime uses an actual virtual device with a simulated agent, not physical BLE/ASR/optics",
+    "No real Docker container execution or paid OpenAI model task",
+    "Firmware binaries withheld pending third-party redistribution review"
+  ]
+}

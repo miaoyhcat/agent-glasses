@@ -1,0 +1,92 @@
+{
+  "scores": {
+    "A-H1": 3.2,
+    "B-standalone": 2.15,
+    "C-platform": 3.4
+  },
+  "sensitivity": [
+    {
+      "energy_weight": 0.1,
+      "procurement_weight": 0.1,
+      "scores": {
+        "A-H1": 3.392,
+        "B-standalone": 2.415,
+        "C-platform": 3.492
+      }
+    },
+    {
+      "energy_weight": 0.1,
+      "procurement_weight": 0.25,
+      "scores": {
+        "A-H1": 3.15,
+        "B-standalone": 2.15,
+        "C-platform": 3.4
+      }
+    },
+    {
+      "energy_weight": 0.1,
+      "procurement_weight": 0.4,
+      "scores": {
+        "A-H1": 2.908,
+        "B-standalone": 1.885,
+        "C-platform": 3.308
+      }
+    },
+    {
+      "energy_weight": 0.25,
+      "procurement_weight": 0.1,
+      "scores": {
+        "A-H1": 3.3,
+        "B-standalone": 2.15,
+        "C-platform": 3.4
+      }
+    },
+    {
+      "energy_weight": 0.25,
+      "procurement_weight": 0.25,
+      "scores": {
+        "A-H1": 3.058,
+        "B-standalone": 1.885,
+        "C-platform": 3.308
+      }
+    },
+    {
+      "energy_weight": 0.25,
+      "procurement_weight": 0.4,
+      "scores": {
+        "A-H1": 2.815,
+        "B-standalone": 1.619,
+        "C-platform": 3.215
+      }
+    },
+    {
+      "energy_weight": 0.4,
+      "procurement_weight": 0.1,
+      "scores": {
+        "A-H1": 3.208,
+        "B-standalone": 1.885,
+        "C-platform": 3.308
+      }
+    },
+    {
+      "energy_weight": 0.4,
+      "procurement_weight": 0.25,
+      "scores": {
+        "A-H1": 2.965,
+        "B-standalone": 1.619,
+        "C-platform": 3.215
+      }
+    },
+    {
+      "energy_weight": 0.4,
+      "procurement_weight": 0.4,
+      "scores": {
+        "A-H1": 2.723,
+        "B-standalone": 1.354,
+        "C-platform": 3.123
+      }
+    }
+  ],
+  "all_candidates_fail_manufacturing_release_gates": true,
+  "development_choice": "A-H1 conditional; C-platform only for earlier SDK display experiments"
+}

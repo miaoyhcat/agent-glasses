@@ -1,0 +1,9 @@
+{
+  "evidence_level": 2,
+  "passed": true,
+  "id_vectors_compared_to_python_rfc4648": 256,
+  "id_bits": 128,
+  "all_paths_fit_spiffs_32_bytes_including_nul": true,
+  "hud_checks": "PASS actual firmware raster: black, white, letterbox, both edges, bounds",
+  "scope": "actual firmware header functions on host CPU; not flash storage or optics tests"
+}

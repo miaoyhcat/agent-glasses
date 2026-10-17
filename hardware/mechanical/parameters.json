@@ -1,0 +1,13 @@
+{
+  "units":"mm", "revision":"H1 fit-and-packaging fixture, not tooling release",
+  "lens_center_x":35,"rim_outer_rx":27,"rim_outer_ry":20,
+  "lens_opening_rx":23.5,"lens_opening_ry":16.5,
+  "front_depth":3.5,"hinge_x":68,"temple_length":145,
+  "temple_width":8.6,"temple_height":20.4,"temple_wall":0.8,"electronics_bay_length":65,
+  "cover_gap":0.2,"cover_seat_length":4,
+  "battery_cell_diameter":16,"battery_cell_thickness":5.4,
+  "battery_clearance":0.6,"optical_envelope":[18,15,14],
+  "optics_note":"Envelope is a requirement for the RFQ, NOT a verified supplier model.",
+  "fasteners":"M1.6 covers, hand-fitted hinge fixture; production hinge/Rx retention unresolved",
+  "intended_use":"Unpowered geometry and fit experiments only; no on-face live battery testing"
+}
