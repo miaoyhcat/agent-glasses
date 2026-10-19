@@ -38,11 +38,11 @@ def main():
     if target.is_relative_to(ROOT):raise ValueError('Output must be outside the project directory')
     if not re.fullmatch(r'v[0-9A-Za-z._-]{1,80}',args.tag):raise ValueError('Invalid release tag')
     if not shutil.which('git'):raise RuntimeError('Git is required')
-    spec=importlib.util.spec_from_file_location('agentglass_delivery_audit',ROOT/'scripts/package_delivery.py')
+    spec=importlib.util.spec_from_file_location('codexglasses_delivery_audit',ROOT/'scripts/package_delivery.py')
     delivery=importlib.util.module_from_spec(spec);spec.loader.exec_module(delivery)
     comparison=json.loads((ROOT/'docs/product-comparison.json').read_text())
     sources=json.loads((ROOT/'docs/sources.json').read_text());source_ids={row['id'] for row in sources}
-    if len(comparison)!=8:raise RuntimeError('Expected AgentGlass and seven representative products')
+    if len(comparison)!=8:raise RuntimeError('Expected CodexGlasses and seven representative products')
     for row in comparison:
         if row['sources']!='PROJECT' and not set(row['sources'].split('|'))<=source_ids:
             raise RuntimeError('Unresolved comparison source')
@@ -50,10 +50,10 @@ def main():
     if required_notice not in (ROOT/'README.md').read_text()[:1500]:raise RuntimeError('Prominent Chinese license notice missing')
     if 'Personal noncommercial use only' not in (ROOT/'README_EN.md').read_text()[:1500]:raise RuntimeError('Prominent English license notice missing')
     if '3277681859@qq.com' not in (ROOT/'COMMERCIAL-LICENSE.md').read_text():raise RuntimeError('Commercial contact missing')
-    for path in ['assets/agentglass-banner.svg','docs/design-index.md','COMMERCIAL-LICENSE.md','CONTRIBUTING.md','CHANGELOG.md']:
+    for path in ['assets/codexglasses-banner.svg','docs/design-index.md','COMMERCIAL-LICENSE.md','CONTRIBUTING.md','CHANGELOG.md']:
         if not (ROOT/path).is_file():raise RuntimeError('Publication file missing: '+path)
     import xml.etree.ElementTree as ET
-    ET.parse(ROOT/'assets/agentglass-banner.svg')
+    ET.parse(ROOT/'assets/codexglasses-banner.svg')
     (ROOT/'docs/evidence/publication-validation.json').write_text(json.dumps({'release_tag':args.tag,'status':'publication_documents_checked','comparison_source_ids_resolve':True,'prominent_licensing_verified':True,'banner_xml_valid':True},indent=2)+'\n')
     audit=delivery.audit()
     audit.update(publication_comparison_rows=len(comparison),prominent_licensing_verified=True)
@@ -67,10 +67,10 @@ def main():
         'source_references':len(sources),'recorded_host_tests':audit['host_test_count'],
         'historical_package_readback':'docs/evidence/package-readback.json records the v0.2 engineering archive; publication documentation changes are separately scoped here',
         'physical_hardware_tests':0,'remote_github_created':False,
-        'license':'LicenseRef-AgentGlass-Personal-Noncommercial-1.0','commercial_contact':'3277681859@qq.com'}
+        'license':'LicenseRef-CodexGlasses-Personal-Noncommercial-1.0','commercial_contact':'3277681859@qq.com'}
     (ROOT/'docs/evidence/publication-validation.json').write_text(json.dumps(publication,indent=2)+'\n')
     (ROOT/'SOURCE-RELEASE.json').write_text(json.dumps({'release_tag':args.tag,'software_version':'0.2.0',
-        'license':'LicenseRef-AgentGlass-Personal-Noncommercial-1.0','commercial_contact':'3277681859@qq.com',
+        'license':'LicenseRef-CodexGlasses-Personal-Noncommercial-1.0','commercial_contact':'3277681859@qq.com',
         'design_index':'docs/design-index.md','product_comparison':'docs/product-comparison.md',
         'validation':'docs/evidence/publication-validation.json'},indent=2)+'\n')
     # Historical archives keep their own recorded hashes. Current manifest covers
@@ -84,9 +84,9 @@ def main():
     build=ROOT/'build';build.mkdir(exist_ok=True);target.parent.mkdir(parents=True,exist_ok=True)
     environment={**os.environ,'GIT_CONFIG_NOSYSTEM':'1','GIT_CONFIG_GLOBAL':os.devnull}
     # The commit identity describes the packaging process, not a legal owner.
-    environment.update(GIT_AUTHOR_NAME='AgentGlass packaging automation',GIT_AUTHOR_EMAIL='build@agentglass.invalid',
-                       GIT_COMMITTER_NAME='AgentGlass packaging automation',GIT_COMMITTER_EMAIL='build@agentglass.invalid')
-    with tempfile.TemporaryDirectory(prefix='agentglass-source-release-',dir=build) as temporary:
+    environment.update(GIT_AUTHOR_NAME='CodexGlasses packaging automation',GIT_AUTHOR_EMAIL='build@codexglasses.invalid',
+                       GIT_COMMITTER_NAME='CodexGlasses packaging automation',GIT_COMMITTER_EMAIL='build@codexglasses.invalid')
+    with tempfile.TemporaryDirectory(prefix='codexglasses-source-release-',dir=build) as temporary:
         temporary=Path(temporary);snapshot=temporary/'snapshot';snapshot.mkdir()
         for path in entries:
             rel=path.relative_to(ROOT);copy=snapshot/rel;copy.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(path,copy)
@@ -95,12 +95,12 @@ def main():
         run(['git','config','core.autocrlf','false'],snapshot,environment)
         run(['git','config','commit.gpgsign','false'],snapshot,environment)
         run(['git','add','--force','--all'],snapshot,environment)
-        run(['git','commit','-m','Publish AgentGlass source, design files, use policy and product comparison'],snapshot,environment)
+        run(['git','commit','-m','Publish CodexGlasses source, design files, use policy and product comparison'],snapshot,environment)
         run(['git','tag',args.tag],snapshot,environment)
         commit=run(['git','rev-parse','HEAD'],snapshot,environment)
         tracked=[p for p in run(['git','ls-files','-z'],snapshot,environment).split('\0') if p]
         if set(tracked)!=set(hashes):raise RuntimeError('Git index does not contain the exact publication snapshot')
-        bundle=temporary/'agent-glasses.git.bundle'
+        bundle=temporary/'codex-glasses.git.bundle'
         run(['git','bundle','create',str(bundle),'--all'],snapshot,environment)
         verified=run(['git','bundle','verify',str(bundle)],snapshot,environment)
         clone=temporary/'clone'
@@ -109,27 +109,27 @@ def main():
         for path,digest in hashes.items():
             if sha(clone/path)!=digest:raise RuntimeError('Bundle clone content differs: '+path)
         # Re-run the artifact/content audit from the independently cloned files.
-        clone_spec=importlib.util.spec_from_file_location('agentglass_clone_audit',clone/'scripts/package_delivery.py')
+        clone_spec=importlib.util.spec_from_file_location('codexglasses_clone_audit',clone/'scripts/package_delivery.py')
         clone_audit=importlib.util.module_from_spec(clone_spec);clone_spec.loader.exec_module(clone_audit)
         clone_audit.audit()
-        package_info={'project':'AgentGlass','release_tag':args.tag,'commit':commit,'branch':'main',
+        package_info={'project':'CodexGlasses','release_tag':args.tag,'commit':commit,'branch':'main',
             'tracked_project_files':len(hashes),'git_bundle_verified':True,'offline_clone_verified':True,
             'clone_file_hashes_match':True,'source_archive_readback_verified':True,'remote_github_created':False,
             'bundle_sha256':sha(bundle),'software_version':'0.2.0','comparison_products':len(comparison),
             'source_references':len(sources),'commercial_contact':'3277681859@qq.com',
-            'license':'LicenseRef-AgentGlass-Personal-Noncommercial-1.0'}
-        first='''# AgentGlass GitHub source release\n\n个人非商业学习、研究、修改及自用；商业销售、生产销售、集成或授权须事先取得书面许可。商业授权：3277681859@qq.com。完整条款在agent-glasses/LICENSE。\n\n- agent-glasses/：完整可浏览源码与设计资料，先看README.md和docs/design-index.md。\n- agent-glasses.git.bundle：已验证的自包含Git仓库，含main分支与发布标签。\n- REPOSITORY-INFO.json：提交、离线克隆、文件哈希和授权信息。\n\n在此目录执行：\n\n```bash\ngit clone ./agent-glasses.git.bundle ./agent-glasses-git\n```\n\n然后按agent-glasses-git/scripts/publish-github.md推送到自己的GitHub公开仓库。仓库首页包含授权说明与同类产品对比。\n'''
+            'license':'LicenseRef-CodexGlasses-Personal-Noncommercial-1.0'}
+        first='''# CodexGlasses GitHub source release\n\n个人非商业学习、研究、修改及自用；商业销售、生产销售、集成或授权须事先取得书面许可。商业授权：3277681859@qq.com。完整条款在codex-glasses/LICENSE。\n\n- codex-glasses/：完整可浏览源码与设计资料，先看README.md和docs/design-index.md。\n- codex-glasses.git.bundle：已验证的自包含Git仓库，含main分支与发布标签。\n- REPOSITORY-INFO.json：提交、离线克隆、文件哈希和授权信息。\n\n在此目录执行：\n\n```bash\ngit clone ./codex-glasses.git.bundle ./codex-glasses-git\n```\n\n然后按codex-glasses-git/scripts/publish-github.md推送到自己的GitHub公开仓库。仓库首页包含授权说明与同类产品对比。\n'''
         partial=target.with_name(target.name+'.partial')
-        run(['git','archive','--format=zip','--prefix=agent-glasses/','--output='+str(partial),'HEAD'],snapshot,environment)
+        run(['git','archive','--format=zip','--prefix=codex-glasses/','--output='+str(partial),'HEAD'],snapshot,environment)
         with zipfile.ZipFile(partial,'a',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-            z.write(bundle,'agent-glasses.git.bundle')
+            z.write(bundle,'codex-glasses.git.bundle')
             z.writestr('REPOSITORY-INFO.json',json.dumps(package_info,indent=2)+'\n')
             z.writestr('START_HERE.md',first)
         with zipfile.ZipFile(partial) as z:
             if len(z.namelist())!=len(set(z.namelist())) or z.testzip():raise RuntimeError('ZIP integrity failed')
             for path,digest in hashes.items():
-                if hashlib.sha256(z.read('agent-glasses/'+path)).hexdigest()!=digest:raise RuntimeError('ZIP source differs: '+path)
-            if hashlib.sha256(z.read('agent-glasses.git.bundle')).hexdigest()!=package_info['bundle_sha256']:raise RuntimeError('ZIP bundle differs')
+                if hashlib.sha256(z.read('codex-glasses/'+path)).hexdigest()!=digest:raise RuntimeError('ZIP source differs: '+path)
+            if hashlib.sha256(z.read('codex-glasses.git.bundle')).hexdigest()!=package_info['bundle_sha256']:raise RuntimeError('ZIP bundle differs')
         os.replace(partial,target)
     print(json.dumps({**package_info,'archive':str(target),'zip_bytes':target.stat().st_size,'archive_sha256':sha(target)},indent=2))
 

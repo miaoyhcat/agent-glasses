@@ -1,4 +1,4 @@
-# AgentGlass Protocol 1
+# CodexGlasses Protocol 1
 
 本协议是本项目自己的配件协议，不冒充 Codex API。桌面端通过官方 App Server 的 JSONL stdio 调用 Codex。
 

@@ -3,7 +3,7 @@ from pathlib import Path
 import stat
 import tempfile
 import unittest
-from agentglass.security import prepare_worker_tree
+from codexglasses.security import prepare_worker_tree
 
 
 class WorkerTreeTests(unittest.TestCase):

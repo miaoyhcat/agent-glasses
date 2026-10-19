@@ -40,7 +40,7 @@
       "claim": "真实CLI初始化",
       "evidence_level": 2,
       "status": "partial",
-      "implementation_or_input": "desktop/agentglass/codex.py",
+      "implementation_or_input": "desktop/codexglasses/codex.py",
       "record": "docs/evidence/codex-live-probe.json",
       "boundary": "initialize received; thread/start timeout; zero inference"
     },
@@ -58,7 +58,7 @@
       "claim": "无宿主凭据、无容器网络的stdio模型代理隔离方案",
       "evidence_level": 4,
       "status": "unverified",
-      "implementation_or_input": "desktop/agentglass/isolation.py",
+      "implementation_or_input": "desktop/codexglasses/isolation.py",
       "record": "SECURITY.md",
       "boundary": "Construction, redaction, quotas and stdio transport tested; real Docker run unverified; no host API key in worker"
     },
@@ -76,7 +76,7 @@
       "claim": "实际Android PCM转换器",
       "evidence_level": 2,
       "status": "passed",
-      "implementation_or_input": "mobile/android/app/src/main/java/dev/agentglass/PcmWave.java",
+      "implementation_or_input": "mobile/android/app/src/main/java/dev/codexglasses/PcmWave.java",
       "record": "docs/evidence/java-audio-tests.json",
       "boundary": "Seven host JVM assertions; not acoustic quality"
     },
@@ -247,7 +247,7 @@
       "claim": "官方CLI+真实本地模型修复公开样例并独立复测通过",
       "evidence_level": 2,
       "status": "passed_public_fixture_only",
-      "implementation_or_input": "desktop/agentglass/model_proxy.py",
+      "implementation_or_input": "desktop/codexglasses/model_proxy.py",
       "record": "docs/evidence/local-codex-broker.json",
       "boundary": "Diagnostic CLI0.104.0/local qwen3:4b-instruct via constrained MCP; 5 genuine model calls; 2 independent tests; not CLI0.162.1 Docker/OpenAI production acceptance"
     },
@@ -256,7 +256,7 @@
       "claim": "连续任务不跟随模型创建的链接设置宿主权限",
       "evidence_level": 2,
       "status": "passed",
-      "implementation_or_input": "desktop/agentglass/security.py",
+      "implementation_or_input": "desktop/codexglasses/security.py",
       "record": "tests/test_worker_tree.py",
       "boundary": "POSIX regression and cleanup gates pass; quiescent owner-controlled tree required; Windows runtime and hard disk quota unverified"
     },

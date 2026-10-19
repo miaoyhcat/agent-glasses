@@ -1,5 +1,5 @@
 item,quantity,model,procurement,evidence,role
 near_eye_display,1,LILYGO T-Glass H715 V2,official retail S53; verify V2 before ordering,S53|S54|S55,complete original optical/display board; no custom lens manufacture
-capture_bench,1,AgentGlass D0,see existing D0 BOM,firmware/README.md,external engineering camera/audio/cache rig; not part of a completed 50g frame
+capture_bench,1,CodexGlasses D0,see existing D0 BOM,firmware/README.md,external engineering camera/audio/cache rig; not part of a completed 50g frame
 phone,1,Android API26+,user supplied,mobile/README.md,voice/network/storage and dual BLE connections
 computer,1,Windows with Linux Docker containers or Linux,requires actual target test,agent-integration/codex/README.md,authenticated agent bridge and model broker

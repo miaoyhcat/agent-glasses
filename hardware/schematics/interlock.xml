@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/workspace/scratch/1628ebaca2ec/revision-v0.2/agent-glasses/hardware/schematics/interlock.kicad_sch</source>
+    <source>/workspace/scratch/1628ebaca2ec/revision-v0.2/codex-glasses/hardware/schematics/interlock.kicad_sch</source>
     <date>Fri Oct 16 17:27:22 2026</date>
     <tool>Eeschema 7.0.11+dfsg-1build4</tool>
     <sheet number="1" name="/" tstamps="/">
@@ -26,7 +26,7 @@
   <components>
     <comp ref="C1">
       <value>1uF</value>
-      <libsource lib="AgentGlass" part="PART_C1" description=""/>
+      <libsource lib="CodexGlasses" part="PART_C1" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -34,7 +34,7 @@
     </comp>
     <comp ref="C2">
       <value>1uF</value>
-      <libsource lib="AgentGlass" part="PART_C2" description=""/>
+      <libsource lib="CodexGlasses" part="PART_C2" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -42,7 +42,7 @@
     </comp>
     <comp ref="C3">
       <value>1nF</value>
-      <libsource lib="AgentGlass" part="PART_C3" description=""/>
+      <libsource lib="CodexGlasses" part="PART_C3" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -50,7 +50,7 @@
     </comp>
     <comp ref="C4">
       <value>100nF</value>
-      <libsource lib="AgentGlass" part="PART_C4" description=""/>
+      <libsource lib="CodexGlasses" part="PART_C4" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -58,7 +58,7 @@
     </comp>
     <comp ref="D1">
       <value>VISIBLE_GREEN_LED</value>
-      <libsource lib="AgentGlass" part="PART_D1" description=""/>
+      <libsource lib="CodexGlasses" part="PART_D1" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -66,7 +66,7 @@
     </comp>
     <comp ref="J1">
       <value>3V3_IN</value>
-      <libsource lib="AgentGlass" part="PART_J1" description=""/>
+      <libsource lib="CodexGlasses" part="PART_J1" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -74,7 +74,7 @@
     </comp>
     <comp ref="J2">
       <value>MCU_CTRL</value>
-      <libsource lib="AgentGlass" part="PART_J2" description=""/>
+      <libsource lib="CodexGlasses" part="PART_J2" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -82,7 +82,7 @@
     </comp>
     <comp ref="J3">
       <value>CAMERA_3V3_OUT</value>
-      <libsource lib="AgentGlass" part="PART_J3" description=""/>
+      <libsource lib="CodexGlasses" part="PART_J3" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -90,7 +90,7 @@
     </comp>
     <comp ref="R1">
       <value>330</value>
-      <libsource lib="AgentGlass" part="PART_R1" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R1" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -98,7 +98,7 @@
     </comp>
     <comp ref="R2">
       <value>232k 1%</value>
-      <libsource lib="AgentGlass" part="PART_R2" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R2" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -106,7 +106,7 @@
     </comp>
     <comp ref="R3">
       <value>100k 1%</value>
-      <libsource lib="AgentGlass" part="PART_R3" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R3" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -114,7 +114,7 @@
     </comp>
     <comp ref="R4">
       <value>22.1k 1%</value>
-      <libsource lib="AgentGlass" part="PART_R4" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R4" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -122,7 +122,7 @@
     </comp>
     <comp ref="R5">
       <value>100k 1%</value>
-      <libsource lib="AgentGlass" part="PART_R5" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R5" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -130,7 +130,7 @@
     </comp>
     <comp ref="R6">
       <value>10k</value>
-      <libsource lib="AgentGlass" part="PART_R6" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R6" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -138,7 +138,7 @@
     </comp>
     <comp ref="R7">
       <value>100k</value>
-      <libsource lib="AgentGlass" part="PART_R7" description=""/>
+      <libsource lib="CodexGlasses" part="PART_R7" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -146,7 +146,7 @@
     </comp>
     <comp ref="SW1">
       <value>EXTERNAL_MASTER_SWITCH</value>
-      <libsource lib="AgentGlass" part="PART_SW1" description=""/>
+      <libsource lib="CodexGlasses" part="PART_SW1" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -154,7 +154,7 @@
     </comp>
     <comp ref="U1">
       <value>MCP6547-I/P</value>
-      <libsource lib="AgentGlass" part="PART_U1" description=""/>
+      <libsource lib="CodexGlasses" part="PART_U1" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -162,7 +162,7 @@
     </comp>
     <comp ref="U2">
       <value>TPS22918DBVR</value>
-      <libsource lib="AgentGlass" part="PART_U2" description=""/>
+      <libsource lib="CodexGlasses" part="PART_U2" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="hardware/schematics/interlock.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -170,7 +170,7 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="AgentGlass" part="PART_C1">
+    <libpart lib="CodexGlasses" part="PART_C1">
       <fields>
         <field name="Reference">C</field>
         <field name="Value">1uF</field>
@@ -180,7 +180,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_C2">
+    <libpart lib="CodexGlasses" part="PART_C2">
       <fields>
         <field name="Reference">C</field>
         <field name="Value">1uF</field>
@@ -190,7 +190,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_C3">
+    <libpart lib="CodexGlasses" part="PART_C3">
       <fields>
         <field name="Reference">C</field>
         <field name="Value">1nF</field>
@@ -200,7 +200,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_C4">
+    <libpart lib="CodexGlasses" part="PART_C4">
       <fields>
         <field name="Reference">C</field>
         <field name="Value">100nF</field>
@@ -210,7 +210,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_D1">
+    <libpart lib="CodexGlasses" part="PART_D1">
       <fields>
         <field name="Reference">D</field>
         <field name="Value">VISIBLE_GREEN_LED</field>
@@ -220,7 +220,7 @@
         <pin num="2" name="LED" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_J1">
+    <libpart lib="CodexGlasses" part="PART_J1">
       <fields>
         <field name="Reference">J</field>
         <field name="Value">3V3_IN</field>
@@ -230,7 +230,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_J2">
+    <libpart lib="CodexGlasses" part="PART_J2">
       <fields>
         <field name="Reference">J</field>
         <field name="Value">MCU_CTRL</field>
@@ -241,7 +241,7 @@
         <pin num="3" name="VSW" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_J3">
+    <libpart lib="CodexGlasses" part="PART_J3">
       <fields>
         <field name="Reference">J</field>
         <field name="Value">CAMERA_3V3_OUT</field>
@@ -251,7 +251,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R1">
+    <libpart lib="CodexGlasses" part="PART_R1">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">330</field>
@@ -261,7 +261,7 @@
         <pin num="2" name="LED" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R2">
+    <libpart lib="CodexGlasses" part="PART_R2">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">232k 1%</field>
@@ -271,7 +271,7 @@
         <pin num="2" name="VLOW" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R3">
+    <libpart lib="CodexGlasses" part="PART_R3">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">100k 1%</field>
@@ -281,7 +281,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R4">
+    <libpart lib="CodexGlasses" part="PART_R4">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">22.1k 1%</field>
@@ -291,7 +291,7 @@
         <pin num="2" name="VHIGH" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R5">
+    <libpart lib="CodexGlasses" part="PART_R5">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">100k 1%</field>
@@ -301,7 +301,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R6">
+    <libpart lib="CodexGlasses" part="PART_R6">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">10k</field>
@@ -311,7 +311,7 @@
         <pin num="2" name="EN" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_R7">
+    <libpart lib="CodexGlasses" part="PART_R7">
       <fields>
         <field name="Reference">R</field>
         <field name="Value">100k</field>
@@ -321,7 +321,7 @@
         <pin num="2" name="GND" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_SW1">
+    <libpart lib="CodexGlasses" part="PART_SW1">
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">EXTERNAL_MASTER_SWITCH</field>
@@ -331,7 +331,7 @@
         <pin num="2" name="VSW" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_U1">
+    <libpart lib="CodexGlasses" part="PART_U1">
       <fields>
         <field name="Reference">U</field>
         <field name="Value">MCP6547-I/P</field>
@@ -347,7 +347,7 @@
         <pin num="8" name="VSW" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="AgentGlass" part="PART_U2">
+    <libpart lib="CodexGlasses" part="PART_U2">
       <fields>
         <field name="Reference">U</field>
         <field name="Value">TPS22918DBVR</field>

@@ -1,5 +1,5 @@
-import dev.agentglass.DurableFiles;
-import dev.agentglass.TaskDispatch;
+import dev.codexglasses.DurableFiles;
+import dev.codexglasses.TaskDispatch;
 import java.io.*;
 import java.nio.file.*;
 import java.nio.channels.FileChannel;
@@ -34,7 +34,7 @@ public class ReliabilityCheck {
             check(q.queued()==1,"ten_thousand_hud_updates_coalesced");release.countDown();await(done);
             check(rendered.get()==9999&&count.get()==1,"latest_hud_is_rendered");
         }
-        Path dir=Files.createTempDirectory("agentglass-atomic-");File f=dir.resolve("manifest.json").toFile(),pending=new File(f.getPath()+".new");
+        Path dir=Files.createTempDirectory("codexglasses-atomic-");File f=dir.resolve("manifest.json").toFile(),pending=new File(f.getPath()+".new");
         DurableFiles.Validator valid=b->new String(b,java.nio.charset.StandardCharsets.UTF_8).matches("\\{[A-Z]+\\}");
         try{
             DurableFiles.write(f,bytes("{OLD}"),ReliabilityCheck::sync);check(read(f).equals("{OLD}"),"initial_manifest_synced");

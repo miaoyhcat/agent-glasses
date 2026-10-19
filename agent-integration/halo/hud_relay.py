@@ -42,7 +42,7 @@ async def main(args):
                 async with session.get(args.desktop.rstrip('/')+'/v1/tasks',ssl=trust,allow_redirects=False) as response:
                     if response.status!=200:raise RuntimeError('Desktop authentication/connection failed')
                     tasks=(await response.json())['tasks']
-                task=tasks[0] if tasks else {'project':'AgentGlass','status':'no tasks'}
+                task=tasks[0] if tasks else {'project':'CodexGlasses','status':'no tasks'}
                 state=(task['project'],task['status'],datetime.now().strftime('%H:%M'))
                 if state!=last:
                     for command in commands(*state):

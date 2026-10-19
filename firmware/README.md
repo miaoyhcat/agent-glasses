@@ -17,7 +17,7 @@
 python -m pip install platformio
 python scripts/build_firmware.py
 # 明确选择台架目标，确认接线后烧录；下面操作需要真实开发板
-PLATFORMIO_SETTING_ENABLE_TELEMETRY=no python -m platformio run -d firmware -e agentglass_d0 -t upload
+PLATFORMIO_SETTING_ENABLE_TELEMETRY=no python -m platformio run -d firmware -e codexglasses_d0 -t upload
 python -m platformio device monitor -b 115200
 ```
 
@@ -35,10 +35,10 @@ D0只能在离体开发夹具上供电测试。摄像头电源测试板不隔离
 
 ## P1：有实际采购路径的近眼显示
 
-`agentglass_tglass_v2` 是独立的 ESP32-S3 / TGlass V2 显示目标；`scripts/build_firmware.py` 同时构建 D0 与 P1，并保存两个实际退出码、内存占用和镜像哈希。P1 使用原厂 MIT 驱动的固定版本，源码与许可在 `third_party/lilygo-tglass-v2/`。
+`codexglasses_tglass_v2` 是独立的 ESP32-S3 / TGlass V2 显示目标；`scripts/build_firmware.py` 同时构建 D0 与 P1，并保存两个实际退出码、内存占用和镜像哈希。P1 使用原厂 MIT 驱动的固定版本，源码与许可在 `third_party/lilygo-tglass-v2/`。
 
 ```bash
-PLATFORMIO_SETTING_ENABLE_TELEMETRY=no python -m platformio run -d firmware -e agentglass_tglass_v2 -t upload
+PLATFORMIO_SETTING_ENABLE_TELEMETRY=no python -m platformio run -d firmware -e codexglasses_tglass_v2 -t upload
 ```
 
 P1 将手机 128×64 位图保留左右边缘后映射到 126×126 显示窗口；支持独立时钟、USB 配钥、加密 BLE 绑定及 HMAC HUD。`photo/record/audio/read` 在此配置明确返回不支持；采集由 D0 或手机承担。Android 可以分别绑定采集板与显示板，两者使用不同密钥。完整采购、显示窗口和 USB BOOT 配钥步骤见 [P1 指南](../hardware/optics/p1-tglass-v2.md)。

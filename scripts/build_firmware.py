@@ -8,13 +8,13 @@ import argparse,datetime,hashlib,json,os,re,subprocess,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def main():
- p=argparse.ArgumentParser();p.add_argument('--env',action='append',choices=['agentglass_d0','agentglass_tglass_v2']);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--env',action='append',choices=['codexglasses_d0','codexglasses_tglass_v2']);a=p.parse_args()
  os.environ['PLATFORMIO_SETTING_ENABLE_TELEMETRY']='no'
  from platformio import app
  if app.get_setting('enable_telemetry') is not False:raise RuntimeError('telemetry_opt_out_not_applied')
  report={'evidence_level':2,'generated_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'platformio_telemetry_enabled':False,'physical_hardware_tests':0,'targets':{}}
- for name in a.env or ['agentglass_d0','agentglass_tglass_v2']:
-  logfile=ROOT/'docs/evidence'/('firmware-build.txt' if name=='agentglass_d0' else 'tglass-v2-build.txt')
+ for name in a.env or ['codexglasses_d0','codexglasses_tglass_v2']:
+  logfile=ROOT/'docs/evidence'/('firmware-build.txt' if name=='codexglasses_d0' else 'tglass-v2-build.txt')
   command=[sys.executable,'-u','-m','platformio','run','-d','firmware','-e',name,'-j','2']
   result=subprocess.run(command,cwd=ROOT,env=os.environ.copy(),capture_output=True,text=True)
   logfile.write_text(result.stdout+result.stderr)

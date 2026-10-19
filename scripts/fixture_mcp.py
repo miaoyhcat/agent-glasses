@@ -95,7 +95,7 @@ class FixtureTools:
         elif name == 'test_fixture' and not arguments:
             # No project-controlled imports or commands: only the exact bundled
             # tests and either the original or arithmetic-only patched module.
-            with tempfile.TemporaryDirectory(prefix='agentglass-fixture-pycache-') as cache:
+            with tempfile.TemporaryDirectory(prefix='codexglasses-fixture-pycache-') as cache:
                 # A same-size patch within one timestamp tick must not reuse the
                 # original module's bytecode. Neither read nor write project caches.
                 run = subprocess.run([sys.executable, '-I', '-B', '-X', 'pycache_prefix=' + cache, '-m', 'unittest', 'discover', '-s', str(self.workspace), '-v'],
@@ -131,7 +131,7 @@ def serve(tools):
         response = {'jsonrpc': '2.0', 'id': request['id']}
         if method == 'initialize':
             version = request.get('params', {}).get('protocolVersion', '2024-11-05')
-            response['result'] = {'protocolVersion': version, 'capabilities': {'tools': {}}, 'serverInfo': {'name': 'agentglass-public-fixture', 'version': '0.2.0'}}
+            response['result'] = {'protocolVersion': version, 'capabilities': {'tools': {}}, 'serverInfo': {'name': 'codexglasses-public-fixture', 'version': '0.2.0'}}
         elif method == 'tools/list':
             response['result'] = {'tools': definitions}
         elif method == 'tools/call':

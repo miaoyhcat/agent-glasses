@@ -1,4 +1,4 @@
-// AgentGlass P1: procurement-first near-eye HUD on a complete LILYGO T-Glass V2.
+// CodexGlasses P1: procurement-first near-eye HUD on a complete LILYGO T-Glass V2.
 // Display-only target: camera/audio/storage remain on D0/phone. Not H1 optics.
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -124,11 +124,11 @@ void setup(){
   static uint16_t blank[126]={};
   for(int y=0;y<294;y++){optic.setAddrWindow(0,y,126,1);optic.pushColors(blank,sizeof(blank));delay(1);}
   uint8_t randomSession[16];esp_fill_random(randomSession,16);sessionId=hexBytes(randomSession,16);
-  prefs.begin("agentglass",false);provisioned=prefs.getBytesLength("key")==32;if(provisioned)prefs.getBytes("key",keyBytes,32);
+  prefs.begin("codexglasses",false);provisioned=prefs.getBytesLength("key")==32;if(provisioned)prefs.getBytes("key",keyBytes,32);
   drawClock();
   // Pairing passkey is shown on USB console; D0 has no font renderer.
   uint32_t passkey=100000+(esp_random()%900000);Serial.printf("BLE pairing passkey: %06lu\n",(unsigned long)passkey);
-  NimBLEDevice::init("AgentGlass-TGlass-V2");NimBLEDevice::setMTU(247);NimBLEDevice::setSecurityAuth(true,true,true);
+  NimBLEDevice::init("CodexGlasses-TGlass-V2");NimBLEDevice::setMTU(247);NimBLEDevice::setSecurityAuth(true,true,true);
   NimBLEDevice::setSecurityIOCap(BLE_HS_IO_DISPLAY_ONLY);NimBLEDevice::setSecurityPasskey(passkey);
   NimBLEServer* s=NimBLEDevice::createServer();s->setCallbacks(new ServerCallbacks());
   NimBLEService* service=s->createService(SERVICE);

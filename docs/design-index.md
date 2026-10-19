@@ -1,6 +1,6 @@
 # 设计图、原理图与配套资料总索引
 
-从本页直接打开源文件、预览、物料与构建入口。文件属于同一AgentGlass仓库，修改后可按对应脚本重新生成。
+从本页直接打开源文件、预览、物料与构建入口。文件属于同一CodexGlasses仓库，修改后可按对应脚本重新生成。
 
 ## 电气与PCB
 
@@ -15,7 +15,7 @@
 | 内容 | 源文件与输出 |
 |---|---|
 | H1结构参数 | [OpenSCAD](../hardware/mechanical/frame.scad) / [尺寸参数](../hardware/mechanical/parameters.json) / [质量布置](../hardware/mechanical/mass-placement.json) |
-| 结构装配几何 | [装配STEP](../hardware/mechanical/generated/agentglass-h1-fixture.step) / [结构预览](../assets/packaging-fixture.png) |
+| 结构装配几何 | [装配STEP](../hardware/mechanical/generated/codexglasses-h1-fixture.step) / [结构预览](../assets/packaging-fixture.png) |
 | 前框 | [STEP](../hardware/mechanical/generated/front.step) / [STL](../hardware/mechanical/generated/front.stl) |
 | 镜腿 | [STEP](../hardware/mechanical/generated/temple.step) / [STL](../hardware/mechanical/generated/temple.stl) |
 | 盖板 | [STEP](../hardware/mechanical/generated/cover.step) / [STL](../hardware/mechanical/generated/cover.stl) |
@@ -31,7 +31,7 @@
 |---|---|
 | 眼镜端D0 / P1 | [固件](../firmware/) / [构建与烧录](../firmware/README.md) |
 | Android | [应用源码](../mobile/android/) / [手机指南](../mobile/README.md) |
-| 桌面连接器 | [Python源码](../desktop/agentglass/) / [Codex接入](../agent-integration/codex/README.md) |
+| 桌面连接器 | [Python源码](../desktop/codexglasses/) / [Codex接入](../agent-integration/codex/README.md) |
 | 通信 | [设备与HTTPS协议](../agent-integration/protocols/protocol.md) |
 | 演示 | [HTTPS模拟](../simulator/demo.py) / [真实本地模型样例](../agent-integration/codex/local-benchmark.md) |
 | 安装包 | [APK与wheel](../releases/README.md) |

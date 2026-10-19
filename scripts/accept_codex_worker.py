@@ -3,11 +3,11 @@
 import argparse,ast,asyncio,datetime,hashlib,json,shutil,ssl,subprocess,sys,time,uuid
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'desktop'))
-from agentglass.cli import initialize
-from agentglass.doctor import readiness
-from agentglass.codex import remove_owned_container
-from agentglass.server import Bridge
-from agentglass.security import tls_context
+from codexglasses.cli import initialize
+from codexglasses.doctor import readiness
+from codexglasses.codex import remove_owned_container
+from codexglasses.server import Bridge
+from codexglasses.security import tls_context
 from aiohttp import web,ClientSession
 sys.path.insert(0,str(ROOT/'scripts'))
 from fixture_mcp import FixtureTools,canonical_ast
@@ -89,12 +89,12 @@ async def full(args,out,report):
                 if Path(name).name.startswith('test_') and hashlib.sha256((workspace/name).read_bytes()).hexdigest()!=digest:
                     raise RuntimeError('acceptance tests were modified')
             clean=stage_acceptance_fixture(workspace,source,out/'independent-fixture')
-            independent_name='agentglass-'+uuid.uuid4().hex
-            command=['docker','run','--rm','--name',independent_name,'--label','dev.agentglass.temporary-worker=true','--pull=never','--network=none','--read-only','--cap-drop=ALL',
+            independent_name='codexglasses-'+uuid.uuid4().hex
+            command=['docker','run','--rm','--name',independent_name,'--label','dev.codexglasses.temporary-worker=true','--pull=never','--network=none','--read-only','--cap-drop=ALL',
                      '--security-opt=no-new-privileges','--user=10001:10001','--memory=512m','--cpus=1','--pids-limit=64',
                      '--tmpfs=/tmp:rw,nosuid,nodev,size=64m','--mount',
                      f'type=bind,source={clean},target=/acceptance,readonly','--workdir=/tmp',
-                     '--entrypoint=python3',args.image,'-I','-B','-X','pycache_prefix=/tmp/agentglass-acceptance-cache',
+                     '--entrypoint=python3',args.image,'-I','-B','-X','pycache_prefix=/tmp/codexglasses-acceptance-cache',
                      '-m','unittest','discover','-s','/acceptance','-v']
             try:
                 result=await asyncio.to_thread(subprocess.run,command,capture_output=True,text=True,timeout=90)
@@ -113,7 +113,7 @@ async def full(args,out,report):
     finally:await runner.cleanup()
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--model');p.add_argument('--image',default='agentglass-codex:0.162.1-broker1')
+    p=argparse.ArgumentParser();p.add_argument('--model');p.add_argument('--image',default='codexglasses-codex:0.162.1-broker1')
     p.add_argument('--output',type=Path,default=ROOT/'build/live-codex');p.add_argument('--timeout',type=int,default=900)
     p.add_argument('--run',action='store_true');p.add_argument('--acknowledge-model-cost',action='store_true');a=p.parse_args()
     config={'runtime_isolation':'docker','worker_image':a.image,'codex_model':a.model,

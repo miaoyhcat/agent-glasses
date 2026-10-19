@@ -1,4 +1,4 @@
-package dev.agentglass;
+package dev.codexglasses;
 
 import android.Manifest;
 import android.app.*;
@@ -35,7 +35,7 @@ public class MainActivity extends Activity implements BleLink.Listener {
     private volatile String computerName="未连接电脑";
     public void onCreate(Bundle saved){super.onCreate(saved);
         ScrollView scroll=new ScrollView(this);layout=new LinearLayout(this);layout.setOrientation(LinearLayout.VERTICAL);layout.setPadding(28,28,28,36);scroll.addView(layout);setContentView(scroll);
-        title("AgentGlass / 工程预览");text("手机负责中文语音、联网和可靠存储；每个 Codex 任务须在电脑端批准。",15);
+        title("CodexGlasses / 工程预览");text("手机负责中文语音、联网和可靠存储；每个 Codex 任务须在电脑端批准。",15);
         android.content.SharedPreferences prefs=getSharedPreferences("settings",MODE_PRIVATE);
         url=edit("电脑 HTTPS 地址",prefs.getString("url","https://192.168.1.2:9443"));pin=edit("电脑显示的证书 SHA-256 指纹",prefs.getString("pin",""));
         code=edit("一次性配对码（首次绑定）","");code.setInputType(129);
@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements BleLink.Listener {
             if(!pairCode.isEmpty())next.pair(pairCode);JSONObject health=next.request("GET","/health",null);
             JSONArray p=next.request("GET","/v1/projects",null).getJSONArray("projects");ArrayList<String> ids=new ArrayList<>();for(int i=0;i<p.length();i++)ids.add(p.getJSONObject(i).getString("id"));
             getSharedPreferences("settings",MODE_PRIVATE).edit().putString("url",endpoint).putString("pin",fingerprint).apply();
-            synchronized(connectionLock){computerName=health.optString("computer_name","AgentGlass PC");api=next;cursor=0;lastGlassHud="";}
+            synchronized(connectionLock){computerName=health.optString("computer_name","CodexGlasses PC");api=next;cursor=0;lastGlassHud="";}
             runOnUiThread(()->{projects.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,ids));code.setText("");append("已连接 "+computerName+" / "+health.optString("mode"));requestPoll();});});});
         title("指令");projects=new Spinner(this);layout.addView(projects);actions=new Spinner(this);
         actions.setAdapter(new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,new String[]{"inspect","fix","test"}));layout.addView(actions);

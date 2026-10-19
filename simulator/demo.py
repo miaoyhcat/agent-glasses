@@ -12,12 +12,12 @@ import time
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'desktop'))
 from aiohttp import ClientSession, web
-from agentglass.security import make_tls,tls_context
-from agentglass.server import Bridge
+from codexglasses.security import make_tls,tls_context
+from codexglasses.server import Bridge
 
 
 async def main():
-    with tempfile.TemporaryDirectory(prefix='agentglass-demo-') as td:
+    with tempfile.TemporaryDirectory(prefix='codexglasses-demo-') as td:
         base=Path(td);source=base/'project';source.mkdir();(source/'example.py').write_text('print("demo")\n')
         state=base/'state';state.mkdir();make_tls(state,[])
         bridge=Bridge(state,{'projects':{'demo':{'path':str(source),'allow_write':True}}},simulate=True)
@@ -52,7 +52,7 @@ async def main():
                 _,events=await call('GET','/v1/events?after=0',token=token)
                 cursor=events['cursor'];_,resumed=await call('GET','/v1/events?after='+str(cursor),token=token)
                 facts['event_cursor_resume']=len(resumed['events'])==0
-                content=b'AgentGlass simulated camera data; not an actual image.'
+                content=b'CodexGlasses simulated camera data; not an actual image.'
                 status,media=await call('POST','/v1/media',{'size':len(content),'sha256':hashlib.sha256(content).hexdigest(),'mime':'image/jpeg'},token)
                 async with client.put(url+'/v1/media/'+media['id']+'/chunks?offset=0',data=content,headers={'Authorization':'Bearer '+token},ssl=trust) as r:await r.read()
                 _,committed=await call('POST','/v1/media/'+media['id']+'/commit',{},token)

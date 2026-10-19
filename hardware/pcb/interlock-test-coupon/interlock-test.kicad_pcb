@@ -423,7 +423,7 @@
     (stroke (width 0.05) (type default)) (layer "Edge.Cuts") (tstamp 3b0f6a8c-328a-46cc-b201-4da036348303))
   (gr_line (start 68 43) (end 2 43)
     (stroke (width 0.05) (type default)) (layer "Edge.Cuts") (tstamp ef68a682-e8f9-403c-ad45-50126c939299))
-  (gr_text "AgentGlass LED interlock TEST ONLY / 3.3V" (at 35 41) (layer "F.SilkS") (tstamp 73d1966a-a314-4eeb-812d-e0fe3f71ae4f)
+  (gr_text "CodexGlasses LED interlock TEST ONLY / 3.3V" (at 35 41) (layer "F.SilkS") (tstamp 73d1966a-a314-4eeb-812d-e0fe3f71ae4f)
     (effects (font (size 0.8 0.8) (thickness 0.12)))
   )
 

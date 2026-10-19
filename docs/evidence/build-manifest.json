@@ -9,7 +9,7 @@
   "android_build_tools": "35.0.0",
   "jdk": "OpenJDK17.0.20",
   "firmware_targets_not_distributed": {
-    "agentglass_d0": {
+    "codexglasses_d0": {
       "exit_code": 0,
       "passed": true,
       "log": "docs/evidence/firmware-build.txt",
@@ -18,7 +18,7 @@
       "binary_sha256": "e9e9ad6287f683ee82f718bc26ae1b0947a08765b7037990d0d573b777922ee9",
       "binary_bytes": 695856
     },
-    "agentglass_tglass_v2": {
+    "codexglasses_tglass_v2": {
       "exit_code": 0,
       "passed": true,
       "log": "docs/evidence/tglass-v2-build.txt",
@@ -30,7 +30,7 @@
   },
   "source_inputs": {
     "firmware": {
-      "firmware/boards/agentglass_d0.json": "c8647b1ed689aa6fce4bab67ee3e2cc4c7aa8a9b98ef819af87102351b522ca4",
+      "firmware/boards/codexglasses_d0.json": "c8647b1ed689aa6fce4bab67ee3e2cc4c7aa8a9b98ef819af87102351b522ca4",
       "firmware/boards/lilygo_tglass_v2.json": "5d71a902076dd3fa716e9db27c0032e70a1d1d72e9eb13b17e91def247c1d59d",
       "firmware/include/hud_raster.h": "568f38a5d6d0d43dfdccbab08b8d97790905affbb220da9a419e88f8c02e6f68",
       "firmware/include/media_id.h": "273796b9fef8e5c25f6d810c30b23ee67cd8f67978cc4307a76a3623863959c2",
@@ -52,40 +52,40 @@
     "android": {
       "mobile/android/app/build.gradle": "07088dd6e5369dffe034c54b2feb209728af2d358c7dbf9c054651254356e244",
       "mobile/android/app/src/main/AndroidManifest.xml": "6542c990692403848f5943b90430cb33c78d42d2a3fed32afcf9404b752dd772",
-      "mobile/android/app/src/main/java/dev/agentglass/BleLink.java": "071aab32a43c2e0ee469f50b60962f494aca3aa6825a0846c3268b7b8bf3f141",
-      "mobile/android/app/src/main/java/dev/agentglass/DurableFiles.java": "db5f9a50cf767dc5bbdf8a7c29d48e4054492788f93cf5c4decba608fbe83aae",
-      "mobile/android/app/src/main/java/dev/agentglass/MainActivity.java": "6f91f503a1fddbacca4658abce48d93201e079a61e8a7a1a5052d6062c3b1956",
-      "mobile/android/app/src/main/java/dev/agentglass/NotificationRelay.java": "4a330cee75fc2e3879aa924ee424b24c9e054647ad52fca3ab768cc52f9a7c53",
-      "mobile/android/app/src/main/java/dev/agentglass/PcmWave.java": "fa2997fb036c8fb8d31f9c9d07df388f71dca043e524f6abbbf8b962468af7f2",
-      "mobile/android/app/src/main/java/dev/agentglass/TaskDispatch.java": "d3b0ca608de7755c6e4a40dd70f043439473d78766bd4c1568782ad5bc4557c6",
-      "mobile/android/app/src/main/java/dev/agentglass/TlsApi.java": "09f25cab77bde007fa19b697d38a9b1a665d5172825c0bfdaa9269d25c567bc1",
+      "mobile/android/app/src/main/java/dev/codexglasses/BleLink.java": "071aab32a43c2e0ee469f50b60962f494aca3aa6825a0846c3268b7b8bf3f141",
+      "mobile/android/app/src/main/java/dev/codexglasses/DurableFiles.java": "db5f9a50cf767dc5bbdf8a7c29d48e4054492788f93cf5c4decba608fbe83aae",
+      "mobile/android/app/src/main/java/dev/codexglasses/MainActivity.java": "6f91f503a1fddbacca4658abce48d93201e079a61e8a7a1a5052d6062c3b1956",
+      "mobile/android/app/src/main/java/dev/codexglasses/NotificationRelay.java": "4a330cee75fc2e3879aa924ee424b24c9e054647ad52fca3ab768cc52f9a7c53",
+      "mobile/android/app/src/main/java/dev/codexglasses/PcmWave.java": "fa2997fb036c8fb8d31f9c9d07df388f71dca043e524f6abbbf8b962468af7f2",
+      "mobile/android/app/src/main/java/dev/codexglasses/TaskDispatch.java": "d3b0ca608de7755c6e4a40dd70f043439473d78766bd4c1568782ad5bc4557c6",
+      "mobile/android/app/src/main/java/dev/codexglasses/TlsApi.java": "09f25cab77bde007fa19b697d38a9b1a665d5172825c0bfdaa9269d25c567bc1",
       "mobile/android/build.gradle": "8ebf0602839be8fd4c06f07a93e45da6b4a04444fa1b38df8b9def9c1b5c8032",
       "mobile/android/settings.gradle": "39413071035f41771763129f7956fec59d2b09fb3dccd4ac7edbbc5a6b0230e7",
       "scripts/build_android.py": "d2d6a761d44ab81d1654f166692c5b009ece73a7cb715e7624e37ac6b5fe8cc7"
     },
     "python": {
-      "desktop/agentglass/__init__.py": "f53e6a5665810caf20f20751c295fada0ae91c3eceec898f8d56a8624484a484",
-      "desktop/agentglass/cli.py": "5b9ccf9ebcb8ae37c33251f4156e876b6c813e3401796590222284d19d1dcf8a",
-      "desktop/agentglass/cloud.py": "23fcbf2173dfbfc450a0155b823b8a04f990a4162e182c1e70046cb88345db43",
-      "desktop/agentglass/codex.py": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
-      "desktop/agentglass/doctor.py": "588d05fea504e33b06d214260389c9672e924065bb42f54641294edcc9226ad9",
-      "desktop/agentglass/isolation.py": "bc83959676b68594b5939eee2b446f06c2e964c5f76267436115e55955b92dcc",
-      "desktop/agentglass/media.py": "6de29f7e2fd8edbaf053de0a7ca65112f66500f6be653da199449d45627b5884",
-      "desktop/agentglass/model_proxy.py": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
-      "desktop/agentglass/protocol.py": "e22fe5f56907d11ae353dbf2b137e711c10d005c2a295162e20ab27615cdaafb",
-      "desktop/agentglass/security.py": "7ce33cc56894381a39e7c52060c46473966b64fe24a399b404c1b73007609387",
-      "desktop/agentglass/server.py": "42feca1581f34a03e5a3c670d8e7dbe8536a859680db71c7447490b1fe06a821",
-      "desktop/agentglass/store.py": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9",
-      "desktop/agentglass/web/index.html": "620d52339c6ba5798d8843ebf4a946e31a1612fff1b6118349f74d79257496e8",
+      "desktop/codexglasses/__init__.py": "f53e6a5665810caf20f20751c295fada0ae91c3eceec898f8d56a8624484a484",
+      "desktop/codexglasses/cli.py": "5b9ccf9ebcb8ae37c33251f4156e876b6c813e3401796590222284d19d1dcf8a",
+      "desktop/codexglasses/cloud.py": "23fcbf2173dfbfc450a0155b823b8a04f990a4162e182c1e70046cb88345db43",
+      "desktop/codexglasses/codex.py": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
+      "desktop/codexglasses/doctor.py": "588d05fea504e33b06d214260389c9672e924065bb42f54641294edcc9226ad9",
+      "desktop/codexglasses/isolation.py": "bc83959676b68594b5939eee2b446f06c2e964c5f76267436115e55955b92dcc",
+      "desktop/codexglasses/media.py": "6de29f7e2fd8edbaf053de0a7ca65112f66500f6be653da199449d45627b5884",
+      "desktop/codexglasses/model_proxy.py": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
+      "desktop/codexglasses/protocol.py": "e22fe5f56907d11ae353dbf2b137e711c10d005c2a295162e20ab27615cdaafb",
+      "desktop/codexglasses/security.py": "7ce33cc56894381a39e7c52060c46473966b64fe24a399b404c1b73007609387",
+      "desktop/codexglasses/server.py": "42feca1581f34a03e5a3c670d8e7dbe8536a859680db71c7447490b1fe06a821",
+      "desktop/codexglasses/store.py": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9",
+      "desktop/codexglasses/web/index.html": "620d52339c6ba5798d8843ebf4a946e31a1612fff1b6118349f74d79257496e8",
       "pyproject.toml": "6dd36af1fee293db3d87205c2fff3839bcf73534045cacbb9a68a0a553683f9c"
     }
   },
   "delivered_binary_outputs": {
-    "releases/agentglass-0.2.0-py3-none-any.whl": {
+    "releases/codexglasses-0.2.0-py3-none-any.whl": {
       "sha256": "52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91",
       "bytes": 39099
     },
-    "releases/agentglass-debug.apk": {
+    "releases/codexglasses-debug.apk": {
       "sha256": "69aacf25db23bc8b4f0ce71a2a60fcc434bf93cdda5ade1f39072dbd039e6c81",
       "bytes": 41357
     }

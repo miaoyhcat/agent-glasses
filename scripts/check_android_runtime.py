@@ -8,19 +8,19 @@ import argparse,asyncio,datetime,hashlib,json,os,re,subprocess,sys,tempfile,thre
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'desktop'))
-from agentglass.server import Bridge
-from agentglass.security import make_tls,tls_context
+from codexglasses.server import Bridge
+from codexglasses.security import make_tls,tls_context
 from aiohttp import web,ClientSession
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--sdk',required=True,type=Path);p.add_argument('--boot-timeout',type=int,default=420);p.add_argument('--api',type=int,choices=[26,35],default=35);p.add_argument('--fresh-app',action='store_true',help='Remove only this disposable test AVD app and its test data before installation');a=p.parse_args()
  sdk=a.sdk.resolve();out=ROOT/'build/android-runtime';out.mkdir(parents=True,exist_ok=True)
- avds=out/'avd';avds.mkdir(exist_ok=True);avd=avds/('agentglass'+str(a.api)+'.avd');avd.mkdir(exist_ok=True)
+ avds=out/'avd';avds.mkdir(exist_ok=True);avd=avds/('codexglasses'+str(a.api)+'.avd');avd.mkdir(exist_ok=True)
  image=sdk/('system-images/android-'+str(a.api)+'/default/x86_64')
- (avds/('agentglass'+str(a.api)+'.ini')).write_text('avd.ini.encoding=UTF-8\npath='+str(avd)+'\ntarget=android-'+str(a.api)+'\n')
+ (avds/('codexglasses'+str(a.api)+'.ini')).write_text('avd.ini.encoding=UTF-8\npath='+str(avd)+'\ntarget=android-'+str(a.api)+'\n')
  (avd/'config.ini').write_text('\n'.join(['avd.ini.encoding=UTF-8','hw.cpu.arch=x86_64','hw.cpu.ncore=2','hw.ramSize=768','disk.dataPartition.size=1073741824','image.sysdir.1='+str(image)+'/','tag.id=default','abi.type=x86_64','hw.keyboard=yes','hw.lcd.width=480','hw.lcd.height=800','hw.lcd.density=160','hw.gpu.enabled=yes','hw.gpu.mode=swiftshader','vm.heapSize=192','PlayStore.enabled=false'])+'\n')
  env=os.environ.copy();env.update(ANDROID_AVD_HOME=str(avds),ANDROID_SDK_ROOT=str(sdk),ADB_SERVER_SOCKET='tcp:5037',ANDROID_I_WANT_MY_TCG='yes',HTTP_PROXY='http://127.0.0.1:1',HTTPS_PROXY='http://127.0.0.1:1',http_proxy='http://127.0.0.1:1',https_proxy='http://127.0.0.1:1')
- adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';apk=ROOT/'build/android/agentglass-debug.apk'
+ adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';apk=ROOT/'build/android/codexglasses-debug.apk'
  def call(args,timeout=30,check=True):
   r=subprocess.run([str(x) for x in args],env=env,capture_output=True,timeout=timeout)
   if check and r.returncode:raise RuntimeError(r.stderr.decode(errors='replace')[-500:])
@@ -54,7 +54,7 @@ def main():
  log=(out/'emulator.log').open('wb');emu=None
  try:
   call([adb,'start-server'])
-  command=[emulator,'-avd','agentglass'+str(a.api),'-port','5554','-no-window','-no-audio','-no-boot-anim','-no-snapshot','-accel','off','-gpu','swiftshader','-memory','768','-cores','2','-partition-size','1024','-no-metrics','-show-kernel']
+  command=[emulator,'-avd','codexglasses'+str(a.api),'-port','5554','-no-window','-no-audio','-no-boot-anim','-no-snapshot','-accel','off','-gpu','swiftshader','-memory','768','-cores','2','-partition-size','1024','-no-metrics','-show-kernel']
   emu=subprocess.Popen([str(x) for x in command],env=env,stdin=subprocess.DEVNULL,stdout=log,stderr=log)
   deadline=time.monotonic()+a.boot_timeout;last=0
   while time.monotonic()<deadline:
@@ -66,14 +66,14 @@ def main():
   report['checks']['android_booted']=True
   device('shell','input','keyevent','82');device('shell','wm','dismiss-keyguard',check=False)
   device('shell','settings','put','global','window_animation_scale','0');device('shell','settings','put','global','transition_animation_scale','0');device('shell','settings','put','global','animator_duration_scale','0')
-  if a.fresh_app:device('uninstall','dev.agentglass',check=False)
+  if a.fresh_app:device('uninstall','dev.codexglasses',check=False)
   installed=device('install','-r',apk,timeout=60).decode();assert 'Success' in installed
   report['checks']['apk_installed']=True
-  launch=device('shell','am','start','-W','-n','dev.agentglass/.MainActivity').decode();assert 'Error' not in launch
+  launch=device('shell','am','start','-W','-n','dev.codexglasses/.MainActivity').decode();assert 'Error' not in launch
   report['checks']['activity_launched']=True;time.sleep(3)
   def hierarchy():
-   device('shell','uiautomator','dump','/sdcard/agentglass-ui.xml',timeout=30)
-   raw=device('exec-out','cat','/sdcard/agentglass-ui.xml').decode();(out/'ui.xml').write_text(raw);return ET.fromstring(raw)
+   device('shell','uiautomator','dump','/sdcard/codexglasses-ui.xml',timeout=30)
+   raw=device('exec-out','cat','/sdcard/codexglasses-ui.xml').decode();(out/'ui.xml').write_text(raw);return ET.fromstring(raw)
   def tap(node):
    v=list(map(int,re.findall(r'\d+',node.attrib['bounds'])));device('shell','input','tap',str((v[0]+v[2])//2),str((v[1]+v[3])//2))
   def click(text):

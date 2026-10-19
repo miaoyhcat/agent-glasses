@@ -1,4 +1,4 @@
-# AgentGlass
+# CodexGlasses
 
 **戴上它去公园散步。家里那台电脑，会替你把活干完。**
 
@@ -11,11 +11,11 @@ Codex 或 DSH 手里。它只在你授权的那份项目副本上动，原件不
 >
 > **商业授权联系邮箱：3277681859@qq.com** · [个人自用与商业授权](COMMERCIAL-LICENSE.md) · [完整许可证](LICENSE)
 
-![AgentGlass — Wear your workflow](assets/agentglass-banner.svg)
+![CodexGlasses — Wear your workflow](assets/codexglasses-banner.svg)
 
 [English](README_EN.md) · [产品对比](docs/product-comparison.md) · [设计图与资料总索引](docs/design-index.md) · [使用指南](docs/user-guide.md) · [验证记录](docs/verification-report.md)
 
-AgentGlass 是一套面向开发者的智能眼镜平台。它把眼镜端固件、Android 应用、
+CodexGlasses 是一套面向开发者的智能眼镜平台。它把眼镜端固件、Android 应用、
 可自托管的桌面连接器、共享协议和硬件设计资料放进同一个仓库，
 围绕「说出需求、批准任务、查看真实进度、接收结果」组织交互。
 
@@ -38,14 +38,14 @@ AgentGlass 是一套面向开发者的智能眼镜平台。它把眼镜端固件
 | Agent | 怎么接 | 现在的状态 |
 |---|---|---|
 | **Codex**（官方 App Server） | 官方 JSONL stdio 塞进无外网 Docker worker | 按实测 0.162.1 的 schema 接入；环境初始化和配置读取可用，`thread/start` 未完成（详见[接入说明](agent-integration/codex/README.md)） |
-| **DSH**（DeepSeek Harness） | 同一个 worker，换一条命令行即可 | 入口已留好（`AGENTGLASS_AGENT` / `AGENTGLASS_AGENT_ARGS`），**未在真实 DSH 上实测**（详见[DSH 接入](agent-integration/dsh/README.md)） |
+| **DSH**（DeepSeek Harness） | 同一个 worker，换一条命令行即可 | 入口已留好（`CODEXGLASSES_AGENT` / `CODEXGLASSES_AGENT_ARGS`），**未在真实 DSH 上实测**（详见[DSH 接入](agent-integration/dsh/README.md)） |
 
 换 agent 不用改代码：
 
 ```bash
 # 默认就是 Codex，不设这两个变量行为不变
-AGENTGLASS_AGENT=dsh \
-AGENTGLASS_AGENT_ARGS="<DSH 的等价启动参数>" \
+CODEXGLASSES_AGENT=dsh \
+CODEXGLASSES_AGENT_ARGS="<DSH 的等价启动参数>" \
 python3 agent-integration/codex/worker_entry.py
 ```
 
@@ -53,14 +53,26 @@ python3 agent-integration/codex/worker_entry.py
 转发，DSH 侧协议不同就得加一层适配；模型请求要能指向本机 broker（`127.0.0.1:9041`）。
 没跑过的东西就是没跑过，不写成「已适配」。
 
-## 为什么是 AgentGlass
+## 欢迎 issue 和 star
+
+这是个人项目，但有人在用、有人较真，它才会变好。
+
+- **跑不通、发现漏洞**：提 [issue](https://github.com/miaoyhcat/codex-glasses/issues/new/choose)，
+  写清系统、Python 版本、你执行到哪一步、报了什么错。能复现的最有价值。
+- **想要的功能**：也提 issue，说清你实际想解决什么事，而不是「加个 X」。
+- **觉得有点意思**：点个 [star](https://github.com/miaoyhcat/codex-glasses)——
+  这是最直接的反馈，让我知道还有人在看。
+
+许可仍然只开放个人非商业使用，商业用途请先联系。
+
+## 为什么是 CodexGlasses
 
 | 核心特色 | 用途 | 仓库入口 |
 |---|---|---|
 | **随身开发任务入口** | 检查项目、修复问题、运行测试；显示连接电脑、项目、任务阶段与结果 | [Codex 接入](agent-integration/codex/README.md) · [DSH 接入](agent-integration/dsh/README.md) |
 | **面向信息的HUD** | 时间、通知、转写、AI文字与任务状态；手机完成中文栅格化 | [固件与HUD](firmware/README.md) |
 | **采集与本地缓存** | 摄像、短录像、录音、媒体校验、确认后删除及断点上传 | [固件](firmware/) / [手机](mobile/README.md) |
-| **自己掌握连接器** | 设备绑定、证书核验、项目授权、本机审批及日志事件 | [桌面端](desktop/agentglass/) / [协议](agent-integration/protocols/protocol.md) |
+| **自己掌握连接器** | 设备绑定、证书核验、项目授权、本机审批及日志事件 | [桌面端](desktop/codexglasses/) / [协议](agent-integration/protocols/protocol.md) |
 | **从设计到代码可审查** | KiCad、STEP/STL、OpenSCAD、BOM、装配资料、测试与演示 | [设计总索引](docs/design-index.md) |
 
 ## 看见并控制真实任务
@@ -82,7 +94,7 @@ flowchart TD
 
 | 产品 | 核心定位 | 公开显示/交互特点 |
 |---|---|---|
-| **AgentGlass** | 可审查、可自托管的智能体眼镜平台 | H1单目HUD设计；P1近眼显示适配；自有项目上的inspect/fix/test、真实任务事件与本机审批 |
+| **CodexGlasses** | 可审查、可自托管的智能体眼镜平台 | H1单目HUD设计；P1近眼显示适配；自有项目上的inspect/fix/test、真实任务事件与本机审批 |
 | **Ray-Ban Meta Gen 3** | 日常拍摄与语音AI | Camera + Audio型号；第一视角记录、通话与日常助手 |
 | **Meta Ray-Ban Display** | 带镜片显示的消费AI眼镜 | 单目全彩600×600；消息、字幕、导航与腕带交互 |
 | **Rokid Glasses with Display** | 轻量翻译与信息显示 | MicroLED、30°FOV；字幕、翻译、提词与拍摄 |
@@ -115,9 +127,9 @@ python scripts/verify.py
 演示使用真实本机HTTPS完成绑定、审批、任务事件及媒体传输，智能体标注SIMULATOR。公开样例的真实Codex/本地模型复现见[本地模型实验](agent-integration/codex/local-benchmark.md)。
 
 ```bash
-agentglass --state runtime init --host 电脑私网IP --name 我的开发电脑
-agentglass --state runtime project-add demo examples/demo-project --allow-snapshot-writes
-agentglass --state runtime serve --simulate
+codexglasses --state runtime init --host 电脑私网IP --name 我的开发电脑
+codexglasses --state runtime project-add demo examples/demo-project --allow-snapshot-writes
+codexglasses --state runtime serve --simulate
 ```
 
 Android调试APK与Python wheel位于[releases](releases/README.md)。固件构建入口：`python scripts/build_firmware.py`；Android构建入口：`python scripts/build_android.py --sdk 官方SDK目录`。

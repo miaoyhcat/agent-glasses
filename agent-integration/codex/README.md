@@ -13,7 +13,7 @@
 Windows可研究Docker Desktop的Linux容器/WSL2；Linux使用Docker Engine。目标平台兼容必须实际验收。构建审核后的镜像：
 
 ~~~bash
-docker build -t agentglass-codex:0.162.1-broker1 agent-integration/codex
+docker build -t codexglasses-codex:0.162.1-broker1 agent-integration/codex
 ~~~
 
 镜像包含Python unittest、git、ripgrep与固定版本Codex。创建状态和授权项目后，在电脑本地config.json设置：
@@ -21,7 +21,7 @@ docker build -t agentglass-codex:0.162.1-broker1 agent-integration/codex
 ~~~json
 {
   "runtime_isolation": "docker",
-  "worker_image": "agentglass-codex:0.162.1-broker1",
+  "worker_image": "codexglasses-codex:0.162.1-broker1",
   "allow_model_api": true,
   "codex_model": "账户实际可用的模型ID"
 }
@@ -30,7 +30,7 @@ docker build -t agentglass-codex:0.162.1-broker1 agent-integration/codex
 模型ID必须来自自己的账户，不从示例占位符推测权限。不要挂载auth.json。只在电脑进程提供OPENAI_API_KEY；不要保存到眼镜、手机、项目目录、命令参数或提交记录。可通过不回显输入启动：
 
 ~~~bash
-python -c "import getpass,os;os.environ['OPENAI_API_KEY']=getpass.getpass('OpenAI API key: ');from agentglass.cli import main;main()" --state runtime serve
+python -c "import getpass,os;os.environ['OPENAI_API_KEY']=getpass.getpass('OpenAI API key: ');from codexglasses.cli import main;main()" --state runtime serve
 ~~~
 
 这不会自动发起模型任务。仍需手机提交、电脑本地批准。allow_model_api与ASR/视觉allow_paid_cloud分别控制。每任务8请求/4096输出token等限额见SECURITY.md，不是货币费用上限。
@@ -46,7 +46,7 @@ completed表示回合结束，默认verification_status仍为not_verified。模�
 ## 可执行的完整验收
 
 ~~~bash
-agentglass --state runtime doctor
+codexglasses --state runtime doctor
 python scripts/accept_codex_worker.py
 # 明确同意真实模型费用后：
 python scripts/accept_codex_worker.py --run --model 实际模型ID --acknowledge-model-cost --output build/live-check-1

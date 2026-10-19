@@ -12,7 +12,7 @@ def readiness(config):
     projects=config.get('projects',{})
     check('authorized_projects',bool(projects) and all(Path(v['path']).is_dir() for v in projects.values()),'Configured project directories must exist')
     docker=shutil.which('docker');check('docker_cli',docker is not None,'Docker CLI is installed' if docker else 'Docker CLI is missing')
-    image=config.get('worker_image','agentglass-codex:0.162.1-broker1')
+    image=config.get('worker_image','codexglasses-codex:0.162.1-broker1')
     valid_image=isinstance(image,str) and re.fullmatch(r'[a-zA-Z0-9_./:@-]{1,200}',image)
     check('worker_image_name',valid_image,'Only a local administrator configures this image')
     if docker:

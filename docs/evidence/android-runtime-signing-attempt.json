@@ -14,5 +14,5 @@
   ],
   "generated_utc": "2026-10-16T16:17:08.695986+00:00",
   "passed": false,
-  "error": "RuntimeError: adb: failed to install /workspace/scratch/1628ebaca2ec/revision-v0.2/agent-glasses/build/android/agentglass-debug.apk: Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package dev.agentglass signatures do not match the previously installed version; ignoring!]\n\n"
+  "error": "RuntimeError: adb: failed to install /workspace/scratch/1628ebaca2ec/revision-v0.2/codex-glasses/build/android/codexglasses-debug.apk: Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package dev.codexglasses signatures do not match the previously installed version; ignoring!]\n\n"
 }

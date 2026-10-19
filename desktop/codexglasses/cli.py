@@ -26,7 +26,7 @@ def secure_directory(directory):
                        stdout=subprocess.DEVNULL)
 
 
-def initialize(directory, hosts, name="AgentGlass PC"):
+def initialize(directory, hosts, name="CodexGlasses PC"):
     if not isinstance(name,str) or not 1 <= len(name) <= 64 or any(ord(c)<32 for c in name):
         raise ValueError("invalid_computer_name")
     if (directory/"config.json").exists():
@@ -39,7 +39,7 @@ def initialize(directory, hosts, name="AgentGlass PC"):
     private_file(directory/"operator.token", token.encode())
     private_file(directory/"config.json", json.dumps({
         "listen": "127.0.0.1", "port": 9443, "projects": {}, "computer_name": name,
-        "runtime_isolation": "disabled", "worker_image": "agentglass-codex:0.162.1-broker1", "codex_model": None,
+        "runtime_isolation": "disabled", "worker_image": "codexglasses-codex:0.162.1-broker1", "codex_model": None,
         "allow_paid_cloud": False,"allow_model_api":False
     }, indent=2).encode())
     return {"certificate_sha256": fingerprint, "state_directory": str(directory)}
@@ -58,11 +58,11 @@ async def operator_request(directory, method, path, payload=None):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog="agentglass")
+    parser = argparse.ArgumentParser(prog="codexglasses")
     parser.add_argument("--state", type=Path, default=Path.cwd()/"runtime")
     subs = parser.add_subparsers(dest="command", required=True)
     init = subs.add_parser("init"); init.add_argument("--host", action="append", default=[])
-    init.add_argument("--name", default="AgentGlass PC")
+    init.add_argument("--name", default="CodexGlasses PC")
     project = subs.add_parser("project-add"); project.add_argument("id"); project.add_argument("path", type=Path)
     project.add_argument("--allow-snapshot-writes", action="store_true")
     pair = subs.add_parser("pair-code"); pair.add_argument("--ttl", type=int, default=300)
@@ -123,7 +123,7 @@ def main():
                 "decision": args.decision, "acknowledge_snapshot_and_provider": args.acknowledge_snapshot_and_provider
             })), indent=2))
     except (ValueError, OSError) as exc:
-        parser.exit(2, f"AgentGlass: {exc}\n")
+        parser.exit(2, f"CodexGlasses: {exc}\n")
 
 
 if __name__ == "__main__":

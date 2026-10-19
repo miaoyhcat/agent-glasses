@@ -1,4 +1,4 @@
-Processing agentglass_tglass_v2 (platform: espressif32@6.9.0; board: lilygo_tglass_v2; framework: arduino)
+Processing codexglasses_tglass_v2 (platform: espressif32@6.9.0; board: lilygo_tglass_v2; framework: arduino)
 --------------------------------------------------------------------------------
 Verbose mode can be enabled via `-v, --verbose` option
 CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/lilygo_tglass_v2.html
@@ -18,11 +18,11 @@ Dependency Graph
 |-- ArduinoJson @ 6.21.5
 |-- NimBLE-Arduino @ 1.4.3
 |-- SensorLib @ 0.1.8
-|-- AgentGlass-LilyGO-TGlass-v2-driver @ 1.0.0
+|-- CodexGlasses-LilyGO-TGlass-v2-driver @ 1.0.0
 |-- Preferences @ 2.0.0
 Building in release mode
-Retrieving maximum program size .pio/build/agentglass_tglass_v2/firmware.elf
-Checking size .pio/build/agentglass_tglass_v2/firmware.elf
+Retrieving maximum program size .pio/build/codexglasses_tglass_v2/firmware.elf
+Checking size .pio/build/codexglasses_tglass_v2/firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
 RAM:   [==        ]  19.3% (used 63212 bytes from 327680 bytes)
 Flash: [==        ]  22.5% (used 706261 bytes from 3145728 bytes)
@@ -30,5 +30,5 @@ Flash: [==        ]  22.5% (used 706261 bytes from 3145728 bytes)
 
 Environment           Status    Duration
 --------------------  --------  ------------
-agentglass_tglass_v2  SUCCESS   00:00:03.101
+codexglasses_tglass_v2  SUCCESS   00:00:03.101
 ========================= 1 succeeded in 00:00:03.101 =========================

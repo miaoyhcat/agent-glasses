@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
-<title id="title">AgentGlass — Wear your workflow</title><desc id="desc">AgentGlass source platform: HUD, voice, camera and agent workflows. Diagram and HUD interface illustration.</desc>
+<title id="title">CodexGlasses — Wear your workflow</title><desc id="desc">CodexGlasses source platform: HUD, voice, camera and agent workflows. Diagram and HUD interface illustration.</desc>
 <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#081a31"/><stop offset="1" stop-color="#133e5a"/></linearGradient><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity=".035"/></pattern></defs>
 <rect width="1200" height="380" rx="22" fill="url(#bg)"/><rect width="1200" height="380" rx="22" fill="url(#grid)"/>
-<g font-family="Arial, Helvetica, sans-serif"><text x="62" y="112" fill="#f4fbff" font-size="62" font-weight="700">AgentGlass</text><text x="65" y="158" fill="#94dfed" font-size="25">Wear your workflow.</text>
+<g font-family="Arial, Helvetica, sans-serif"><text x="62" y="112" fill="#f4fbff" font-size="62" font-weight="700">CodexGlasses</text><text x="65" y="158" fill="#94dfed" font-size="25">Wear your workflow.</text>
 <text x="65" y="207" fill="#d6e4ee" font-size="17">HUD  /  VOICE  /  CAMERA  /  CODEX</text>
 <rect x="65" y="239" width="190" height="35" rx="17" fill="#173c50" stroke="#3c778a"/><text x="86" y="262" fill="#d3f7f1" font-size="14">SOURCE AVAILABLE</text>
 <text x="65" y="329" fill="#b7cbd9" font-size="14">Personal noncommercial use · Commercial licensing: 3277681859@qq.com</text>

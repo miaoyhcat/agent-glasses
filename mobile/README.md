@@ -4,7 +4,7 @@ Android API26+原生Java，编译目标API35。直接官方SDK构建、v2/v3签�
 
 ~~~bash
 python scripts/build_android.py --sdk 官方AndroidSDK目录
-adb install -r build/android/agentglass-debug.apk
+adb install -r build/android/codexglasses-debug.apk
 ~~~
 
 保留Android Studio/Gradle源码，但本轮执行的是直接SDK构建。调试签名不是生产发行签名；本次复用先前交付的调试签名以维持升级身份。若自行构建出现签名不匹配，不能在未备份媒体时卸载应用。自动测试的--fresh-app只删除本项目临时AVD内的测试应用，不适用于个人设备资料。

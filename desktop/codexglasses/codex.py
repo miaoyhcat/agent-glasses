@@ -40,7 +40,7 @@ class AppServer:
         self.container_name=None
         if self.command[:2]==['docker','run'] and '--name' in self.command:
             name=self.command[self.command.index('--name')+1]
-            if not re.fullmatch(r'agentglass-[0-9a-f]{32}',name):raise ValueError('invalid_owned_container_name')
+            if not re.fullmatch(r'codexglasses-[0-9a-f]{32}',name):raise ValueError('invalid_owned_container_name')
             self.container_name=name
 
     def diagnostics(self):
@@ -56,7 +56,7 @@ class AppServer:
         self.reader = asyncio.create_task(self._read())
         self.stderr = asyncio.create_task(self._drain_stderr())
         result = await self.call("initialize", {"clientInfo": {
-            "name": "agentglass", "title": "AgentGlass personal bridge", "version": "0.2.0"}})
+            "name": "codexglasses", "title": "CodexGlasses personal bridge", "version": "0.2.0"}})
         await self.send({"method": "initialized", "params": {}})
         return result
 
@@ -184,7 +184,7 @@ class AppServer:
 
 
 async def remove_owned_container(name):
-    if not re.fullmatch(r'agentglass-[0-9a-f]{32}',name):raise ValueError('invalid_owned_container_name')
+    if not re.fullmatch(r'codexglasses-[0-9a-f]{32}',name):raise ValueError('invalid_owned_container_name')
     process=None
     try:
         process=await asyncio.create_subprocess_exec('docker','rm','--force',name,

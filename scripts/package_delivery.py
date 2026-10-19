@@ -37,10 +37,10 @@ def audit():
     required=['README.md','README_EN.md','LICENSE','NOTICE.md','SECURITY.md','docs/final-report.md',
       'docs/verification-report.md','docs/evidence-index.json','docs/acceptance-matrix.csv',
       'docs/evidence/build-manifest.json','docs/evidence/software-validation.json',
-      'hardware/bom/components.csv','hardware/bom/mass-budget.csv','hardware/mechanical/generated/agentglass-h1-fixture.step',
+      'hardware/bom/components.csv','hardware/bom/mass-budget.csv','hardware/mechanical/generated/codexglasses-h1-fixture.step',
       'hardware/schematics/interlock.kicad_sch','hardware/pcb/interlock-test-coupon/interlock-test.kicad_pcb',
-      'firmware/src/tglass_main.cpp','scripts/benchmark_codex_local.py','scripts/fixture_mcp.py','firmware/src/main.cpp','mobile/android/app/src/main/java/dev/agentglass/MainActivity.java',
-      'desktop/agentglass/codex.py','simulator/demo.py','releases/agentglass-debug.apk']
+      'firmware/src/tglass_main.cpp','scripts/benchmark_codex_local.py','scripts/fixture_mcp.py','firmware/src/main.cpp','mobile/android/app/src/main/java/dev/codexglasses/MainActivity.java',
+      'desktop/codexglasses/codex.py','simulator/demo.py','releases/codexglasses-debug.apk']
     for rel in required:
         if not (ROOT/rel).is_file():raise RuntimeError('Missing: '+rel)
     current=files();broken=[]
@@ -77,10 +77,10 @@ def audit():
     for row in matrix:
         if not (ROOT/row['evidence_or_plan']).exists():raise RuntimeError('Unresolved acceptance path: '+row['evidence_or_plan'])
     runtime=json.loads((ROOT/'docs/evidence/android-runtime.json').read_text())
-    if not runtime['passed'] or runtime['apk_sha256']!=sha(ROOT/'releases/agentglass-debug.apk'):
+    if not runtime['passed'] or runtime['apk_sha256']!=sha(ROOT/'releases/codexglasses-debug.apk'):
         raise RuntimeError('Delivered APK was not the tested Android artifact')
     firmware=json.loads((ROOT/'docs/evidence/firmware-validation.json').read_text())
-    if not firmware['all_passed'] or set(firmware['targets'])!={'agentglass_d0','agentglass_tglass_v2'}:
+    if not firmware['all_passed'] or set(firmware['targets'])!={'codexglasses_d0','codexglasses_tglass_v2'}:
         raise RuntimeError('Both firmware targets must have actual successful records')
     origin=ROOT/'third_party/lilygo-tglass-v2'
     vendor=json.loads((origin/'ORIGIN.json').read_text())
@@ -96,7 +96,7 @@ def audit():
     for path,digest in reproduction.get('source_inputs',{}).items():
         if sha(ROOT/path)!=digest:raise RuntimeError('Tested model runner changed: '+path)
     wheel_runtime=json.loads((ROOT/'docs/evidence/wheel-runtime.json').read_text())
-    if not wheel_runtime['passed'] or wheel_runtime['wheel_sha256']!=sha(ROOT/'releases/agentglass-0.2.0-py3-none-any.whl'):
+    if not wheel_runtime['passed'] or wheel_runtime['wheel_sha256']!=sha(ROOT/'releases/codexglasses-0.2.0-py3-none-any.whl'):
         raise RuntimeError('Delivered wheel differs from tested installation')
     private_pattern=re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{32,}|\bsk-(?:proj-)?[A-Za-z0-9_-]{35,}')
     for p in current:
@@ -121,13 +121,13 @@ def main():
     (ROOT/'DELIVERY-MANIFEST.json').write_text(archive_manifest)
     temporary=target.with_name(target.name+'.partial')
     with zipfile.ZipFile(temporary,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-        for f in entries:z.write(f,'agent-glasses/'+str(f.relative_to(ROOT)))
-        z.writestr('agent-glasses/DELIVERY-MANIFEST.json',archive_manifest)
+        for f in entries:z.write(f,'codex-glasses/'+str(f.relative_to(ROOT)))
+        z.writestr('codex-glasses/DELIVERY-MANIFEST.json',archive_manifest)
     with zipfile.ZipFile(temporary) as z:
         if len(z.namelist())!=len(set(z.namelist())):raise RuntimeError('Duplicate ZIP entry')
         if z.testzip():raise RuntimeError('ZIP CRC failure')
         for rel,meta in inventory.items():
-            if hashlib.sha256(z.read('agent-glasses/'+rel)).hexdigest()!=meta['sha256']:raise RuntimeError('ZIP readback differs: '+rel)
+            if hashlib.sha256(z.read('codex-glasses/'+rel)).hexdigest()!=meta['sha256']:raise RuntimeError('ZIP readback differs: '+rel)
     os.replace(temporary,target)
     print(json.dumps({'archive':str(target),'project_files':len(entries),'zip_bytes':target.stat().st_size,'sha256':sha(target),'readback_verified':True},indent=2))
 

@@ -1,4 +1,4 @@
-import dev.agentglass.PcmWave;
+import dev.codexglasses.PcmWave;
 import java.io.*;
 import java.nio.*;
 import java.nio.file.*;
@@ -15,7 +15,7 @@ public class PcmWaveCheck {
     static void check(boolean condition,String name){if(!condition)throw new AssertionError(name);System.out.println("PASS "+name);}
     static boolean rejects(File f){try{PcmWave.read(f);return false;}catch(Exception e){return true;}}
     public static void main(String[] args)throws Exception{
-        Path path=Files.createTempFile("agentglass-pcm-",".wav");File file=path.toFile();
+        Path path=Files.createTempFile("codexglasses-pcm-",".wav");File file=path.toFile();
         try{
             Files.write(path,wav(16000,1,1600,1));byte[] out=PcmWave.read(file);check(out.length==3200,"mono_length");check(ByteBuffer.wrap(out).order(ByteOrder.LITTLE_ENDIAN).getShort()==1000,"mono_values");
             Files.write(path,wav(48000,2,48000,1));out=PcmWave.read(file);check(out.length==32000,"stereo_resample_length");check(ByteBuffer.wrap(out).order(ByteOrder.LITTLE_ENDIAN).getShort()==0,"stereo_mix");

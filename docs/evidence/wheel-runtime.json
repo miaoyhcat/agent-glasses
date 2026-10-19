@@ -5,7 +5,7 @@
   "wheel_sha256": "52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91",
   "isolated_wheel_import": {
     "version": "0.2.0",
-    "import_file": "/workspace/scratch/1628ebaca2ec/revision-v0.2/agent-glasses/build/install-smoke/lib/python3.12/site-packages/agentglass/__init__.py",
+    "import_file": "/workspace/scratch/1628ebaca2ec/revision-v0.2/codex-glasses/build/install-smoke/lib/python3.12/site-packages/codexglasses/__init__.py",
     "web_ui_present": true
   },
   "passed": true

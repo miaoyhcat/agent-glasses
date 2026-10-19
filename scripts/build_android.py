@@ -28,7 +28,7 @@ def main():
     # Gradle injects namespace; the direct SDK route uses a generated manifest.
     import xml.etree.ElementTree as ET
     ET.register_namespace('android','http://schemas.android.com/apk/res/android')
-    manifest=ET.parse(source/"AndroidManifest.xml");manifest.getroot().set('package','dev.agentglass')
+    manifest=ET.parse(source/"AndroidManifest.xml");manifest.getroot().set('package','dev.codexglasses')
     generated=out/"AndroidManifest.xml";manifest.write(generated,encoding='utf-8',xml_declaration=True)
     run([tools/"aapt2","link","-o",out/"base.apk","-I",jar,"--manifest",generated,"--min-sdk-version","26","--target-sdk-version","35","--version-code","2","--version-name","0.2.0"])
     compiler=["javac"] if shutil.which("javac") else ["java","com.sun.tools.javac.Main"]
@@ -44,8 +44,8 @@ def main():
     run([tools/"zipalign","-f","4",unsigned,out/"aligned.apk"])
     key=out/"debug.jks"
     if not key.exists():
-        run(["keytool","-genkeypair","-keystore",key,"-storepass","android","-alias","debug","-keypass","android","-dname","CN=AgentGlass Engineering Debug","-keyalg","RSA","-keysize","2048","-validity","3650"])
-    result=out/"agentglass-debug.apk"
+        run(["keytool","-genkeypair","-keystore",key,"-storepass","android","-alias","debug","-keypass","android","-dname","CN=CodexGlasses Engineering Debug","-keyalg","RSA","-keysize","2048","-validity","3650"])
+    result=out/"codexglasses-debug.apk"
     run([tools/"apksigner","sign","--ks",key,"--ks-pass","pass:android","--key-pass","pass:android","--out",result,out/"aligned.apk"])
     run([tools/"apksigner","verify","--verbose",result]);print(result)
 

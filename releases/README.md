@@ -1,10 +1,10 @@
 # 工程调试包 / v0.2
 
-`agentglass-debug.apk` 为实际 Android 源码经官方 SDK35/JDK17 构建的 v0.2.0 调试包，最低 Android8/API26。已经过 APK v2/v3 签名检查，以及官方 API26 模拟器的安装、TLS 配对、任务提交、本机批准和状态回传七项运行检查。实际 APK SHA-256 与 `docs/evidence/android-runtime.json` 一致；智能体明确是 SIMULATOR。没有实机 BLE、音频、相机或后台稳定性验收。
+`codexglasses-debug.apk` 为实际 Android 源码经官方 SDK35/JDK17 构建的 v0.2.0 调试包，最低 Android8/API26。已经过 APK v2/v3 签名检查，以及官方 API26 模拟器的安装、TLS 配对、任务提交、本机批准和状态回传七项运行检查。实际 APK SHA-256 与 `docs/evidence/android-runtime.json` 一致；智能体明确是 SIMULATOR。没有实机 BLE、音频、相机或后台稳定性验收。
 
 ```bash
-adb install -r releases/agentglass-debug.apk
-python -m pip install releases/agentglass-0.2.0-py3-none-any.whl
+adb install -r releases/codexglasses-debug.apk
+python -m pip install releases/codexglasses-0.2.0-py3-none-any.whl
 ```
 
 APK 使用先前交付包的同一工程调试签名；调试私钥不打包。自行重建会产生自己的签名，不能保证覆盖安装。签名不一致时 Android 应拒绝更新；先妥善导出媒体及配置，不能为解决安装错误自动卸载含个人数据的应用。不要把签名有效当作安全认证或正式发布身份。

@@ -22,7 +22,7 @@ from .isolation import container_command
 from .model_proxy import ModelProxy
 
 WEB = Path(__file__).with_name("web")
-DEVICE_KEY = web.RequestKey("agentglass.device", dict)
+DEVICE_KEY = web.RequestKey("codexglasses.device", dict)
 
 
 class Bridge:
@@ -202,7 +202,7 @@ class Bridge:
                     if self.config.get('allow_model_api') is not True:raise ValueError('model_api_disabled_by_desktop_owner')
                     async with ModelProxy(self.config.get('codex_model')) as proxy:
                         await run_codex(task,self.store,command,runtime_workspace,framed=True,model_proxy=proxy,
-                                        child_env={'AGENTGLASS_PROXY_TOKEN':proxy.token},**arguments)
+                                        child_env={'CODEXGLASSES_PROXY_TOKEN':proxy.token},**arguments)
                         self.store.event(task_id,'bridge',{'event':'model_budget','calls':proxy.calls,'input_bytes':proxy.total})
         except Exception as exc:
             if self.store.task(task_id)["status"] not in TERMINAL:
@@ -271,7 +271,7 @@ class Bridge:
         return web.FileResponse(WEB/"index.html")
 
     async def health(self, request):
-        return web.json_response({"v": 1, "service": "agentglass", "computer_name": str(self.config.get("computer_name","AgentGlass PC"))[:64], "mode": "SIMULATOR" if self.simulate else "codex"})
+        return web.json_response({"v": 1, "service": "codexglasses", "computer_name": str(self.config.get("computer_name","CodexGlasses PC"))[:64], "mode": "SIMULATOR" if self.simulate else "codex"})
 
     async def close(self, app):
         for task in list(self.runners.values()):

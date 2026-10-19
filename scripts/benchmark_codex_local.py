@@ -20,9 +20,9 @@ import urllib.request
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'desktop'));sys.path.insert(0,str(ROOT/'scripts'))
-from agentglass.codex import AppServer,run_codex
-from agentglass.model_proxy import ModelProxy
-from agentglass.store import Store
+from codexglasses.codex import AppServer,run_codex
+from codexglasses.model_proxy import ModelProxy
+from codexglasses.store import Store
 from fixture_mcp import FixtureTools,canonical_ast
 
 
@@ -43,7 +43,7 @@ async def exercise(args,out,version):
         'supports_parallel_tool_calls':False,'supports_reasoning_summaries':False,'supports_reasoning_summary_parameter':False,
         'default_reasoning_summary':'none','base_instructions':instructions.read_text()}]}))
     audit=out/'tool-audit.jsonl'
-    settings={'model_provider':'agentglass_proxy','model_providers.agentglass_proxy':{'name':'Local public-fixture broker','base_url':'http://127.0.0.1:9041/v1','env_key':'AGENTGLASS_PROXY_TOKEN','wire_api':'responses','requires_openai_auth':False},
+    settings={'model_provider':'codexglasses_proxy','model_providers.codexglasses_proxy':{'name':'Local public-fixture broker','base_url':'http://127.0.0.1:9041/v1','env_key':'CODEXGLASSES_PROXY_TOKEN','wire_api':'responses','requires_openai_auth':False},
         'model':args.model,'model_catalog_json':str(catalog),'model_instructions_file':str(instructions),
         'analytics.enabled':False,'feedback.enabled':False,'otel.exporter':'none','otel.metrics_exporter':'none','otel.trace_exporter':'none',
         'features.api_key_model_discovery':False,'features.plugins':False,'features.remote_plugin':False,'features.apps':False,
@@ -72,7 +72,7 @@ async def exercise(args,out,version):
     try:
         async with LocalProxy(args.model,api_key='LOCAL_MODEL_DUMMY_ONLY',_test_upstream='http://127.0.0.1:11434/v1/responses',max_output=768) as proxy:
             await run_codex(task,store,[sys.executable,'-c',bootstrap],fixture,model=args.model,framed=True,model_proxy=proxy,
-                child_env={'AGENTGLASS_PROXY_TOKEN':proxy.token,'OPENAI_API_KEY':'','CODEX_API_KEY':''},rpc_timeout=45,timeout=360)
+                child_env={'CODEXGLASSES_PROXY_TOKEN':proxy.token,'OPENAI_API_KEY':'','CODEX_API_KEY':''},rpc_timeout=45,timeout=360)
             expected=ast.parse((ROOT/'examples/demo-project/discount.py').read_text())
             for node in ast.walk(expected):
                 if isinstance(node,ast.BinOp) and isinstance(node.op,ast.Add):node.op=ast.Sub()

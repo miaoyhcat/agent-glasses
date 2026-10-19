@@ -4,24 +4,24 @@
 
 ## 从单文件发布包还原Git仓库
 
-解压发布包后，得到可浏览的`agent-glasses/`目录及`agent-glasses.git.bundle`。若需要保留发布提交和标签，在解压目录执行：
+解压发布包后，得到可浏览的`codex-glasses/`目录及`codex-glasses.git.bundle`。若需要保留发布提交和标签，在解压目录执行：
 
 ```bash
-git clone ./agent-glasses.git.bundle ./agent-glasses-git
-cd agent-glasses-git
-git bundle verify ../agent-glasses.git.bundle
+git clone ./codex-glasses.git.bundle ./codex-glasses-git
+cd codex-glasses-git
+git bundle verify ../codex-glasses.git.bundle
 git log -1 --oneline
 ```
 
-`agent-glasses/`为同一提交的普通文件副本，适合直接阅读和打开CAD；`agent-glasses-git/`为离线克隆生成的Git工作区，两者无需同时修改。
+`codex-glasses/`为同一提交的普通文件副本，适合直接阅读和打开CAD；`codex-glasses-git/`为离线克隆生成的Git工作区，两者无需同时修改。
 
 ## 推送公开仓库
 
-1. 在[GitHub新建仓库](https://github.com/new)，名称可用`agent-glasses`，选择Public并创建空仓库，使用本项目已有README与LICENSE。
+1. 在[GitHub新建仓库](https://github.com/new)，名称可用`codex-glasses`，选择Public并创建空仓库，使用本项目已有README与LICENSE。
 2. 将以下`YOUR_ACCOUNT`替换成拥有该仓库权限的账户，在上述Git工作区执行：
 
 ```bash
-git remote add origin https://github.com/YOUR_ACCOUNT/agent-glasses.git
+git remote add origin https://github.com/YOUR_ACCOUNT/codex-glasses.git
 git push -u origin main
 git push origin --tags
 ```

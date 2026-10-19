@@ -25,7 +25,7 @@ for line in sys.stdin:
         if '--model-proxy' in sys.argv:
             import os,urllib.request
             body=json.dumps({'model':'fixture-model','input':'public fixture','stream':True}).encode()
-            request=urllib.request.Request('http://127.0.0.1:9041/v1/responses',body,{'Authorization':'Bearer '+os.environ['AGENTGLASS_PROXY_TOKEN'],'Content-Type':'application/json'})
+            request=urllib.request.Request('http://127.0.0.1:9041/v1/responses',body,{'Authorization':'Bearer '+os.environ['CODEXGLASSES_PROXY_TOKEN'],'Content-Type':'application/json'})
             with urllib.request.urlopen(request,timeout=10) as r:
                 if b'fixture_payload' not in r.read():raise RuntimeError('broker_response_missing')
         send({"method": "item/reasoning/textDelta", "params": {"delta": "DO_NOT_EXPOSE_SECRET_REASONING"}})

@@ -19,15 +19,15 @@ def inputs(paths):
 
 
 def main():
-    outputs = [ROOT / 'releases/agentglass-0.2.0-py3-none-any.whl', ROOT / 'releases/agentglass-debug.apk']
+    outputs = [ROOT / 'releases/codexglasses-0.2.0-py3-none-any.whl', ROOT / 'releases/codexglasses-debug.apk']
     wheel = outputs[0]
     with zipfile.ZipFile(wheel) as z:
-        for p in (ROOT / 'desktop/agentglass').rglob('*'):
+        for p in (ROOT / 'desktop/codexglasses').rglob('*'):
             if p.is_file() and p.suffix in {'.py', '.html'}:
                 member = str(p.relative_to(ROOT / 'desktop'))
                 if z.read(member) != p.read_bytes():
                     raise RuntimeError('wheel_source_mismatch: ' + member)
-        if b'Version: 0.2.0\n' not in z.read('agentglass-0.2.0.dist-info/METADATA'):
+        if b'Version: 0.2.0\n' not in z.read('codexglasses-0.2.0.dist-info/METADATA'):
             raise RuntimeError('wheel_version_mismatch')
     firmware = json.loads((ROOT / 'docs/evidence/firmware-validation.json').read_text())
     if not firmware['all_passed']:
@@ -44,7 +44,7 @@ def main():
                            [p for p in (ROOT / 'third_party/lilygo-tglass-v2').rglob('*') if p.suffix in {'.h', '.cpp', '.c', '.json'}]),
         'android': inputs(list((ROOT / 'mobile/android/app/src').rglob('*.java')) + list((ROOT / 'mobile/android').rglob('*.gradle')) +
                           [ROOT / 'mobile/android/app/src/main/AndroidManifest.xml', ROOT / 'scripts/build_android.py']),
-        'python': inputs([p for p in (ROOT / 'desktop/agentglass').rglob('*') if p.suffix in {'.py', '.html'}] + [ROOT / 'pyproject.toml'])}
+        'python': inputs([p for p in (ROOT / 'desktop/codexglasses').rglob('*') if p.suffix in {'.py', '.html'}] + [ROOT / 'pyproject.toml'])}
     report = {
         'generated_utc': datetime.now(timezone.utc).isoformat(), 'project_version': '0.2.0', 'evidence_level': 2,
         'physical_tests': 0, 'host_python': platform.python_version(), 'platformio': '6.2.0',

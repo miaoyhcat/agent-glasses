@@ -4,7 +4,7 @@
   "platformio_telemetry_enabled": false,
   "physical_hardware_tests": 0,
   "targets": {
-    "agentglass_d0": {
+    "codexglasses_d0": {
       "exit_code": 0,
       "passed": true,
       "log": "docs/evidence/firmware-build.txt",
@@ -13,7 +13,7 @@
       "binary_sha256": "e9e9ad6287f683ee82f718bc26ae1b0947a08765b7037990d0d573b777922ee9",
       "binary_bytes": 695856
     },
-    "agentglass_tglass_v2": {
+    "codexglasses_tglass_v2": {
       "exit_code": 0,
       "passed": true,
       "log": "docs/evidence/tglass-v2-build.txt",

@@ -1,4 +1,4 @@
-# AgentGlass
+# CodexGlasses
 
 **Put them on, go for a walk. The computer at home keeps working.**
 
@@ -12,11 +12,11 @@ You come home with the result already on the glass.
 >
 > **Commercial licensing: 3277681859@qq.com** · [Use policy](COMMERCIAL-LICENSE.md) · [Full license](LICENSE)
 
-![AgentGlass](assets/agentglass-banner.svg)
+![CodexGlasses](assets/codexglasses-banner.svg)
 
 [中文](README.md) · [Product comparison](docs/product-comparison.md) · [Design index](docs/design-index.md) · [Evidence](docs/verification-report.md)
 
-AgentGlass brings ESP32-S3 firmware, an Android companion, a self-hosted desktop connector, shared protocols and hardware design material into one repository. Its focus is a developer workflow: speak a request, select an authorized project, approve the task on the computer, observe actual task events and receive a result.
+CodexGlasses brings ESP32-S3 firmware, an Android companion, a self-hosted desktop connector, shared protocols and hardware design material into one repository. Its focus is a developer workflow: speak a request, select an authorized project, approve the task on the computer, observe actual task events and receive a result.
 
 ## Two agents, one path
 
@@ -26,13 +26,13 @@ Model keys stay on the computer; task progress comes from real session events.
 | Agent | How it connects | Status |
 |---|---|---|
 | **Codex** (official App Server) | official JSONL stdio inside an offline Docker worker | wired against the schema measured on CLI 0.162.1; init and config read work, `thread/start` not finished |
-| **DSH** (DeepSeek Harness) | the same worker, a different command line | entry point in place (`AGENTGLASS_AGENT` / `AGENTGLASS_AGENT_ARGS`), **not tested against a real DSH** |
+| **DSH** (DeepSeek Harness) | the same worker, a different command line | entry point in place (`CODEXGLASSES_AGENT` / `CODEXGLASSES_AGENT_ARGS`), **not tested against a real DSH** |
 
 Switching agents needs no code change:
 
 ```bash
 # default: Codex, unchanged when these are unset
-AGENTGLASS_AGENT=dsh AGENTGLASS_AGENT_ARGS="<dsh args>" python3 agent-integration/codex/worker_entry.py
+CODEXGLASSES_AGENT=dsh CODEXGLASSES_AGENT_ARGS="<dsh args>" python3 agent-integration/codex/worker_entry.py
 ```
 
 Requirements for the DSH side (frame format, model endpoint) are listed in
@@ -48,7 +48,7 @@ Requirements for the DSH side (frame format, model endpoint) are listed in
 
 ## Positioning alongside other glasses
 
-Consumer platforms such as Ray-Ban Meta, Meta Ray-Ban Display and Rokid emphasize everyday capture, assistance, captions and navigation. Even G2 focuses on information assistance. XREAL One Pro emphasizes an external large-screen experience, RayNeo X3 Pro combines AI and spatial AR, and Brilliant Halo offers a public developer ecosystem. AgentGlass focuses on owner-controlled project tasks and the complete, inspectable connector workflow. [Sources and comparison data](docs/product-comparison.md) distinguish vendor specifications from project design inputs and software tests; unspecified vendor capabilities are not treated as unsupported.
+Consumer platforms such as Ray-Ban Meta, Meta Ray-Ban Display and Rokid emphasize everyday capture, assistance, captions and navigation. Even G2 focuses on information assistance. XREAL One Pro emphasizes an external large-screen experience, RayNeo X3 Pro combines AI and spatial AR, and Brilliant Halo offers a public developer ecosystem. CodexGlasses focuses on owner-controlled project tasks and the complete, inspectable connector workflow. [Sources and comparison data](docs/product-comparison.md) distinguish vendor specifications from project design inputs and software tests; unspecified vendor capabilities are not treated as unsupported.
 
 ## Run the software
 

@@ -16,6 +16,6 @@
   "historical_package_readback": "docs/evidence/package-readback.json records the v0.2 engineering archive; publication documentation changes are separately scoped here",
   "physical_hardware_tests": 0,
   "remote_github_created": false,
-  "license": "LicenseRef-AgentGlass-Personal-Noncommercial-1.0",
+  "license": "LicenseRef-CodexGlasses-Personal-Noncommercial-1.0",
   "commercial_contact": "3277681859@qq.com"
 }

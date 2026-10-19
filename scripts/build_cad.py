@@ -45,7 +45,7 @@ def placement(p, sign, cover=False):
 def build():
     p=json.loads((ROOT/'hardware/mechanical/parameters.json').read_text());parts=geometry(p)
     front,temple,cover=(parts[name] for name in ['front','temple','cover'])
-    assembly=cq.Assembly(name='AgentGlass_H1_PACKAGING_FIXTURE')
+    assembly=cq.Assembly(name='CodexGlasses_H1_PACKAGING_FIXTURE')
     assembly.add(front,name='front',color=cq.Color(.12,.15,.18))
     for sign,name in [(-1,'left_temple'),(1,'right_temple')]:
         assembly.add(temple,name=name,loc=cq.Location(cq.Vector(*placement(p,sign))),color=cq.Color(.15,.17,.2))
@@ -53,7 +53,7 @@ def build():
     optic=cq.Workplane('XY').box(*p['optical_envelope'],centered=(False,False,False)).translate((-44,13,4))
     assembly.add(optic,name='RFQ_ONLY_optic_envelope',color=cq.Color(.2,.7,.4,.4))
     out=ROOT/'hardware/mechanical/generated';out.mkdir(exist_ok=True)
-    assembly.save(str(out/'agentglass-h1-fixture.step'))
+    assembly.save(str(out/'codexglasses-h1-fixture.step'))
     volumes={}
     for name,shape in parts.items():
         if not shape.val().isValid():raise ValueError(name+' invalid BREP')

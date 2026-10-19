@@ -1,4 +1,4 @@
-package dev.agentglass;
+package dev.codexglasses;
 
 import java.io.*;
 import java.nio.file.*;

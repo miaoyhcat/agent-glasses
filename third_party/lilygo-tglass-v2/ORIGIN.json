@@ -1,7 +1,7 @@
 {
   "upstream": "https://github.com/Xinyuan-LilyGO/LilyGO-T-Wristband-and-T-Glass",
   "commit": "99ae22477daeaec55714f6b31e0219407dd52439",
-  "license": "MIT, unchanged third-party files, NOT relicensed under AgentGlass license",
+  "license": "MIT, unchanged third-party files, NOT relicensed under CodexGlasses license",
   "files_sha256": {
     "LICENSE": "913879919918761b5b79f9aa804a772f1033e1fa28d425d6fa368448046ccc42",
     "src/LilyGo_Wristband.h": "e30165d7ff48a03b96edf3d5305bb67768bc96a9d56eeb62aa1ab64455f4acd8",

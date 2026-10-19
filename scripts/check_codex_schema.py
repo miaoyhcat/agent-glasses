@@ -10,7 +10,7 @@ import hashlib
 import json
 from pathlib import Path
 import jsonschema
-from agentglass.codex import sandbox
+from codexglasses.codex import sandbox
 
 ROOT=Path(__file__).resolve().parents[1]
 

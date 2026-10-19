@@ -81,12 +81,12 @@ def generate_modern_schematic(directory):
     root=uid();symbols=[];instances=[];wires=[]
     for idx,(ref,value,kind,x,y,nets) in enumerate(PARTS):
         name='PART_'+ref;half=max(2.54,len(nets)*1.27);sx=30+(idx%4)*90;sy=30+(idx//4)*50
-        lib=[f'(symbol "AgentGlass:{name}" (pin_names (offset 0.5)) (in_bom yes) (on_board yes)',
+        lib=[f'(symbol "CodexGlasses:{name}" (pin_names (offset 0.5)) (in_bom yes) (on_board yes)',
              f'(property "Reference" "{ref.rstrip("0123456789")}" (at 0 {half+2.5} 0) {effect()})',
              f'(property "Value" {quoted(value)} (at 0 {-half-2.5} 0) {effect()})',
              f'(symbol "{name}_0_1" (rectangle (start -7.62 {half}) (end 7.62 {-half}) (stroke (width .254) (type default)) (fill (type background))))',
              f'(symbol "{name}_1_1"']
-        ins=[f'(symbol (lib_id "AgentGlass:{name}") (at {sx} {sy} 0) (unit 1) (in_bom yes) (on_board yes) (uuid {uid()})',
+        ins=[f'(symbol (lib_id "CodexGlasses:{name}") (at {sx} {sy} 0) (unit 1) (in_bom yes) (on_board yes) (uuid {uid()})',
              f'(property "Reference" "{ref}" (at {sx} {sy-half-2.5} 0) {effect()})',
              f'(property "Value" {quoted(value)} (at {sx} {sy+half+2.5} 0) {effect(.85)})']
         for i,net in enumerate(nets,1):
@@ -180,7 +180,7 @@ def build():
     # Dedicated return for the small SOT23 ground pad; avoids relying on a narrow thermal island.
     ground=k.PCB_TRACK(board);ground.SetStart(point(48.9,20));ground.SetEnd(point(47.5,20));ground.SetWidth(k.FromMM(.3));ground.SetLayer(k.F_Cu);ground.SetNetCode(netcodes['GND'].GetNetCode());board.Add(ground)
     via=k.PCB_VIA(board);via.SetPosition(point(47.5,20));via.SetWidth(k.FromMM(.6));via.SetDrill(k.FromMM(.3));via.SetViaType(k.VIATYPE_THROUGH);via.SetLayerPair(k.F_Cu,k.B_Cu);via.SetNetCode(netcodes['GND'].GetNetCode());board.Add(via)
-    text=k.PCB_TEXT(board);text.SetText('AgentGlass LED interlock TEST ONLY / 3.3V');text.SetPosition(point(35,41));text.SetTextSize(point(.8,.8));text.SetTextThickness(k.FromMM(.12));text.SetLayer(k.F_SilkS);board.Add(text)
+    text=k.PCB_TEXT(board);text.SetText('CodexGlasses LED interlock TEST ONLY / 3.3V');text.SetPosition(point(35,41));text.SetTextSize(point(.8,.8));text.SetTextThickness(k.FromMM(.12));text.SetLayer(k.F_SilkS);board.Add(text)
     board.BuildConnectivity()
     file=OUT/'interlock-test.kicad_pcb';k.SaveBoard(str(file),board)
     # Round-trip initializes KiCad's board design settings/net-class caches.

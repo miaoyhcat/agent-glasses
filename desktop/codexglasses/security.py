@@ -25,7 +25,7 @@ def private_file(path: Path, data: bytes):
 
 def make_tls(directory: Path, hosts: list[str]):
     key = ec.generate_private_key(ec.SECP256R1())
-    name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "AgentGlass local bridge")])
+    name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "CodexGlasses local bridge")])
     san = []
     for host in dict.fromkeys(["localhost", "127.0.0.1", "::1", *hosts]):
         try:

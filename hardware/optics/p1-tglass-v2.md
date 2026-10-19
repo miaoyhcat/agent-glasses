@@ -16,9 +16,9 @@ JD9613 RAM为294×126，棱镜观察区约126×126，放大区还会缩小 [S54]
 
 ```bash
 python -m pip install platformio==6.2.0
-python scripts/build_firmware.py --env agentglass_tglass_v2
+python scripts/build_firmware.py --env codexglasses_tglass_v2
 # 核对板型和USB端口后，POSIX shell：
-PLATFORMIO_SETTING_ENABLE_TELEMETRY=no python -m platformio run -d firmware -e agentglass_tglass_v2 -t upload
+PLATFORMIO_SETTING_ENABLE_TELEMETRY=no python -m platformio run -d firmware -e codexglasses_tglass_v2 -t upload
 ```
 
 首次烧录后在受信任USB查看配对密码；按住BOOT发送`provision <64位十六进制密钥>`。密钥由用户安全随机生成，不放进仓库。Android选择“连接T-Glass近眼显示”，再连接电脑。双设备绑定、MTU、重连与中文显示均待实机验证。

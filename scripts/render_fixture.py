@@ -29,7 +29,7 @@ def main():
     optic=cq.Workplane('XY').box(*p['optical_envelope'],centered=(False,False,False)).translate((-44,13,4)).val();add(optic,'#2eaf83',.6)
     ax.set(xlim=(-90,90),ylim=(-20,155),zlim=(-35,45),xlabel='left / right (mm)',ylabel='rearward (mm)',zlabel='')
     ax.set_box_aspect((180,175,80));ax.view_init(elev=26,azim=-58);ax.grid(False)
-    fig.suptitle('AgentGlass H1 | CAD packaging fixture',x=.08,ha='left',fontsize=21,fontweight='bold',color='#23323e')
+    fig.suptitle('CodexGlasses H1 | CAD packaging fixture',x=.08,ha='left',fontsize=21,fontweight='bold',color='#23323e')
     fig.text(.08,.875,'Green: unconfirmed optical-engine envelope. No powered prototype or finished frame.',fontsize=11,color='#53616c')
     fig.text(.08,.045,'Generated from delivered STEP geometry. Hinge mechanism, lens retention and supplier mounting remain unresolved.',fontsize=10,color='#53616c')
     (ROOT/'assets').mkdir(exist_ok=True);fig.savefig(ROOT/'assets/packaging-fixture.png',dpi=140,bbox_inches='tight');plt.close(fig)

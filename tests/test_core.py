@@ -10,13 +10,13 @@ from pathlib import Path
 
 from aiohttp.test_utils import TestClient, TestServer
 
-from agentglass.codex import AppServer, run_codex
-from agentglass.media import MediaStore
-from agentglass.protocol import ble_packet, ble_verify, task_request
-from agentglass.security import snapshot_project, make_tls
-from agentglass.server import Bridge
-from agentglass.store import Store
-from agentglass.isolation import container_command
+from codexglasses.codex import AppServer, run_codex
+from codexglasses.media import MediaStore
+from codexglasses.protocol import ble_packet, ble_verify, task_request
+from codexglasses.security import snapshot_project, make_tls
+from codexglasses.server import Bridge
+from codexglasses.store import Store
+from codexglasses.isolation import container_command
 
 
 class StoreTests(unittest.TestCase):
@@ -200,7 +200,7 @@ class BoundaryTests(unittest.TestCase):
             self.assertIn('--cap-drop=ALL',command)
             self.assertIn('--network=none',command)
             self.assertFalse(any('auth.json' in a for a in command))
-            self.assertIn('AGENTGLASS_PROXY_TOKEN',command)
+            self.assertIn('CODEXGLASSES_PROXY_TOKEN',command)
             self.assertTrue(any('target=/workspace,readonly' in a for a in command))
             self.assertFalse(any('docker.sock' in a for a in command))
 
@@ -397,7 +397,7 @@ class CodexProtocolTests(unittest.IsolatedAsyncioTestCase):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);store=Store(root/'state.db');device,_=store.add_device('test')
             task=store.create_task(device,'missing_123','demo','inspect','Check')[0];store.transition(task['id'],'preparing')
-            await run_codex(task,store,['/nonexistent-agentglass-codex'],root)
+            await run_codex(task,store,['/nonexistent-codexglasses-codex'],root)
             self.assertEqual(store.task(task['id'])['status'],'failed');store.close()
 
 

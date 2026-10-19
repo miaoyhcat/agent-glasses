@@ -1,4 +1,4 @@
-package dev.agentglass;
+package dev.codexglasses;
 
 import android.content.Context;
 import android.security.keystore.KeyGenParameterSpec;
@@ -44,7 +44,7 @@ public final class TlsApi {
         SSLContext ctx=SSLContext.getInstance("TLS");ctx.init(null,managers,new SecureRandom());return ctx;
     }
     public void pair(String code) throws Exception {
-        JSONObject response=request("POST","/v1/pair",new JSONObject().put("code",code).put("name","AgentGlass Android"));
+        JSONObject response=request("POST","/v1/pair",new JSONObject().put("code",code).put("name","CodexGlasses Android"));
         token=response.getString("token");saveSecret(context,"device_token_"+pin,token);
     }
     public JSONObject request(String method,String path,JSONObject data) throws Exception {
@@ -69,12 +69,12 @@ public final class TlsApi {
     }
     private static SecretKey secretKey() throws Exception {
         KeyStore ks=KeyStore.getInstance("AndroidKeyStore");ks.load(null);
-        if(!ks.containsAlias("agentglass_v1")){
+        if(!ks.containsAlias("codexglasses_v1")){
             KeyGenerator kg=KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES,"AndroidKeyStore");
-            kg.init(new KeyGenParameterSpec.Builder("agentglass_v1",KeyProperties.PURPOSE_ENCRYPT|KeyProperties.PURPOSE_DECRYPT)
+            kg.init(new KeyGenParameterSpec.Builder("codexglasses_v1",KeyProperties.PURPOSE_ENCRYPT|KeyProperties.PURPOSE_DECRYPT)
                 .setBlockModes(KeyProperties.BLOCK_MODE_GCM).setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE).build());kg.generateKey();
         }
-        return ((KeyStore.SecretKeyEntry)ks.getEntry("agentglass_v1",null)).getSecretKey();
+        return ((KeyStore.SecretKeyEntry)ks.getEntry("codexglasses_v1",null)).getSecretKey();
     }
     public static void saveSecret(Context c,String name,String value)throws Exception{
         Cipher cipher=Cipher.getInstance("AES/GCM/NoPadding");cipher.init(Cipher.ENCRYPT_MODE,secretKey());

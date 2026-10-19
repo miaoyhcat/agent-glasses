@@ -1,4 +1,4 @@
-// AgentGlass D0: implemented drivers for a bench rig. H1 optics remain gated.
+// CodexGlasses D0: implemented drivers for a bench rig. H1 optics remain gated.
 #include <Arduino.h>
 #include <ArduinoJson.h>
 #include <SPI.h>
@@ -299,12 +299,12 @@ void setup(){
   pinMode(CAMERA_GATE,OUTPUT);digitalWrite(CAMERA_GATE,LOW);pinMode(PRIVACY_READY,INPUT_PULLDOWN);
   pinMode(AUDIO_ENABLE,OUTPUT);digitalWrite(AUDIO_ENABLE,LOW);pinMode(USER_BUTTON,INPUT_PULLUP);
   uint8_t randomSession[16];esp_fill_random(randomSession,16);sessionId=hexBytes(randomSession,16);
-  prefs.begin("agentglass",false);provisioned=prefs.getBytesLength("key")==32;if(provisioned)prefs.getBytes("key",keyBytes,32);
+  prefs.begin("codexglasses",false);provisioned=prefs.getBytesLength("key")==32;if(provisioned)prefs.getBytes("key",keyBytes,32);
   SPI.begin(SPI_SCK,SPI_MISO,SPI_MOSI);lcdInit();drawClock();sdReady=SD.begin(SD_CS,SPI,10000000);
   if(sdReady)cache=&SD;else if(!SPIFFS.begin(false)){error("cache_not_formatted_uploadfs_required");}
   // Pairing passkey is shown on USB console; D0 has no font renderer.
   uint32_t passkey=100000+(esp_random()%900000);Serial.printf("BLE pairing passkey: %06lu\n",(unsigned long)passkey);
-  NimBLEDevice::init("AgentGlass-D0");NimBLEDevice::setMTU(247);NimBLEDevice::setSecurityAuth(true,true,true);
+  NimBLEDevice::init("CodexGlasses-D0");NimBLEDevice::setMTU(247);NimBLEDevice::setSecurityAuth(true,true,true);
   NimBLEDevice::setSecurityIOCap(BLE_HS_IO_DISPLAY_ONLY);NimBLEDevice::setSecurityPasskey(passkey);
   NimBLEServer* s=NimBLEDevice::createServer();s->setCallbacks(new ServerCallbacks());
   NimBLEService* service=s->createService(SERVICE);

@@ -1,9 +1,9 @@
 Processing ./.
   Preparing metadata (pyproject.toml): started
   Preparing metadata (pyproject.toml): finished with status 'done'
-Building wheels for collected packages: agentglass
-  Building wheel for agentglass (pyproject.toml): started
-  Building wheel for agentglass (pyproject.toml): finished with status 'done'
-  Created wheel for agentglass: filename=agentglass-0.2.0-py3-none-any.whl size=39099 sha256=52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91
+Building wheels for collected packages: codexglasses
+  Building wheel for codexglasses (pyproject.toml): started
+  Building wheel for codexglasses (pyproject.toml): finished with status 'done'
+  Created wheel for codexglasses: filename=codexglasses-0.2.0-py3-none-any.whl size=39099 sha256=52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91
   Stored in directory: /tmp/pip-ephem-wheel-cache-d2s9wm3s/wheels/f9/14/25/856caecb0a2b5748f471762c50e78672fa0fde067db43c1b53
-Successfully built agentglass
+Successfully built codexglasses

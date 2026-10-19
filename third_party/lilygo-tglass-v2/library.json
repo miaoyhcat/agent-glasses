@@ -1,5 +1,5 @@
 {
-  "name": "AgentGlass-LilyGO-TGlass-v2-driver",
+  "name": "CodexGlasses-LilyGO-TGlass-v2-driver",
   "version": "1.0.0",
   "frameworks": "arduino",
   "platforms": "espressif32",

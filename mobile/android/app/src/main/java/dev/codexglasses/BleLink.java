@@ -1,4 +1,4 @@
-package dev.agentglass;
+package dev.codexglasses;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

@@ -143,9 +143,9 @@
     "scripts/benchmark_codex_local.py": "c48794ed142e93cc28e670feb278a73d2a747d6ba34b731811da8d4cf7fb98c7",
     "scripts/fixture_mcp.py": "1d3da67d07c3f085c0b5b11da31cee725575bc1fe0e3673f7f26aabf43b8dca2",
     "agent-integration/codex/worker_entry.py": "9462a885488ec2139c459fdbc2671f307f9a3de09ef5d181501ae35d6220269c",
-    "desktop/agentglass/codex.py": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
-    "desktop/agentglass/model_proxy.py": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
-    "desktop/agentglass/store.py": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9"
+    "desktop/codexglasses/codex.py": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
+    "desktop/codexglasses/model_proxy.py": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
+    "desktop/codexglasses/store.py": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9"
   },
   "model_patch_artifact": "examples/verified-local-result/discount.py"
 }

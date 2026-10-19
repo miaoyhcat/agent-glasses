@@ -17,13 +17,13 @@ DSH 和 Codex 走**同一条链路**，区别只在隔离 worker 里跑哪条命
 worker 默认启动 Codex。要换 DSH，给两个环境变量即可，**不用改代码**：
 
 ```bash
-AGENTGLASS_AGENT=dsh \
-AGENTGLASS_AGENT_ARGS="<DSH 的等价启动参数>" \
+CODEXGLASSES_AGENT=dsh \
+CODEXGLASSES_AGENT_ARGS="<DSH 的等价启动参数>" \
 python3 agent-integration/codex/worker_entry.py
 ```
 
-- `AGENTGLASS_AGENT`：要启动的可执行文件（默认 `codex`）。
-- `AGENTGLASS_AGENT_ARGS`：按空格切分的启动参数；非 Codex 分支不会注入任何
+- `CODEXGLASSES_AGENT`：要启动的可执行文件（默认 `codex`）。
+- `CODEXGLASSES_AGENT_ARGS`：按空格切分的启动参数；非 Codex 分支不会注入任何
   Codex 专有配置（`-c model_provider=...` 那些只对 Codex 生效）。
 
 ## 需要 DSH 一侧满足的前提
@@ -43,7 +43,7 @@ python3 agent-integration/codex/worker_entry.py
 | 项 | 状态 |
 |---|---|
 | Codex 路径（默认分支） | 已按实测 0.162.1 的 schema 接入，见 [Codex 接入说明](../codex/README.md) |
-| worker 换命令的入口（`AGENTGLASS_AGENT`） | 已实现，默认分支行为不变 |
+| worker 换命令的入口（`CODEXGLASSES_AGENT`） | 已实现，默认分支行为不变 |
 | **DSH 真机联调** | **未做** —— 没有在真实 DSH 上跑过，DSH 的启动参数与帧格式以它自己的文档为准 |
 
 没跑过就写没跑过。等你在本机接上以后，把实际参数补回这份文档即可。

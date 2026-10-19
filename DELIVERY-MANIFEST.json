@@ -84,7 +84,7 @@
       "sha256": "1e4c21b507af1b61f999f62ee730e5707bcac6f068cf3e8bf603ef8f5d8cc8bb",
       "bytes": 7783
     },
-    "assets/agentglass-banner.svg": {
+    "assets/codexglasses-banner.svg": {
       "sha256": "ee93e38ef511b4c46adab61db26f4574a4397291d2238654437e740532cdb26d",
       "bytes": 2123
     },
@@ -100,55 +100,55 @@
       "sha256": "7ed47d8ce2148f59999544155d0124221f46560e145d5a1947406bfe666a976e",
       "bytes": 1429
     },
-    "desktop/agentglass/__init__.py": {
+    "desktop/codexglasses/__init__.py": {
       "sha256": "f53e6a5665810caf20f20751c295fada0ae91c3eceec898f8d56a8624484a484",
       "bytes": 95
     },
-    "desktop/agentglass/cli.py": {
+    "desktop/codexglasses/cli.py": {
       "sha256": "5b9ccf9ebcb8ae37c33251f4156e876b6c813e3401796590222284d19d1dcf8a",
       "bytes": 6611
     },
-    "desktop/agentglass/cloud.py": {
+    "desktop/codexglasses/cloud.py": {
       "sha256": "23fcbf2173dfbfc450a0155b823b8a04f990a4162e182c1e70046cb88345db43",
       "bytes": 2920
     },
-    "desktop/agentglass/codex.py": {
+    "desktop/codexglasses/codex.py": {
       "sha256": "d90be6c9928a669601be4811e39860751361925ba0d1d15c9cf722ca9827f9d5",
       "bytes": 15803
     },
-    "desktop/agentglass/doctor.py": {
+    "desktop/codexglasses/doctor.py": {
       "sha256": "588d05fea504e33b06d214260389c9672e924065bb42f54641294edcc9226ad9",
       "bytes": 2395
     },
-    "desktop/agentglass/isolation.py": {
+    "desktop/codexglasses/isolation.py": {
       "sha256": "bc83959676b68594b5939eee2b446f06c2e964c5f76267436115e55955b92dcc",
       "bytes": 1824
     },
-    "desktop/agentglass/media.py": {
+    "desktop/codexglasses/media.py": {
       "sha256": "6de29f7e2fd8edbaf053de0a7ca65112f66500f6be653da199449d45627b5884",
       "bytes": 5639
     },
-    "desktop/agentglass/model_proxy.py": {
+    "desktop/codexglasses/model_proxy.py": {
       "sha256": "179a3a8275adb82d9c7a36276d280677c2d991dc7af3a367c72017ba0d53b762",
       "bytes": 5756
     },
-    "desktop/agentglass/protocol.py": {
+    "desktop/codexglasses/protocol.py": {
       "sha256": "e22fe5f56907d11ae353dbf2b137e711c10d005c2a295162e20ab27615cdaafb",
       "bytes": 2869
     },
-    "desktop/agentglass/security.py": {
+    "desktop/codexglasses/security.py": {
       "sha256": "7ce33cc56894381a39e7c52060c46473966b64fe24a399b404c1b73007609387",
       "bytes": 7147
     },
-    "desktop/agentglass/server.py": {
+    "desktop/codexglasses/server.py": {
       "sha256": "42feca1581f34a03e5a3c670d8e7dbe8536a859680db71c7447490b1fe06a821",
       "bytes": 19989
     },
-    "desktop/agentglass/store.py": {
+    "desktop/codexglasses/store.py": {
       "sha256": "deb1ded89b9e070ffbe4048242c7c4843dae677d51cf5ebcb37c29a7afbfffd9",
       "bytes": 9167
     },
-    "desktop/agentglass/web/index.html": {
+    "desktop/codexglasses/web/index.html": {
       "sha256": "620d52339c6ba5798d8843ebf4a946e31a1612fff1b6118349f74d79257496e8",
       "bytes": 6887
     },
@@ -472,7 +472,7 @@
       "sha256": "11207a8957817d68104a1568773c92a8d9df51190b9619b4d89fd4f7f029acdb",
       "bytes": 4768
     },
-    "firmware/boards/agentglass_d0.json": {
+    "firmware/boards/codexglasses_d0.json": {
       "sha256": "c8647b1ed689aa6fce4bab67ee3e2cc4c7aa8a9b98ef819af87102351b522ca4",
       "bytes": 733
     },
@@ -544,7 +544,7 @@
       "sha256": "8b7ff9b304f93e59a8b6fb42ccc2950d6cce295acd7bfdde4f8eab26d47b615a",
       "bytes": 1949
     },
-    "hardware/mechanical/generated/agentglass-h1-fixture.step": {
+    "hardware/mechanical/generated/codexglasses-h1-fixture.step": {
       "sha256": "51e149e8fb52b813e272e0f7bfec8849b89bb27ed4c53f420527ee68b7662469",
       "bytes": 210862
     },
@@ -688,31 +688,31 @@
       "sha256": "6542c990692403848f5943b90430cb33c78d42d2a3fed32afcf9404b752dd772",
       "bytes": 1695
     },
-    "mobile/android/app/src/main/java/dev/agentglass/BleLink.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/BleLink.java": {
       "sha256": "071aab32a43c2e0ee469f50b60962f494aca3aa6825a0846c3268b7b8bf3f141",
       "bytes": 9344
     },
-    "mobile/android/app/src/main/java/dev/agentglass/DurableFiles.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/DurableFiles.java": {
       "sha256": "db5f9a50cf767dc5bbdf8a7c29d48e4054492788f93cf5c4decba608fbe83aae",
       "bytes": 1518
     },
-    "mobile/android/app/src/main/java/dev/agentglass/MainActivity.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/MainActivity.java": {
       "sha256": "6f91f503a1fddbacca4658abce48d93201e079a61e8a7a1a5052d6062c3b1956",
       "bytes": 28419
     },
-    "mobile/android/app/src/main/java/dev/agentglass/NotificationRelay.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/NotificationRelay.java": {
       "sha256": "4a330cee75fc2e3879aa924ee424b24c9e054647ad52fca3ab768cc52f9a7c53",
       "bytes": 1084
     },
-    "mobile/android/app/src/main/java/dev/agentglass/PcmWave.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/PcmWave.java": {
       "sha256": "fa2997fb036c8fb8d31f9c9d07df388f71dca043e524f6abbbf8b962468af7f2",
       "bytes": 1854
     },
-    "mobile/android/app/src/main/java/dev/agentglass/TaskDispatch.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/TaskDispatch.java": {
       "sha256": "d3b0ca608de7755c6e4a40dd70f043439473d78766bd4c1568782ad5bc4557c6",
       "bytes": 1878
     },
-    "mobile/android/app/src/main/java/dev/agentglass/TlsApi.java": {
+    "mobile/android/app/src/main/java/dev/codexglasses/TlsApi.java": {
       "sha256": "09f25cab77bde007fa19b697d38a9b1a665d5172825c0bfdaa9269d25c567bc1",
       "bytes": 6548
     },
@@ -732,11 +732,11 @@
       "sha256": "42e766ca1e9d37332dfd0fea6face37d1d7be392e0a8af217e99e784aa8f6eea",
       "bytes": 1503
     },
-    "releases/agentglass-0.2.0-py3-none-any.whl": {
+    "releases/codexglasses-0.2.0-py3-none-any.whl": {
       "sha256": "52dfe9195ffc6ac985830ed7fef3ff7ee5a63890f818cf4b8f9ff74022307b91",
       "bytes": 39099
     },
-    "releases/agentglass-debug.apk": {
+    "releases/codexglasses-debug.apk": {
       "sha256": "69aacf25db23bc8b4f0ce71a2a60fcc434bf93cdda5ade1f39072dbd039e6c81",
       "bytes": 41357
     },

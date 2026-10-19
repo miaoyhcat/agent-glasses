@@ -1,4 +1,4 @@
-package dev.agentglass;
+package dev.codexglasses;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;

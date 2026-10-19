@@ -7,7 +7,7 @@ import subprocess
 ROOT=Path(__file__).resolve().parents[1]
 out=ROOT/'build/host-java-reliability';out.mkdir(parents=True,exist_ok=True)
 compiler=['javac'] if shutil.which('javac') else ['java','com.sun.tools.javac.Main']
-source=ROOT/'mobile/android/app/src/main/java/dev/agentglass'
+source=ROOT/'mobile/android/app/src/main/java/dev/codexglasses'
 subprocess.run([*compiler,'--release','8','-d',str(out),str(source/'DurableFiles.java'),str(source/'TaskDispatch.java'),str(ROOT/'tests/ReliabilityCheck.java')],check=True)
 result=subprocess.run(['java','-cp',str(out),'ReliabilityCheck'],capture_output=True,text=True,check=True)
 print(result.stdout)

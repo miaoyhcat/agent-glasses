@@ -9,7 +9,7 @@ import struct
 def extract(source:Path,destination:Path):
     destination.mkdir(parents=True,exist_ok=True);frames=[]
     with source.open('rb') as f:
-        if f.read(5)!=b'AGMJ1':raise ValueError('not an AgentGlass JPEG-frame recording')
+        if f.read(5)!=b'AGMJ1':raise ValueError('not an CodexGlasses JPEG-frame recording')
         while header:=f.read(8):
             if len(header)!=8:raise ValueError('truncated frame header')
             timestamp,length=struct.unpack('<II',header)

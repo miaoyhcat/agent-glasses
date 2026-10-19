@@ -3,9 +3,9 @@ from pathlib import Path
 from unittest.mock import patch,AsyncMock
 from aiohttp import web
 from aiohttp.test_utils import TestServer
-from agentglass.model_proxy import ModelProxy
-from agentglass.codex import run_codex,remove_owned_container
-from agentglass.store import Store
+from codexglasses.model_proxy import ModelProxy
+from codexglasses.codex import run_codex,remove_owned_container
+from codexglasses.store import Store
 ROOT=Path(__file__).resolve().parents[1]
 
 class BrokerTests(unittest.IsolatedAsyncioTestCase):
@@ -63,13 +63,13 @@ class BrokerTests(unittest.IsolatedAsyncioTestCase):
             task=store.create_task(device,'broker_protocol_123','demo','inspect','test broker')[0];store.transition(task['id'],'preparing')
             script="import sys;sys.path.insert(0,"+repr(str(ROOT/'agent-integration/codex'))+");from worker_entry import Worker;raise SystemExit(Worker().run([sys.executable,"+repr(str(ROOT/'tests/fake_codex.py'))+",'--model-proxy']))"
             async with self.broker() as b:
-                await run_codex(task,store,[sys.executable,'-c',script],root,framed=True,model_proxy=b,child_env={'AGENTGLASS_PROXY_TOKEN':b.token},timeout=10)
+                await run_codex(task,store,[sys.executable,'-c',script],root,framed=True,model_proxy=b,child_env={'CODEXGLASSES_PROXY_TOKEN':b.token},timeout=10)
                 self.assertEqual(store.task(task['id'])['status'],'completed');self.assertEqual(b.calls,1)
                 self.assertNotIn('HOST_ONLY_DUMMY_CREDENTIAL',json.dumps(store.events()))
             store.close()
     async def test_only_exact_owned_container_names_can_be_removed(self):
         with self.assertRaises(ValueError):await remove_owned_container('unrelated-container')
         process=AsyncMock();process.returncode=0;process.communicate.return_value=(b'',b'')
-        with patch('agentglass.codex.asyncio.create_subprocess_exec',return_value=process) as launch:
-            self.assertTrue(await remove_owned_container('agentglass-'+'a'*32))
-            self.assertEqual(launch.call_args.args[:4],('docker','rm','--force','agentglass-'+'a'*32))
+        with patch('codexglasses.codex.asyncio.create_subprocess_exec',return_value=process) as launch:
+            self.assertTrue(await remove_owned_container('codexglasses-'+'a'*32))
+            self.assertEqual(launch.call_args.args[:4],('docker','rm','--force','codexglasses-'+'a'*32))

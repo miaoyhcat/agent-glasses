@@ -8,4 +8,4 @@ Verified using v3.1 scheme (APK Signature Scheme v3.1): false
 Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
-/workspace/scratch/1628ebaca2ec/revision-v0.2/agent-glasses/build/android/agentglass-debug.apk
+/workspace/scratch/1628ebaca2ec/revision-v0.2/codex-glasses/build/android/codexglasses-debug.apk

@@ -56,7 +56,7 @@ class Worker:
                     with worker.lock:worker.pending.pop(request_id,None)
         return Relay
     def run(self,command):
-        if not os.environ.get('AGENTGLASS_PROXY_TOKEN'):raise RuntimeError('missing_job_token')
+        if not os.environ.get('CODEXGLASSES_PROXY_TOKEN'):raise RuntimeError('missing_job_token')
         server=http.server.ThreadingHTTPServer(('127.0.0.1',9041),self.handler());server.daemon_threads=True
         threading.Thread(target=server.serve_forever,daemon=True).start()
         self.child=subprocess.Popen(command,stdin=subprocess.PIPE,stdout=subprocess.PIPE)
@@ -74,13 +74,13 @@ class Worker:
             if self.child.poll() is None:self.child.kill();self.child.wait()
 
 def command():
-    agent=os.environ.get('AGENTGLASS_AGENT','codex').strip() or 'codex'
+    agent=os.environ.get('CODEXGLASSES_AGENT','codex').strip() or 'codex'
     if agent!='codex':
         # 非 Codex：命令和参数完全由环境变量给，不注入 Codex 专有配置。
         # 协议要求见 agent-integration/dsh/README.md（一行一个 JSON 帧）。
-        return [agent]+shlex.split(os.environ.get('AGENTGLASS_AGENT_ARGS',''))
-    settings=['analytics.enabled=false','feedback.enabled=false','otel.exporter="none"','otel.metrics_exporter="none"','otel.trace_exporter="none"','web_search="disabled"','features.api_key_model_discovery=false','features.plugins=false','features.remote_plugin=false','features.apps=false','shell_environment_policy.inherit="none"','model_provider="agentglass_proxy"',
-      'model_providers.agentglass_proxy={name="AgentGlass bounded Responses broker",base_url="http://127.0.0.1:9041/v1",env_key="AGENTGLASS_PROXY_TOKEN",wire_api="responses",requires_openai_auth=false}']
+        return [agent]+shlex.split(os.environ.get('CODEXGLASSES_AGENT_ARGS',''))
+    settings=['analytics.enabled=false','feedback.enabled=false','otel.exporter="none"','otel.metrics_exporter="none"','otel.trace_exporter="none"','web_search="disabled"','features.api_key_model_discovery=false','features.plugins=false','features.remote_plugin=false','features.apps=false','shell_environment_policy.inherit="none"','model_provider="codexglasses_proxy"',
+      'model_providers.codexglasses_proxy={name="CodexGlasses bounded Responses broker",base_url="http://127.0.0.1:9041/v1",env_key="CODEXGLASSES_PROXY_TOKEN",wire_api="responses",requires_openai_auth=false}']
     result=['codex']
     for value in settings:result+=['-c',value]
     return result+['app-server']

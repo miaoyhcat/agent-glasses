@@ -1,10 +1,10 @@
-# AgentGlass 与代表性智能眼镜的对比
+# CodexGlasses 与代表性智能眼镜的对比
 
 比较日期：2026-10-17。重点是使用场景、可修改性和智能体工作流，便于开发者选择平台。
 
 | 产品 | 显示与采集 | 开发入口 | 实用侧重点 | 来源 |
 |---|---|---|---|---|
-| **AgentGlass** | H1单目HUD设计；P1近眼显示适配；D0相机/录音/短音频与手机协同 | 固件、Android、桌面、协议和CAD共同交付 | 自有项目上的inspect/fix/test、真实任务事件与本机审批 | [项目证据](evidence-index.json) |
+| **CodexGlasses** | H1单目HUD设计；P1近眼显示适配；D0相机/录音/短音频与手机协同 | 固件、Android、桌面、协议和CAD共同交付 | 自有项目上的inspect/fix/test、真实任务事件与本机审批 | [项目证据](evidence-index.json) |
 | **Ray-Ban Meta Gen 3** | Camera + Audio型号；12MP相机、开放式音频 | 厂商应用及服务生态 | 第一视角记录、通话与日常助手 | [S62](https://www.ray-ban.com/usa/l/discover-ray-ban-meta-ai-glasses) |
 | **Meta Ray-Ban Display** | 单目全彩600×600；12MP、麦克风与开放式扬声器 | Meta应用生态与Neural Band | 消息、字幕、导航与腕带交互 | [S63](https://www.ray-ban.com/usa/l/discover-meta-ray-ban-display) |
 | **Rokid Glasses with Display** | MicroLED、30°FOV；12MP、4麦与开放式音频 | Rokid应用与服务 | 字幕、翻译、提词与拍摄 | [S64](https://store.rokid.com/products/rokid-glasses) |
@@ -13,7 +13,7 @@
 | **XREAL One Pro** | MicroOLED、57°FOV；Bose调校音频；XREAL Eye为外部配件 | USB-C DP主机与开发门户 | 电脑/游戏/移动设备大屏 | [S68](https://www.xreal.com/one-pro) |
 | **RayNeo X3 Pro** | 双目全彩640×480、30°FOV；12MP、3麦阵列 | Creator Mode、Unity/Android ARDK | 导航、翻译、空间应用 | [S69](https://www.rayneo.com/products/x3-pro-ai-display-glasses) |
 
-## AgentGlass 的实用价值
+## CodexGlasses 的实用价值
 
 - **把任务带离电脑桌面**：为“检查项目→修复问题→运行测试”提供统一指令与状态接口，HUD呈现项目、阶段、结果和审批。
 - **连接自己的开发环境**：桌面连接器可自托管，按本机配置授权项目；模型与设备入口分开配置。
@@ -23,7 +23,7 @@
 
 ## 对比口径
 
-商业产品栏采用厂商公开规格；AgentGlass栏描述本仓库设计和实现，不是同条件整机实测排名。厂商未公开某个接口时，不推断其不支持第三方集成。Halo等产品同样具有公开开发生态；AgentGlass聚焦的是完整的Codex项目任务流程与可审查交付资料。
+商业产品栏采用厂商公开规格；CodexGlasses栏描述本仓库设计和实现，不是同条件整机实测排名。厂商未公开某个接口时，不推断其不支持第三方集成。Halo等产品同样具有公开开发生态；CodexGlasses聚焦的是完整的Codex项目任务流程与可审查交付资料。
 
 H1的66.45g、定义混合负载8.486h为工程预算；P1显示配置和H1参数分开记录。分辨率、视场、重量和续航不用于未经实测的“全面领先”结论。可复算输入见[可行性](feasibility-study.md)，软件运行记录见[验证报告](verification-report.md)。
 
