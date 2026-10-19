@@ -1,6 +1,12 @@
 # AgentGlass
 
-**Connect in-lens information, voice, first-person capture and tasks on your own development computer.**
+**Put them on, go for a walk. The computer at home keeps working.**
+
+Say "check that project and run the tests" before you leave. The request lands on
+Codex or DSH running on your own machine, inside an offline worker, against a copy of
+the project you authorized - never the original. Glance at the lens on the way:
+connected, which repo, reading files, test 3 of 12, where it got stuck.
+You come home with the result already on the glass.
 
 > **Personal noncommercial use only.** Original project material may be used for personal noncommercial learning, research, modification and self-use. Commercial sale, production for sale, integration, licensing, business operations and other commercial uses require the copyright owner's prior written permission. Unauthorized commercial use is prohibited.
 >
@@ -11,6 +17,26 @@
 [中文](README.md) · [Product comparison](docs/product-comparison.md) · [Design index](docs/design-index.md) · [Evidence](docs/verification-report.md)
 
 AgentGlass brings ESP32-S3 firmware, an Android companion, a self-hosted desktop connector, shared protocols and hardware design material into one repository. Its focus is a developer workflow: speak a request, select an authorized project, approve the task on the computer, observe actual task events and receive a result.
+
+## Two agents, one path
+
+Glasses -> phone -> desktop connector -> offline worker -> agent CLI.
+Model keys stay on the computer; task progress comes from real session events.
+
+| Agent | How it connects | Status |
+|---|---|---|
+| **Codex** (official App Server) | official JSONL stdio inside an offline Docker worker | wired against the schema measured on CLI 0.162.1; init and config read work, `thread/start` not finished |
+| **DSH** (DeepSeek Harness) | the same worker, a different command line | entry point in place (`AGENTGLASS_AGENT` / `AGENTGLASS_AGENT_ARGS`), **not tested against a real DSH** |
+
+Switching agents needs no code change:
+
+```bash
+# default: Codex, unchanged when these are unset
+AGENTGLASS_AGENT=dsh AGENTGLASS_AGENT_ARGS="<dsh args>" python3 agent-integration/codex/worker_entry.py
+```
+
+Requirements for the DSH side (frame format, model endpoint) are listed in
+[agent-integration/dsh/README.md](agent-integration/dsh/README.md).
 
 ## Practical features
 

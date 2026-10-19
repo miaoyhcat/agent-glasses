@@ -4,7 +4,7 @@
 No Unix socket, host TCP listener, provider credential, or original project is
 mounted. The only credential in the worker is an expiring bounded job token.
 """
-import base64,http.server,json,os,queue,signal,subprocess,sys,threading,uuid
+import base64,http.server,json,os,queue,shlex,signal,subprocess,sys,threading,uuid
 
 class Worker:
     def __init__(self):self.output=threading.Lock();self.pending={};self.lock=threading.Lock();self.child=None
@@ -74,6 +74,11 @@ class Worker:
             if self.child.poll() is None:self.child.kill();self.child.wait()
 
 def command():
+    agent=os.environ.get('AGENTGLASS_AGENT','codex').strip() or 'codex'
+    if agent!='codex':
+        # 非 Codex：命令和参数完全由环境变量给，不注入 Codex 专有配置。
+        # 协议要求见 agent-integration/dsh/README.md（一行一个 JSON 帧）。
+        return [agent]+shlex.split(os.environ.get('AGENTGLASS_AGENT_ARGS',''))
     settings=['analytics.enabled=false','feedback.enabled=false','otel.exporter="none"','otel.metrics_exporter="none"','otel.trace_exporter="none"','web_search="disabled"','features.api_key_model_discovery=false','features.plugins=false','features.remote_plugin=false','features.apps=false','shell_environment_policy.inherit="none"','model_provider="agentglass_proxy"',
       'model_providers.agentglass_proxy={name="AgentGlass bounded Responses broker",base_url="http://127.0.0.1:9041/v1",env_key="AGENTGLASS_PROXY_TOKEN",wire_api="responses",requires_openai_auth=false}']
     result=['codex']

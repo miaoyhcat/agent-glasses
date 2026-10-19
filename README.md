@@ -1,6 +1,11 @@
 # AgentGlass
 
-**把镜片信息显示、语音交互、第一视角采集与电脑智能体任务连接起来。**
+**戴上它去公园散步。家里那台电脑，会替你把活干完。**
+
+出门前说一句「检查一下那个项目，顺手把测试跑了」，话就落到了你电脑上的
+Codex 或 DSH 手里。它只在你授权的那份项目副本上动，原件不碰。
+你沿着湖边走一圈，抬眼看看镜片：连上电脑了、在读代码、跑到第 3 个测试、
+卡在哪儿——不用回屋，也不用盯终端。走回来的时候，结果已经在镜片上了。
 
 > **本项目仅允许个人非商业学习、研究、修改及自用。未经著作权人事先书面许可，严禁将本项目原创成果用于商业用途，包括商业销售、生产销售、商业集成、商业授权或其他以商业利益为目的的使用。违者必究。**
 >
@@ -10,13 +15,49 @@
 
 [English](README_EN.md) · [产品对比](docs/product-comparison.md) · [设计图与资料总索引](docs/design-index.md) · [使用指南](docs/user-guide.md) · [验证记录](docs/verification-report.md)
 
-AgentGlass是一套面向开发者的智能眼镜平台。它将眼镜端固件、Android应用、可自托管的桌面连接器、共享协议和硬件设计资料放进同一个仓库，围绕“说出需求、批准任务、查看真实进度、接收结果”组织交互。
+AgentGlass 是一套面向开发者的智能眼镜平台。它把眼镜端固件、Android 应用、
+可自托管的桌面连接器、共享协议和硬件设计资料放进同一个仓库，
+围绕「说出需求、批准任务、查看真实进度、接收结果」组织交互。
+
+## 一次散步，四件事
+
+| 你在做什么 | 眼镜在做什么 | 家里那台电脑在做什么 |
+|---|---|---|
+| 出门前说一句话 | 语音转写，上行 | 等你在本机点一下批准 |
+| 沿着湖边走 | 显示「已连接 · 哪个项目 · 进行到哪一步」 | 在项目副本上跑 inspect / fix / test |
+| 停下来看看 | 事件逐条上屏：读文件、跑测试、哪条没过 | 真实输出，不是「正在思考」的转圈 |
+| 走回家 | 结果和验收状态 | 留档，下次接着来 |
+
+需要批准的地方，仍然要你在电脑上点那一下——散步归散步，权限不撒手。
+
+## 接哪些 Agent：Codex 与 DSH
+
+两类 agent 走同一条链路：**眼镜 → 手机 → 电脑连接器 → 隔离 worker → agent CLI**。
+模型密钥留在电脑端，任务进度取自真实会话事件，容器里没有外网。
+
+| Agent | 怎么接 | 现在的状态 |
+|---|---|---|
+| **Codex**（官方 App Server） | 官方 JSONL stdio 塞进无外网 Docker worker | 按实测 0.162.1 的 schema 接入；环境初始化和配置读取可用，`thread/start` 未完成（详见[接入说明](agent-integration/codex/README.md)） |
+| **DSH**（DeepSeek Harness） | 同一个 worker，换一条命令行即可 | 入口已留好（`AGENTGLASS_AGENT` / `AGENTGLASS_AGENT_ARGS`），**未在真实 DSH 上实测**（详见[DSH 接入](agent-integration/dsh/README.md)） |
+
+换 agent 不用改代码：
+
+```bash
+# 默认就是 Codex，不设这两个变量行为不变
+AGENTGLASS_AGENT=dsh \
+AGENTGLASS_AGENT_ARGS="<DSH 的等价启动参数>" \
+python3 agent-integration/codex/worker_entry.py
+```
+
+前提写在 [DSH 接入说明](agent-integration/dsh/README.md) 里：worker 按「一行一个 JSON 帧」
+转发，DSH 侧协议不同就得加一层适配；模型请求要能指向本机 broker（`127.0.0.1:9041`）。
+没跑过的东西就是没跑过，不写成「已适配」。
 
 ## 为什么是 AgentGlass
 
 | 核心特色 | 用途 | 仓库入口 |
 |---|---|---|
-| **随身开发任务入口** | 检查项目、修复问题、运行测试；显示连接电脑、项目、任务阶段与结果 | [官方Codex适配](agent-integration/codex/README.md) |
+| **随身开发任务入口** | 检查项目、修复问题、运行测试；显示连接电脑、项目、任务阶段与结果 | [Codex 接入](agent-integration/codex/README.md) · [DSH 接入](agent-integration/dsh/README.md) |
 | **面向信息的HUD** | 时间、通知、转写、AI文字与任务状态；手机完成中文栅格化 | [固件与HUD](firmware/README.md) |
 | **采集与本地缓存** | 摄像、短录像、录音、媒体校验、确认后删除及断点上传 | [固件](firmware/) / [手机](mobile/README.md) |
 | **自己掌握连接器** | 设备绑定、证书核验、项目授权、本机审批及日志事件 | [桌面端](desktop/agentglass/) / [协议](agent-integration/protocols/protocol.md) |
