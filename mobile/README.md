@@ -1,5 +1,7 @@
 # Android手机端 / v0.2
 
+[English](README_EN.md)
+
 Android API26+原生Java，编译目标API35。直接官方SDK构建、v2/v3签名校验；API26模拟器已运行TLS配对、任务发送、电脑审批和状态显示。模拟器测试的智能体明确是SIMULATOR，不是Codex模型执行。API35系统镜像本次未达到启动验收。
 
 ~~~bash

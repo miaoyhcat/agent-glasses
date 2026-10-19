@@ -1,5 +1,7 @@
 # D0 / P1 固件：已交叉编译，未烧录实物
 
+[English](README_EN.md)
+
 硬件为 ESP32-S3-WROOM-1-N16R8 开发板加外设，具体接线见 `include/pins.h` 和 `hardware/assembly/d0-wiring.csv`。D0 没有 VGA020/透明光机驱动。另提供 P1 TGlass V2 专用近眼显示固件；它与 D0 是分体开发平台，不是 H1 轻量整机。
 
 ## 已编写的实际驱动

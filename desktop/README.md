@@ -1,5 +1,7 @@
 # 电脑端
 
+[English](README_EN.md)
+
 Python 3.11+，aiohttp HTTPS服务，SQLite WAL持久状态；CLI负责本机批准。浏览器工作台是该程序的同源管理界面，不是单独部署的网站。Linux已运行软件测试；Windows/macOS安装、文件ACL、Docker卷和设备连接仍需实机验收。
 
 `codexglasses init` 建立私有状态目录、TLS证书和独立operator令牌。Windows初始化使用icacls移除继承权限，失败则停止。手机只得到设备令牌；operator令牌不传至手机、眼镜或URL。

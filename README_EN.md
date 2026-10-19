@@ -155,6 +155,8 @@ Firmware build entry: `python scripts/build_firmware.py`; Android build entry:
 
 ## Where to find everything
 
+**English documents:** [Security](SECURITY_EN.md) · [Protocol](agent-integration/protocols/protocol_EN.md) · [User guide](docs/user-guide_EN.md) · [Contributing](CONTRIBUTING_EN.md) · [Desktop](desktop/README_EN.md) · [Mobile](mobile/README_EN.md) · [Firmware](firmware/README_EN.md)
+
 - [Design, schematics, PCB, CAD and BOM index](docs/design-index.md)
 - [Product requirements](docs/product-requirements.md) / [Architecture](docs/architecture.md) / [Engineering calculations](docs/feasibility-study.md)
 - [Market research: 16 products](docs/market-research.md) / [Product comparison](docs/product-comparison.md) / [Sources](docs/sources.md)

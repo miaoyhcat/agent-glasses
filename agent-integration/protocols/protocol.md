@@ -1,5 +1,7 @@
 # CodexGlasses Protocol 1
 
+[English](protocol_EN.md)
+
 本协议是本项目自己的配件协议，不冒充 Codex API。桌面端通过官方 App Server 的 JSONL stdio 调用 Codex。
 
 ## HTTPS 控制平面
