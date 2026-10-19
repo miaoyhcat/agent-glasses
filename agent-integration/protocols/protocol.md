@@ -17,11 +17,26 @@
 | GET /v1/events?after=N | 单调 seq、最多 200 条；返回 cursor；断线从最后 cursor 继续 |
 | GET /v1/operator/pending | 限 loopback + 独立 operator 令牌，含完整待批准指令 |
 | POST /v1/operator/tasks/{id}/decision | 本机 approve/reject；批准必须确认副本和模型服务数据处理 |
+| POST /v1/operator/tasks/{id}/voice-decision | 语音批准：转写文本 → 固定口令 → 同一条批准路径；**默认关闭** |
 | POST /v1/media | `{size,sha256,mime,request_id?}`；设备内幂等，返回 ID/offset/complete |
 | GET /v1/media/{id} | size/received/complete |
 | PUT /v1/media/{id}/chunks?offset=N | 顺序原始字节块，≤256KiB；精确重复可安全重传 |
 | POST /v1/media/{id}/commit | 长度和 SHA-256 匹配后提交；返回完整状态 |
 | POST /v1/ai | 已提交media_id、kind=transcribe/vision、question、consent_upload_and_cost=true；默认拒绝云服务 |
+
+### 语音批准
+
+`POST /v1/operator/tasks/{id}/voice-decision`，body：`{transcript, acknowledge_snapshot_and_provider}`。
+
+- **默认关闭**，需要在电脑端 `config.json` 里写 `"allow_voice_approval": true`；未开启时返回
+  `400 {"error":"voice_approval_disabled"}`，任务状态不变。
+- 只认固定说法（`批准` / `确认批准` / `拒绝` / `不批准` 等），**否定优先**：
+  「不批准」里含有「批准」，所以先判否定再判肯定，写反就是一次误批准。
+- 认不出（空、过长、含糊）返回 `400 {"error":"voice_not_recognized"}`，**不产生任何状态变化**。
+- 批准成功后走的是和点击完全相同的路径：同样要求 `acknowledge_snapshot_and_provider`，
+  同样检查并发上限、副本占用、父任务清理；只是入口不同。
+- 审计只记录匹配到的短语（`voice_decision` 事件），**不保存整段转写** ——
+  转写里可能有用户没打算公开的内容。
 
 `request_id` 在同一设备内幂等。重复 ID + 相同参数返回原任务；参数不同返回 400，不能启动第二次。任务不会因断线自动重放。HTTP 401=重新配对或令牌撤销；403=权限不足；429=退避重试；其他 400=修正请求后重试。首次实现针对一个个人所有者，所有已配对设备共享该所有者的任务历史；**不是多租户服务**。媒体资源限定上传设备。
 

@@ -72,6 +72,9 @@ def main():
     subs.add_parser("pending")
     decision = subs.add_parser("decide"); decision.add_argument("task_id"); decision.add_argument("decision", choices=["approve", "reject"])
     decision.add_argument("--acknowledge-snapshot-and-provider", action="store_true")
+    voice_decide = subs.add_parser("voice-decide"); voice_decide.add_argument("task_id")
+    voice_decide.add_argument("--text", default=None, help="转写文本；不给就从标准输入读一行")
+    voice_decide.add_argument("--acknowledge-snapshot-and-provider", action="store_true")
     subs.add_parser("audit-check")
     subs.add_parser("fingerprint")
     subs.add_parser("doctor")
@@ -122,6 +125,12 @@ def main():
             print(json.dumps(asyncio.run(operator_request(directory, "POST", f"/v1/operator/tasks/{args.task_id}/decision", {
                 "decision": args.decision, "acknowledge_snapshot_and_provider": args.acknowledge_snapshot_and_provider
             })), indent=2))
+        elif args.command == "voice-decide":
+            import sys
+            text = args.text if args.text is not None else sys.stdin.readline()
+            print(json.dumps(asyncio.run(operator_request(directory, "POST", f"/v1/operator/tasks/{args.task_id}/voice-decision", {
+                "transcript": text, "acknowledge_snapshot_and_provider": args.acknowledge_snapshot_and_provider
+            })), ensure_ascii=False, indent=2))
     except (ValueError, OSError) as exc:
         parser.exit(2, f"CodexGlasses: {exc}\n")
 

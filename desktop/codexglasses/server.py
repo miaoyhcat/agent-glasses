@@ -18,6 +18,7 @@ from .protocol import task_request
 from .security import snapshot_project,prepare_worker_tree
 from .store import Store, TERMINAL
 from .cloud import CloudAI
+from . import voice
 from .isolation import container_command
 from .model_proxy import ModelProxy
 
@@ -132,14 +133,42 @@ class Bridge:
     async def decide(self, request):
         self.operator(request)
         body = await request.json()
+        return await self._decide(request, body, body.get("decision"))
+
+    async def voice_decide(self, request):
+        """语音批准：一句话的转写 → 固定口令 → 同一条批准路径。
+
+        默认关闭，要在电脑端配置里显式写 "allow_voice_approval": true 才生效。
+        认不出口令时返回 voice_not_recognized，不产生任何状态变化 ——
+        语音识别的错误不能被当成一次批准。
+        """
+        self.operator(request)
+        # 默认关闭。要用语音批准，必须在电脑端配置里显式打开。
+        if self.config.get("allow_voice_approval") is not True:
+            raise web.HTTPBadRequest(text='{"error":"voice_approval_disabled"}', content_type="application/json")
+        body = await request.json()
+        task = self.store.task(request.match_info["id"])
+        decision = voice.parse(body.get("transcript"))
+        if decision is None:
+            # 存一条审计事件：有人尝试用语音批准，但口令没认出来，任务保持原状。
+            self.store.event(task["id"], "voice_decision",
+                             {"decision": None, "phrase": voice.matched_phrase(body.get("transcript"))})
+            raise web.HTTPBadRequest(text='{"error":"voice_not_recognized"}', content_type="application/json")
+        # 只记短语，不记整段转写：转写里可能有用户没打算公开的内容。
+        self.store.event(task["id"], "voice_decision",
+                         {"decision": decision, "phrase": voice.matched_phrase(body.get("transcript"))})
+        return await self._decide(request, body, decision)
+
+    async def _decide(self, request, body, decision):
+        """点击批准和语音批准共用这一条路，权限检查一个不少。"""
         # No await between reading pending state and reserving preparing state.
         # Two local approvals must not launch the same task twice.
         task = self.store.task(request.match_info["id"])
         if task["status"] != "pending":
             raise ValueError("task_not_pending")
-        if body.get("decision") not in {"approve", "reject"}:
+        if decision not in {"approve", "reject"}:
             raise ValueError("invalid_decision")
-        if body["decision"] == "reject":
+        if decision == "reject":
             self.store.transition(task["id"], "rejected")
         else:
             if len(self.runners) >= 2:
@@ -317,6 +346,7 @@ class Bridge:
             web.get("/v1/projects", self.projects), web.get("/v1/tasks", self.tasks), web.post("/v1/tasks", self.create_task),
             web.get("/v1/tasks/{id}", self.task), web.post("/v1/tasks/{id}/cancel", self.cancel), web.get("/v1/events", self.events),
             web.get("/v1/operator/pending", self.pending), web.post("/v1/operator/tasks/{id}/decision", self.decide),
+            web.post("/v1/operator/tasks/{id}/voice-decision", self.voice_decide),
             web.post("/v1/media", self.media_create), web.get("/v1/media/{id}", self.media_info),
             web.put("/v1/media/{id}/chunks", self.media_chunk), web.post("/v1/media/{id}/commit", self.media_commit)])
         app.router.add_post("/v1/ai", self.analyze)
